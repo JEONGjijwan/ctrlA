@@ -27,7 +27,7 @@ html,body{
 }
 header{
     width: 100%;
-    height: 100px;
+    height: 180px;
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
@@ -52,8 +52,8 @@ header{
     position: relative;
     width: 30px;
     height: 30px;
-    right: -4px;
-    top: 46px;
+    right: -10px;
+    top: 38px;
     /*margin-right: 20px;*/
     background-color: #fae100;
     border-radius: 50%;
@@ -80,10 +80,15 @@ header{
     /*display: none;*/
     list-style: none;
     height: 18px;
-    margin: 40px 0 30px 0;
+    margin: 20px 0 30px 0;
     font-weight: bolder;
-    color: blue;
-    /*z-index: 900;*/
+}
+#sideTxt ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 0.7em;
+    margin-left: 30px;
+    z-index: 900;
 }
 /*********************************상단 네비*********************************/
 #topGnb{
@@ -93,9 +98,11 @@ header{
     position: absolute;
     display: flex;
     justify-content: space-around;
+    border: 1px solid red;
 }
 #topGnb:hover{
     background-color: white;
+    height: 180px;
     transition: background-color 0.5s;
 }
 #topGnb #actHov{
@@ -170,7 +177,57 @@ header{
     margin-top: 40px;
     cursor: pointer;
 }
-
+/*********************************컴터 서브 메뉴*********************************/
+#subMenu{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 100px;
+}
+#subMenu .subList{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: white;
+    transition: background-color 0.5s;
+    justify-content: center;
+    border-top: 1px solid lightgrey;
+}
+#subMenu li{
+    float: left;
+    margin: 30px;
+    list-style: none;
+    color: black;
+    font-weight: bolder;
+    z-index: 10;
+}
+#subMenu li a{
+   /* position: absolute;*/
+}
+#subMenu li:hover{
+    color: #60227E;
+    transition: color 0.3s;
+}
+#subMenu2{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    z-index: 100;
+    display: none;
+}
+#subMenu2 ul{
+    width: 100%;
+    height: 100%;
+    float: left;
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
+#subMenu2 ul li{
+    float: left;
+    position: relative;
+    list-style:none;
+}
 /*********************************모바일 서브 메뉴*********************************/
 .mobileGnb{
     width: 100%;
@@ -184,7 +241,13 @@ header{
     width: 100%;
     height: 100%;
     background-color: white;
-    border-top: 1px solid grey;
+    border-top: 1px solid lightgrey;
+}
+.mobileGnb #mobileTop{
+    /*z-index: 200;*/
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
 }
 .mobileMenu li{
     margin-top: 20px;
@@ -251,54 +314,6 @@ header{
 .mobileGnb .mobileMenu #subM2 li:nth-of-type(4){
     font-size: 0.7em;
 }
-/*********************************컴터 서브 메뉴*********************************/
-#subMenu{
-    width: 100%;
-    height: 100px;
-    position: absolute;
-    top: 100px;
-    z-index: 100;
-}
-#subMenu .subList{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    background-color: white;
-    transition: background-color 0.5s;
-    justify-content: center;
-    border-top: 1px solid lightgrey;
-}
-#subMenu li{
-    float: left;
-    margin: 30px;
-    list-style: none;
-    color: black;
-    font-weight: bolder;
-}
-#subMenu li:hover{
-    color: #60227E;
-    transition: color 0.3s;
-}
-#subMenu2{
-    width: 100%;
-    height: 150px;
-    position: absolute;
-    top: 100px;
-    z-index: 100;
-    display: none;
-}
-#subMenu2 ul{
-    width: 100%;
-    height: 100%;
-    float: left;
-    /*display: flex;*/
-    /*justify-content: center;*/
-}
-#subMenu2 ul li{
-    float: left;
-    position: relative;
-    list-style:none;
-}
 /*********************************carousel*********************************/
 #carousel1 .carousel-inner .carousel-item img{
     height: auto;
@@ -351,6 +366,7 @@ header{
     align-items: center;
     margin: 130px auto 0;
     box-sizing: border-box;
+    border: 1px solid red;
 }
 #sec1 .imgBox .mainBox{
     width: 285px;
@@ -688,16 +704,17 @@ header{
     #menu,
     .close,
     #sec2 #carousel2,
-    #sec2 #project2{
+    #sec2 #project2,
+    #top{
         display: none;
     }
 }
 /****************타블렛 사이즈****************/
 @media screen and (min-width: 841px) and (max-width: 1199px){
-    #language,
     .close,
     #topGnb ul,
-    #sec2 #carousel2{
+    #sec2 #carousel2,
+    #menu{
         display: block;
     }
     #topGnb li,
@@ -705,6 +722,12 @@ header{
     #sideBox,
     #sideTxt{
         display: none;
+    }
+    header{
+        height: 100px;
+    }
+    header:hover #menu{
+        margin-top: 55px;
     }
     #sec2 #Freenext{
         height: 40%;
@@ -719,7 +742,6 @@ header{
     }
     #menu{
         scale: 1.5;
-        display: block;
         position: relative;
         right: 30px;
         top: 10px;
@@ -755,7 +777,7 @@ header{
         height: 500px;
     }
     #sec1 .imgBox{
-        width: 86%;
+        width: 70%;
     }
     #sec1 .imgBox .mainBox,
     #sec1 .imgBox .box,
@@ -816,10 +838,14 @@ header{
     #sec1 .imgBox{
         display: flex;
         flex-wrap: wrap;
-        justify-content: left;
     }
     #subMenu {
         z-index: 0;
+    }
+    #wrapper #top{
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
     }
 }
 /**************모바일 사이즈***************/
@@ -836,6 +862,12 @@ header{
     #sideBox,
     #sideTxt{
         display: none;
+    }
+    header{
+        height: 100px;
+    }
+    header:hover #menu{
+        margin-top: 55px;
     }
     #topGnb{
         display: flex;
@@ -869,6 +901,7 @@ header{
     }
     #sec1 .small{
         display: block;
+        margin-top: -30px;
     }
     #sec1 .small #smallcross{
         position: relative;
@@ -891,12 +924,12 @@ header{
     #sec1 .imgBox .box,
     #sec1 .imgBox .mainBox .main
     {
-        width: 210px;
-        height: 230px;
+        width: 200px;
+        height: 200px;
         object-fit: cover;
     }
     #sec1 .imgBox{
-        width: 100%;
+        width: 92%;
         margin-top: 80px;
         display: flex;
         flex-wrap: wrap;
@@ -985,5 +1018,10 @@ header{
     }
     #subMenu {
         z-index: 0;
+    }
+    #wrapper #top{
+        position: fixed;
+        right: 10px;
+        bottom: 50px;
     }
 }
