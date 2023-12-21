@@ -221,34 +221,35 @@ header{
     width: 100%;
     height: 120px;
     background-color: #F9FAFB;
-    border: 1px solid red;
+    display: flex;
+    align-items: center;
 }
 .mobileGnb .mobileMenu #subM1 li{
     position: relative;
-    margin-top: 20px;
     left: -20px;
     list-style: none;
     font-size: 0.8em;
-    border: 1px solid black;
 }
 .mobileGnb .mobileMenu #subM2{
     width: 100%;
     height: 175px;
     background-color: #F9FAFB;
+    display: flex;
+    align-items: center;
     /*border: 1px solid red;*/
 }
 .mobileGnb .mobileMenu #subM2 li{
     position: relative;
     left: -20px;
     list-style: none;
-    font-size: 1.3em;
+    font-size: 1.1em;
     /*border: 1px solid black;*/
     margin-top: 10px;
 }
 .mobileGnb .mobileMenu #subM2 li:nth-of-type(2),
 .mobileGnb .mobileMenu #subM2 li:nth-of-type(3),
 .mobileGnb .mobileMenu #subM2 li:nth-of-type(4){
-    font-size: 0.9em;
+    font-size: 0.7em;
 }
 /*********************************컴터 서브 메뉴*********************************/
 #subMenu{
@@ -899,7 +900,7 @@ header{
         margin-top: 80px;
         display: flex;
         flex-wrap: wrap;
-        border: 1px solid red;
+        /*border: 1px solid red;*/
         /*justify-content: left;*/
     }
     #sec1 .imgBox .box span{
