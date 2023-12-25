@@ -27,7 +27,7 @@ html,body{
 }
 header{
     width: 100%;
-    height: 180px;
+    height: 200px;
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
@@ -46,7 +46,7 @@ header{
     right: 0;
     margin-right: 30px;
     top: 30%;
-    z-index: 3;
+    z-index: 99999;
 }
 #sideBox #yellow{
     position: relative;
@@ -82,6 +82,7 @@ header{
     height: 18px;
     margin: 20px 0 30px 0;
     font-weight: bolder;
+    z-index: 99999;
 }
 #sideTxt ul li a{
     color: black;
@@ -98,11 +99,11 @@ header{
     position: absolute;
     display: flex;
     justify-content: space-around;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 #topGnb:hover{
     background-color: white;
-    height: 180px;
+    height: 200px;
     transition: background-color 0.5s;
 }
 #topGnb #actHov{
@@ -177,12 +178,19 @@ header{
     margin-top: 40px;
     cursor: pointer;
 }
+#topGnb #subMenu .sublist li a:nth-of-type(1){
+
+}
 /*********************************컴터 서브 메뉴*********************************/
 #subMenu{
     width: 100%;
-    height: 80px;
+    height: 100px;
     position: absolute;
     top: 100px;
+    z-index: 99999 !important;
+    background-color: white;
+    box-sizing: border-box;
+    transition: background-color 0.5s;
 }
 #subMenu .subList{
     width: 100%;
@@ -191,19 +199,37 @@ header{
     background-color: white;
     transition: background-color 0.5s;
     justify-content: center;
+    align-items: center;
     border-top: 1px solid lightgrey;
+    position: relative;
+    z-index: 9;
+    /*display: none;*/
+    /*opacity: 0.5;*/
 }
-#subMenu li{
+#subMenu .subList li{
+    width: 10%;
+    height: 100%;
     float: left;
     margin: 30px;
     list-style: none;
     color: black;
     font-weight: bolder;
-    z-index: 10;
+    position: relative;
+    z-index: 99;
 }
-#subMenu li a{
-   /* position: absolute;*/
+#subMenu .subList li a{
+    display: block;
+    position: relative;
+    font-size: 1em;
+    /*color: red;*/
+    z-index: 999 !important;
 }
+#subMenu ul li:hover a::after{
+    display: none;
+}
+/*#subMenu li a{
+     position: absolute;
+}*/
 #subMenu li:hover{
     color: #60227E;
     transition: color 0.3s;
@@ -315,6 +341,10 @@ header{
     font-size: 0.7em;
 }
 /*********************************carousel*********************************/
+#carousel1{
+    position: relative;
+    z-index: 1;
+}
 #carousel1 .carousel-inner .carousel-item img{
     height: auto;
     object-fit: cover;
@@ -366,7 +396,7 @@ header{
     align-items: center;
     margin: 130px auto 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 #sec1 .imgBox .mainBox{
     width: 285px;
@@ -535,36 +565,39 @@ header{
     height: 100%;
     position: relative;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 #sec2 #Freenext .Fbox .txt1{
     position: absolute;
-    left: 32%;
-    top: 15%;
+    margin-top: -200px;
     color: white;
     font-size: 4.2em;
     font-weight: bolder;
 }
 #sec2 #Freenext .Fbox .txtX{
     position: absolute;
-    left: 37%;
+    /*left: 37%;*/
 }
 #sec2 #Freenext .Fbox .txt2{
     position: absolute;
-    left: 30%;
-    top: 50%;
+    /*left: 30%;*/
+    /*top: 50%;*/
     color: white;
     font-size: 1.2em;
 }
 #sec2 #Freenext .Fbox .txtX2{
     position: absolute;
-    left: 31%;
+    /*left: 31%;*/
 }
 #sec2 #Freenext .Fbox .arrow{
     position: absolute;
     left: 45%;
     bottom: 15%;
     color: #868586;
-    font-size: 3em;
+    font-size: 5em;
     cursor: pointer;
 }
 #sec2 #Freenext .Fbox .arrow:hover{
@@ -593,8 +626,8 @@ header{
 #sec2 #project2 h3{
     font-size: 2.5em;
     position: relative;
-    left: 50px;
-    top: 50px;
+    /*left: 50px;*/
+    /*top: 50px;*/
 }
 #sec2 #project #txt2{
     position: relative;
@@ -727,7 +760,7 @@ header{
         height: 100px;
     }
     header:hover #menu{
-        margin-top: 55px;
+        margin-top: 60px;
     }
     #sec2 #Freenext{
         height: 40%;
@@ -839,13 +872,14 @@ header{
         display: flex;
         flex-wrap: wrap;
     }
-    #subMenu {
-        z-index: 0;
-    }
+    /*#subMenu {*/
+    /*    z-index: 0;*/
+    /*}*/
     #wrapper #top{
         position: fixed;
         right: 50px;
         bottom: 50px;
+        z-index: 999;
     }
 }
 /**************모바일 사이즈***************/
@@ -867,7 +901,7 @@ header{
         height: 100px;
     }
     header:hover #menu{
-        margin-top: 55px;
+        margin-top: 60px;
     }
     #topGnb{
         display: flex;
@@ -1016,12 +1050,13 @@ header{
         font-size: 0.9em;
         line-height: 40px;
     }
-    #subMenu {
-        z-index: 0;
-    }
+    /*#subMenu {*/
+    /*    z-index: 0;*/
+    /*}*/
     #wrapper #top{
         position: fixed;
         right: 10px;
         bottom: 50px;
+        z-index: 999;
     }
 }
