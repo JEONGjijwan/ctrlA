@@ -239,7 +239,7 @@ header {
     width: 100%;
     height: 100%;
     background-color: white;
-    margin-left: 30px;
+    z-index: 10;
 }
 .mobileGnb #mobileTop{
     /*z-index: 200;*/
@@ -252,7 +252,7 @@ header {
     scale: 1.3;
 }
 .mobileMenu li{
-    margin-top: 20px;
+    margin: 20px 0 0 30px;
     font-size: 1em;
     font-weight: bolder;
 }
@@ -331,188 +331,37 @@ header {
 /**********************section1**********************/
 #section1{
     position: relative;
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    height: 200px;
-    margin: 80px auto;
-}
-#section1 .textBox{
-    /*display: none;*/
-}
-#section1 div{
-    width: 260px;
-}
-#section1 div .name{
-    font-weight: bolder;
-    border-bottom: 2px solid black;
-    margin-bottom: 10px;
-}
-#section1 div .name:nth-of-type(2){
-    margin-top: 50px;
-}
-#section1 div p{
-    font-size: 0.9em;
-}
-#section1 div li{
-    margin-left: 18px;
-    margin-top: 5px;
-    font-size: 0.9em;
-    list-style: square;
-}
-/**********************section1-mobile**********************/
-#section1 #section1_mobile{
-    width: 500px;
-    height: 320px;
+    width: 100%;
+    height: 450px;
     /*border: 1px solid red;*/
-    margin-top: -160px;
+    /*margin-top: 20px;*/
 }
-#section1 #section1_mobile div{
-    float: left;
-}
-#section1 #section1_mobile .section1_mobile_txtBox{
-    height: 30px;
-    width: 100%;
-    display: inline-block;
-    margin-top: 20px;
-    /*float: right;*/
-}
-#section1 #section1_mobile .section1_mobile_txtBox ul{
-    width: 100%;
-}
-#section1 #section1_mobile .section1_mobile_txtBox:nth-of-type(4){
-    margin-top: 60px;
-}
-#section1 #section1_mobile .section1_mobile_txtBox li{
-    font-size: 0.8em;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-}
-#section1 #section1_mobile .section1_mobile_txtBox li:nth-of-type(2),
-#section1 #section1_mobile .section1_mobile_txtBox li:nth-of-type(3),
-#section1 #section1_mobile .section1_mobile_txtBox li:nth-of-type(4),
-#section1 #section1_mobile .section1_mobile_txtBox li:nth-of-type(5){
-    margin-left: 110px;
-}
-#section1 #section1_mobile div p{
-    margin-top: 5px;
-    font-size: 0.8em;
-}
-#section1 #section1_mobile div .mobileName{
-    width: 90px;
-    border-bottom: 2px solid black;
-    font-weight: bolder;
-    font-size: 0.8em;
-    margin-right: 20px;
-}
-/**********************section2**********************/
-#section2{
+#section1 #allContentBox{
     position: relative;
-    width: 100%;
-    height: 400px;
+    height: 100%;
     display: flex;
+    text-align: center;
     justify-content: center;
+    /*margin: 50px;*/
 }
-#section2 #purple{
-    text-align: center;
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    /*line-height: 100px;*/
-    border-radius: 50%;
-    background-color: #70388B;
-    opacity: 0.9;
-    color: white;
-    margin-right: 220px;
-    z-index: 2;
-}
-#section2 #navy{
-    text-align: center;
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: #53618C;
-    opacity: 0.9;
-    color: white;
-    margin-left: 220px;
-}
-#section2 #purple div,
-#section2 #navy div{
-    margin-top: 50px;
-}
-#section2 #purple h1,
-#section2 #navy h1{
-    font-size: 6em;
-    font-weight: lighter;
-}
-#section2 #purple p,
-#section2 #navy p{
-    font-size: 1.1em;
-}
-/**********************section3**********************/
-#section3{
-    width: 80%;
-    height: auto;
+#section1 #allContentBox .contentBox{
     position: relative;
-    /*border: 1px solid red;*/
-    margin: 0 auto;
+    /*border: 1px solid black;*/
+    width: 430px;
+    height: 100%;
 }
-#section3 #client{
-    text-align: center;
-}
-#section3 #client h1{
-    font-size: 2.5em;
-}
-#section3 #client p{
-    font-size: 0.8em;
-    margin-top: 25px;
-    color: #999999;
-}
-/**********************section3 clientImgBox**********************/
-#section3 #clientImgBox{
-    margin: 60px auto;
-    width: 85%;
-    /*border: 1px solid red;*/
+#section1 #allContentBox .contentBox .inside_ContentBox{
     position: relative;
+    margin-top: 100px;
 }
-#section3 #clientImgBox ul{
+#section1 #allContentBox .contentBox .inside_ContentBox h3{
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    margin-top: 30px;
+    font-size: 1.5em;
 }
-#section3 #clientImgBox li{
-    position: relative;
-    margin: 5px;
-    border: 1px dashed grey;
-    width: 150px;
-    height: 60px;
-    text-align: center;
-    line-height: 70px;
-    list-style: none;
-}
-/**********************footer**********************/
-#footer{
-    position: relative;
-    width: 100%;
-    height: 180px;
-    background-color: black;
-    color: #999999;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#footer div{
-    position: relative;
-}
-#footer div img{
-    margin-bottom: 30px;
-}
-#footer div p{
-    font-size: 0.8em;
+#section1 #allContentBox .contentBox .inside_ContentBox p{
+    margin-top: 10px;
+    color: #5B6168;
 }
 /***************************************************************************/
 /*********************************미디어 쿼리*********************************/
@@ -543,52 +392,5 @@ header {
     }
     #topGnb img{
         margin-left: 30px;
-    }
-}
-/**************모바일 사이즈***************/
-@media screen and (max-width: 840px){
-    #topGnb ul li,
-    #title,
-    #section1 .textBox,
-    #language{
-        display: none;
-    }
-    #topGnb{
-        /*background-color: #1A191B;*/
-    }
-    #hamburger{
-        display: block;
-        margin-right: 30px;
-        scale: 1.3;
-    }
-    #topGnb img{
-        margin-left: 30px;
-    }
-    #section2{
-        height: 300px;
-    }
-    #section2 #purple,
-    #section2 #navy{
-        width: 200px;
-        height: 200px;
-    }
-    #section2 #purple{
-        margin-left: 50px;
-    }
-    #section2 #navy{
-        margin-right: 50px;
-    }
-    #section2 #purple div,
-    #section2 #navy div{
-        margin-top: 30px;
-    }
-    #section2 #purple h1,
-    #section2 #navy h1{
-        font-size: 4em;
-        font-weight: lighter;
-    }
-    #section2 #purple p,
-    #section2 #navy p{
-        font-size: 0.8em;
     }
 }
