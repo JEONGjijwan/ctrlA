@@ -182,17 +182,18 @@ header{
 
 }
 /*********************************컴터 서브 메뉴*********************************/
-#subMenu{
+#subMenu {
     width: 100%;
-    height: 100px;
+    height: 110px;
     position: absolute;
-    top: 100px;
+    margin-top: 100px;
     z-index: 99999 !important;
     background-color: white;
     box-sizing: border-box;
     transition: background-color 0.5s;
+    display: none;
 }
-#subMenu .subList{
+#subMenu .subList {
     width: 100%;
     height: 100%;
     display: flex;
@@ -203,34 +204,37 @@ header{
     border-top: 1px solid lightgrey;
     position: relative;
     z-index: 9;
-    /*display: none;*/
-    /*opacity: 0.5;*/
+    box-sizing: border-box;
 }
-#subMenu .subList li{
+#subMenu .subList li {
     width: 10%;
     height: 100%;
     float: left;
-    margin: 30px;
+    /*margin: 30px;*/
     list-style: none;
-    color: black;
     font-weight: bolder;
     position: relative;
+    text-align: center;
     z-index: 99;
 }
-#subMenu .subList li a{
+#subMenu .subList li a {
     display: block;
     position: relative;
     font-size: 1em;
-    /*color: red;*/
+    color: black;
+    margin-top: 40px;
+    text-decoration: none;
     z-index: 999 !important;
 }
-#subMenu ul li:hover a::after{
-    display: none;
+#subMenu .subList li a:hover{
+    color: #60227E;
+    transition: color 0.5s;
 }
 /*#subMenu li a{
      position: absolute;
 }*/
-#subMenu li:hover{
+#subMenu li:hover,
+#subMenu2 ul li a:hover{
     color: #60227E;
     transition: color 0.3s;
 }
@@ -240,19 +244,56 @@ header{
     position: absolute;
     top: 100px;
     z-index: 100;
-    display: none;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    font-size: 0.9em;
+    border-top: 1px solid lightgrey;
+    box-sizing: border-box;
 }
-#subMenu2 ul{
+#subMenu2 #subMenu2_lastTxt{
+    margin-left: 10px;
+}
+#subMenu2 div{
+    width: 220px;
+    /*border: 1px solid blue;*/
+    /*border-top: 1px solid lightgrey;*/
+}
+#subMenu2 div ul{
     width: 100%;
     height: 100%;
+}
+#subMenu2 #subMenu2_firstBox{
+    width: 200px;
+}
+#subMenu2 #subMenu2_firstBox #subMenu2_textBox{
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+#subMenu2  div p{
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin: 10px 0 10px 0;
+}
+#subMenu2 #subMenu2_firstBox .subMenu2_menu{
+    width: 50%;
+    height: 100%;
     float: left;
-    /*display: flex;*/
-    /*justify-content: center;*/
 }
 #subMenu2 ul li{
-    float: left;
     position: relative;
     list-style:none;
+    float: left;
+    margin-bottom: 10px;
+}
+#subMenu2 ul li a{
+    text-decoration: none;
+    position: relative;
+    color: #5B6168;
+}
+#subMenu2 ul li a:nth-of-type(1){
+    margin-right: 10px;
 }
 /*********************************모바일 서브 메뉴*********************************/
 .mobileGnb{

@@ -5,21 +5,22 @@
     <title>회사소개 > 컨트롤에이, CONTROLA</title>
     <link rel="icon" href="x" type="image/x-icon">
     <link rel="stylesheet" href="css/css2.css">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="wrapper">
-    <!--------------------------------데스크탑네비-------------------------------------->
+<!--------------------------------데스크탑네비-------------------------------------->
     <header>
         <nav id="topGnb">
             <a href="index.html">
                 <img src="img/logo_color.png" width="166px" height="28px" alt="">
             </a>
             <ul>
-                <li><a href="">회사소개</a></li>
+                <li><a href="#">회사소개</a></li>
                 <li><a href="#">사업영역</a></li>
-                <li><a href="index3.html">특장점</a></li>
+                <li><a href="#">특장점</a></li>
                 <li><a href="#">포트폴리오</a></li>
                 <li><a href="#">오시는 길</a></li>
                 <li><a href="#">프로젝트 의뢰</a></li>
@@ -27,11 +28,11 @@
             <span class="material-symbols-outlined" id="language">language</span>
             <span class="material-symbols-outlined" id="hamburger">menu</span>
         </nav>
-        <!--------------------------------데스크탑서브메뉴-------------------------------------->
+<!--------------------------------데스크탑서브메뉴-------------------------------------->
         <nav id="subMenu">
             <ul class="subList">
                 <li>
-                    <a href="index2.html">
+                    <a href="">
                         회사소개
                     </a>
                 </li>
@@ -92,12 +93,12 @@
                 </ul>
             </div>
         </nav>
-        <!--------------------------------타이틀-------------------------------------->
+<!--------------------------------타이틀-------------------------------------->
         <div id="title">
             <h1>Company Info</h1>
         </div>
     </header>
-    <!--------------------------------모바일네비-------------------------------------->
+<!--------------------------------모바일네비-------------------------------------->
     <nav class="mobileGnb">
         <div id="mobileTop">
             <a href="index.html">
@@ -140,13 +141,13 @@
                     </li>
                 </ul>
             </div>
-            <li><a href="index3.html">특장점</a></li>
+            <li><a href="#">특장점</a></li>
             <li><a href="#">포트폴리오</a></li>
             <li><a href="#">오시는 길</a></li>
             <li><a href="#">프로젝트 의뢰</a></li>
         </ul>
     </nav>
-    <!--------------------------------section1-------------------------------------->
+<!--------------------------------section1-------------------------------------->
     <section id="section1">
         <div class="textBox">
             <div class="name">회사명</div>
@@ -172,7 +173,7 @@
                 <li>디지털채널 운영 및 이노베이션 사업</li>
             </ul>
         </div>
-        <!--------------------------------section1-mobile-------------------------------------->
+<!--------------------------------section1-mobile-------------------------------------->
         <div id="section1_mobile">
             <div class="section1_mobile_txtBox">
                 <div class="mobileName">회사명</div>
@@ -202,7 +203,7 @@
             </div>
         </div>
     </section>
-    <!--------------------------------section2-------------------------------------->
+<!--------------------------------section2-------------------------------------->
     <section id="section2">
         <div id="purple">
             <div>
@@ -217,7 +218,7 @@
             </div>
         </div>
     </section>
-    <!--------------------------------section3-------------------------------------->
+<!--------------------------------section3-------------------------------------->
     <section id="section3">
         <div id="client">
             <h1>Our Client</h1>
@@ -333,7 +334,7 @@
             </ul>
         </div>
     </section>
-    <!--------------------------------footer-------------------------------------->
+<!--------------------------------footer-------------------------------------->
     <footer id="footer">
         <div>
             <img src="img/footer_logo_on.png" alt="">
@@ -361,7 +362,7 @@
         /********************topGnb 활성화 및 비활성화********************/
 
         subMenu.hide();
-        subMenu2.hide();
+        // subMenu2.hide();
         navLi.eq(0).hover(function (){
             // subList1.show();
             subMenu.show();
@@ -373,7 +374,7 @@
             subMenu2.show();
             subMenu.hide();
         });subMenu2.mouseleave(function (){
-            subMenu2.hide();
+            // subMenu2.hide();
         });
 
         navLi.eq(2).hover(function (){

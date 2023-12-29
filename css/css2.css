@@ -179,13 +179,16 @@ header {
     justify-content: center;
     background-color: white;
     font-size: 0.9em;
-    border: 1px solid red;
+    border-top: 1px solid lightgrey;
     box-sizing: border-box;
+}
+#subMenu2 #subMenu2_lastTxt{
+    margin-left: 10px;
 }
 #subMenu2 div{
     width: 220px;
-    border: 1px solid blue;
-    border-top: 1px solid lightgrey;
+    /*border: 1px solid blue;*/
+    /*border-top: 1px solid lightgrey;*/
 }
 #subMenu2 div ul{
     width: 100%;
@@ -193,22 +196,20 @@ header {
 }
 #subMenu2 #subMenu2_firstBox{
     width: 200px;
-    display: flex;
-    /*flex-direction: column;*/
 }
 #subMenu2 #subMenu2_firstBox #subMenu2_textBox{
     width: 100%;
     height: 40px;
     position: relative;
 }
-#subMenu2 #subMenu2_firstBox div p{
+#subMenu2  div p{
     font-size: 1.2em;
     font-weight: bolder;
-    margin: 15px 0 15px 0;
+    margin: 10px 0 10px 0;
 }
 #subMenu2 #subMenu2_firstBox .subMenu2_menu{
     width: 50%;
-    /*height: 140px;*/
+    height: 100%;
     float: left;
 }
 #subMenu2 ul li{
