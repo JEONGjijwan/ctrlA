@@ -1,0 +1,583 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.material-symbols-outlined .arrow2 {
+    color: white;
+    font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+}
+.hidden {
+    overflow: hidden;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#wrapper {
+    width: 100%;
+    height: 100%;
+}
+header {
+    width: 80%;
+    height: 250px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    /*  border: 1px solid red;*/
+}
+#subMenu2 {
+    display: none;
+}
+.po{
+    cursor: pointer;
+}
+/**********************상단 네비**********************/
+#topGnb {
+    width: 100%;
+    height: 100px;
+    z-index: 9;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+#topGnb:hover {
+    background-color: white;
+    color: #1A191B;
+    transition: background-color 0.5s;
+}
+#topGnb #language,
+#topGnb #hamburger {
+    color: black;
+    cursor: pointer;
+}
+#topGnb ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0;
+}
+#topGnb ul li {
+    width: 15%;
+    float: left;
+    list-style: none;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+    left: -40px;
+    /*margin-right: -30px;*/
+}
+#topGnb ul li a::after {
+    content: "";
+    width: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    transition: width 0.3s;
+    margin: 0 auto;
+}
+#topGnb ul li:hover a::after {
+    width: 50%;
+    background-color: purple;
+}
+#topGnb ul li:hover a {
+    color: purple;
+    transition: color 0.5s;
+}
+#topGnb ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.2em;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+#topGnb span {
+    color: white;
+    margin-top: 40px;
+}
+#topGnb img {
+    margin-top: 40px;
+    cursor: pointer;
+}
+.gnbActive{
+    content: "";
+    width: 50%;
+    background-color: purple;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    margin: 0 auto;
+}
+/**********************상단 네비 서브메뉴**********************/
+#subMenu {
+    width: 100%;
+    height: 110px;
+    position: absolute;
+    margin-top: 100px;
+    z-index: 99999 !important;
+    background-color: white;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    box-sizing: border-box;
+    transition: background-color 0.5s;
+    display: none;
+}
+#subMenu .subList {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: white;
+    transition: background-color 0.5s;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+    box-sizing: border-box;
+}
+#subMenu .subList li {
+    width: 10%;
+    height: 100%;
+    float: left;
+    /*margin: 30px;*/
+    list-style: none;
+    font-weight: bolder;
+    position: relative;
+    text-align: center;
+    z-index: 99;
+}
+#subMenu .subList li a {
+    display: block;
+    position: relative;
+    font-size: 1em;
+    color: black;
+    margin-top: 40px;
+    text-decoration: none;
+    z-index: 999 !important;
+}
+#subMenu .subList li a:hover{
+    color: #60227E;
+    transition: color 0.5s;
+}
+/*#subMenu li a{
+     position: absolute;
+}*/
+#subMenu li:hover,
+#subMenu2 ul li a:hover{
+    color: #60227E;
+    transition: color 0.3s;
+}
+#subMenu2{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    font-size: 0.9em;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    box-sizing: border-box;
+}
+#subMenu2 #subMenu2_lastTxt{
+    margin-left: 10px;
+}
+#subMenu2 div{
+    width: 220px;
+    /*border: 1px solid blue;*/
+    /*border-top: 1px solid lightgrey;*/
+}
+#subMenu2 div ul{
+    width: 100%;
+    height: 100%;
+}
+#subMenu2 #subMenu2_firstBox{
+    width: 200px;
+}
+#subMenu2 #subMenu2_firstBox #subMenu2_textBox{
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+#subMenu2  div p{
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin: 10px 0 10px 0;
+}
+#subMenu2 #subMenu2_firstBox .subMenu2_menu{
+    width: 48%;
+    height: 85px;
+    float: left;
+    /*border: 1px solid black;*/
+}
+#subMenu2 ul li{
+    position: relative;
+    list-style:none;
+    float: left;
+    margin-bottom: 10px;
+}
+#subMenu2 ul li a{
+    text-decoration: none;
+    position: relative;
+    color: #5B6168;
+}
+#subMenu2 ul li a:nth-of-type(1){
+    margin-right: 10px;
+}
+/**********************모바일 네비**********************/
+.mobileGnb{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.mobileMenu{
+    list-style: none;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 10;
+}
+.mobileGnb #mobileTop{
+    /*z-index: 200;*/
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+}
+.mobileGnb #mobileTop .close{
+    cursor: pointer;
+    scale: 1.3;
+}
+.mobileGnb .mobileMenu li{
+    margin: 20px 0 0 30px;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+.mobileGnb .mobileMenu li a{
+    color: black;
+    text-decoration: none;
+    /*font-size: 1.3em;*/
+}
+.mobileGnb .mobileMenu #subM1 li a{
+    color: black;
+}
+.mobileGnb .mobileMenu #subM2 li a{
+    color: #5B6168;
+}
+.mobileMenu #subM1 li a:hover,
+.mobileMenu #subM2 li a:hover{
+    color: #60227E;
+    transition: color 0.5s;
+}
+.moreBtn1,
+.moreBtn2,
+.lessBtn1,
+.lessBtn2{
+    display: flex;
+    position: absolute;
+    left:92%;
+    cursor: pointer;
+    z-index: 9;
+}
+.mobileGnb .mobileMenu #subM1{
+    width: 100%;
+    height: 120px;
+    background-color: #F9FAFB;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    /*display: none;*/
+}
+.mobileGnb .mobileMenu #subM1 li{
+    position: relative;
+    left: -20px;
+    list-style: none;
+    font-size: 1em;
+}
+.mobileGnb .mobileMenu #subM2{
+    width: 100%;
+    height: 175px;
+    background-color: #F9FAFB;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.mobileGnb .mobileMenu #subM2 li{
+    position: relative;
+    left: -20px;
+    list-style: none;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+.mobileGnb .mobileMenu #subM2 li:nth-of-type(2),
+.mobileGnb .mobileMenu #subM2 li:nth-of-type(3),
+.mobileGnb .mobileMenu #subM2 li:nth-of-type(4){
+    font-size: 1em;
+}
+/**********************title**********************/
+#title {
+    width: 100%;
+    /*height: 50px;*/
+    position: absolute;
+    text-align: center;
+    font-size: 2.1em;
+    /*border: 1px solid red;*/
+    margin:120px auto;
+    /*display: none;*/
+}
+/**********************section1 네비**********************/
+#section1_nav{
+    width: 100%;
+    height: 100px;
+    /*border: 1px solid black;*/
+    margin: 50px auto 0 auto;
+    position: relative;
+}
+#section1_nav nav{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#section1_nav nav ul{
+    display: flex;
+    justify-content: center;
+}
+#section1_nav nav ul li{
+    margin: 10px;
+    font-size: 1em;
+    color: #AAAAAA;
+    font-weight: bolder;
+    list-style: none;
+    cursor: pointer;
+    letter-spacing:1px;
+}
+#section1_nav nav ul .section1_nav_img{
+    width: 35px;
+    height: 35px;
+    background-color: #E9E9E9;
+    border-radius: 50%;
+    text-align: center;
+}
+#section1_nav nav ul .section1_nav_img img{
+    margin-top: 10px;
+}
+.active{
+    color: black !important;
+    border-bottom: 2px solid black;
+}
+/**********************section1**********************/
+#section1{
+    height: auto;
+    width: 1141px;
+    /*border: 1px solid red;*/
+    margin: 0 auto;
+    /*position: absolute;*/
+}
+.bor{
+    border: 1px solid red;
+}
+.sec1-mb-90{
+    margin-bottom: 90px;
+}
+#section1 img{
+    /*object-fit: cover;*/
+}
+#section1 #section1_firstLine{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#section1 .section1_imgBox{
+    width: auto;
+    height: auto;
+    position: relative;
+    /*border: 1px solid black;*/
+}
+#section1 .Classification{
+    position: absolute;
+    font-weight: bolder;
+    color: white;
+    letter-spacing: 1px;
+    bottom: 10px;
+    left: 10px;
+}
+#section1 .section1_txtBox h3,
+#section1 .section1_txtBox p{
+    margin-left: 10px;
+}
+#section1 .section1_txtBox h3{
+    font-size: 18px;
+}
+#section1 .section1_txtBox p{
+    font-size: 13px;
+}
+#section1 #section1_secondLine{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#section1 #section1_thirdLine{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+/**********************section1_imgHover**********************/
+.box{
+    width: 285px;
+    height: 325px;
+}
+#section1 .box:hover .section1_txtBox{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+#section1 .section1_imgHoverBox{
+    position: absolute;
+    width: 245px;
+    height: 317px;
+    background-color: #60227E;
+    opacity: 0.9;
+    display: none;
+    margin-top: 60px;
+}
+#section1 .section1_imgHoverBox .section1_imgHoverTxt{
+    width: 200px;
+    height: 317px;
+    z-index: 5;
+}
+#section1 .section1_imgHoverBox h2,
+#section1 .section1_imgHoverBox span,
+#section1 .section1_imgHoverBox p{
+    position: absolute;
+    color: white;
+}
+#section1 .section1_imgHoverBox h2{
+    top: 50px;
+    left: 20px;
+}
+#section1 .section1_imgHoverBox span{
+    top: 200px;
+    left: 30px;
+}
+#section1 .section1_imgHoverBox p{
+    bottom: 30px;
+    left: 10px;
+    font-size: 13px;
+}
+#section1 .box:hover .section1_imgHoverBox{
+    display: block;
+    z-index: 2;
+}
+/*#section1 .box:hover .section1_imgHoverBox .section1_imgHoverTxt{*/
+/*    z-index: 3;*/
+/*}*/
+#section1 .box:hover .Classification{
+    top: 20px;
+    left: 20px;
+}
+.arrow{
+    color: #1A191B;
+}
+/**********************PlusBtn**********************/
+#PlusBtn_box{
+    width: 100%;
+    height: auto;
+    margin: 80px 0 80px 0;
+}
+#PlusBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #EFEFEF;
+    margin: 0 auto;
+}
+/**********************footer**********************/
+#footer{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background-color: black;
+    color: #999999;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer div{
+    position: relative;
+}
+#footer div img{
+    margin-bottom: 30px;
+}
+/***************************************************************************/
+/*********************************미디어 쿼리*********************************/
+/***************************************************************************/
+/***************모니터 크기***************/
+@media screen and (min-width: 1200px){
+    #menu,
+    .close,
+    #section1_mobile,
+    #hamburger{
+        display: none;
+    }
+    #language{
+        display: block;
+    }
+}
+/**************타블렛 사이즈***************/
+@media screen and (min-width: 841px) and (max-width: 1199px){
+    #topGnb ul li,
+    #title,
+    #language{
+        display: none;
+    }
+    #hamburger{
+        display: block;
+        margin-right: 30px;
+        scale: 1.3;
+    }
+    #topGnb img{
+        margin-left: 30px;
+    }
+}
+/**************모바일 사이즈***************/
+@media screen and (max-width: 840px) {
+    #topGnb ul li,
+    #title,
+    #language {
+        display: none;
+    }
+    #topGnb {
+        /*background-color: #1A191B;*/
+    }
+    #hamburger {
+        display: block;
+        margin-right: 30px;
+        scale: 1.3;
+    }
+    #topGnb img {
+        margin-left: 30px;
+    }
+}

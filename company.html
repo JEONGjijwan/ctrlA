@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>회사소개 > 컨트롤에이, CONTROLA</title>
     <link rel="icon" href="x" type="image/x-icon">
-    <link rel="stylesheet" href="css/css2.css">
-    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/company.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -360,11 +361,13 @@
         let subMenu2=$("#subMenu2");
         let navLi=$("#topGnb li a");
         /********************topGnb 활성화 및 비활성화********************/
-
         subMenu.hide();
-        // subMenu2.hide();
+        subMenu2.hide();
+        header.mouseleave(function (){
+            subMenu.hide();
+            subMenu2.hide();
+        })
         navLi.eq(0).hover(function (){
-            // subList1.show();
             subMenu.show();
             subMenu2.hide();
         });subMenu.mouseleave(function (){
@@ -374,7 +377,7 @@
             subMenu2.show();
             subMenu.hide();
         });subMenu2.mouseleave(function (){
-            // subMenu2.hide();
+            subMenu2.hide();
         });
 
         navLi.eq(2).hover(function (){
