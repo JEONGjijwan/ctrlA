@@ -174,7 +174,7 @@
     </div>
     <!--------------------------------section1 (▼ 구조 변경 중 ▼)-------------------------------------->
     <section id="section1">
-        <div id="section1_firstLine" class="sec1-mb-90">
+        <div class="section1_LineBox sec1-mb-90">
             <div class="po box">
                 <!--hover-->
                 <div class="section1_imgHoverBox">
@@ -255,8 +255,8 @@
                     <p>커스텀아츠 주식회사 2021.09.10</p>
                 </div>
             </div>
-        </div>
-        <div id="section1_secondLine" class="sec1-mb-90">
+        </div><!---------------Line 1--------------->
+        <div class="section1_LineBox sec1-mb-90">
             <div class="po box">
                 <!--hover-->
                 <div class="section1_imgHoverBox">
@@ -337,8 +337,8 @@
                     <p>주식회사 리을 2021.05.10</p>
                 </div>
             </div>
-        </div>
-        <div id="section1_thirdLine" class="sec1-mb-90">
+        </div><!---------------Line 2--------------->
+        <div id="section1_thirdLine" class="sec1-mb-90 bor">
             <div class="po box">
                 <!--hover-->
                 <div class="section1_imgHoverBox">
@@ -377,6 +377,68 @@
                 <div class="section1_txtBox">
                     <h3>넛츠크루 기업 및 다국어 서비스 제작</h3>
                     <p>넛츠크루 2021.03</p>
+                </div>
+            </div>
+            <div class="po box Consulting">
+                <!--hover-->
+                <div class="section1_imgHoverBox">
+                    <div class="section1_imgHoverTxt">
+                        <h2>공감랩 AVM 서비스 UI UX 컨설팅</h2>
+                        <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+                        <p>자동 부동산 시세조회 및 임대차,부동산금융서비스</p>
+                    </div>
+                </div>
+                <div class="section1_imgBox">
+                    <span class="Classification">Consulting</span>
+                    <img src="work_/file_1601290756_.png" alt="">
+                </div>
+                <div class="section1_txtBox">
+                    <h3>공감랩 AVM 서비스 UI UX 컨설팅</h3>
+                    <p>공감랩 2016.10</p>
+                </div>
+            </div>
+            <div class="po box Consulting">
+                <!--hover-->
+                <div class="section1_imgHoverBox">
+                    <div class="section1_imgHoverTxt">
+                        <h2>증권 버티컬 서비스 UI/UX컨설팅</h2>
+                        <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+                        <p>증권 버티컬 서비스 UI/UX컨설팅</p>
+                    </div>
+                </div>
+                <div class="section1_imgBox">
+                    <span class="Classification">Consulting</span>
+                    <img src="work_/file_1601290638_.png" alt="">
+                </div>
+                <div class="section1_txtBox">
+                    <h3>증권 버티컬 서비스 UI/UX컨설팅</h3>
+                    <p>2016.07</p>
+                </div>
+            </div>
+        </div><!---------------Line 3--------------->
+        <div class="sec1-mb-90">
+            <div class="po box Consulting">
+                <!--hover-->
+                <div class="section1_imgHoverBox">
+                    <div class="section1_imgHoverTxt">
+                        <h2>증권 버티컬 서비스 UI/UX컨설팅</h2>
+                        <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+                        <p>증권 버티컬 서비스 UI/UX컨설팅</p>
+                    </div>
+                </div>
+                <div class="section1_imgBox">
+                    <span class="Classification">Consulting</span>
+                    <img src="work_/file_1601290638_.png" alt="">
+                </div>
+                <div class="section1_txtBox">
+                    <h3>증권 버티컬 서비스 UI/UX컨설팅</h3>
+                    <p>2016.07</p>
                 </div>
             </div>
         </div>
@@ -513,6 +575,20 @@
         activeClass.click(function (){
             $(this).addClass("active");
             activeClass.not(this).removeClass("active")
+        })
+        /********************list 별 상자 구분********************/
+        let box=$("#section1 .box")
+        let consulting=$("#section1 .Consulting")
+
+        consulting.hide();
+        activeClass.eq(0).click(function (){/* All */
+            box.show();
+            $(".Consulting").hide();
+        })
+        activeClass.eq(1).click(function (){ /* consulting */
+            consulting.show();
+            box.not(".Consulting").hide();
+            box.removeClass(sec1-mb-90);
         })
     })
 </script>
