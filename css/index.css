@@ -1,0 +1,1101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.material-symbols-outlined .arrow2 {
+    color: white;
+
+    font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing:-1.5px;
+}
+.material-symbols-outlined .arrow2 {
+    color: white;
+}
+.hidden{
+    overflow: hidden;
+}
+#wrapper{
+    width: 100%;
+    height: 100%;
+}
+header {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    /*overflow: hidden;*/
+    display: flex;
+    position: absolute;
+    /*  border: 1px solid red;*/
+}
+header:hover #topGnb,
+header:hover #subMenu,
+header:hover #subMenu2{
+    background-color: white;
+    transition: background-color 0.5s;
+    color: black;
+}
+#subMenu2 {
+    display: none;
+}
+/*********************************side box*********************************/
+#sideBox{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+    height: 500px;
+    box-sizing: border-box;
+    text-align: center;
+    right: 0;
+    margin-right: 30px;
+    top: 30%;
+    z-index: 99999;
+}
+#sideBox #yellow{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    right: -10px;
+    top: 38px;
+    /*margin-right: 20px;*/
+    background-color: #fae100;
+    border-radius: 50%;
+    /*border: 1px solid blue;*/
+    z-index: -1;
+}
+#sideBox .side{
+    width: 20px;
+    height: 20px;
+    margin: 14px auto;
+    cursor: pointer;
+}
+#sideTxt{
+    width: 120px;
+    height: 600px;
+    position: fixed;
+    top: 27%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    right: 80px;
+}
+#sideTxt ul li{
+    /*display: none;*/
+    list-style: none;
+    height: 18px;
+    margin: 20px 0 30px 0;
+    font-weight: bolder;
+    z-index: 99999;
+}
+#sideTxt ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 0.7em;
+    margin-left: 30px;
+    z-index: 900;
+}
+/**********************상단 네비**********************/
+#topGnb {
+    width: 100%;
+    height: 100px;
+    z-index: 9;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+#topGnb:hover {
+    /*background-color: white;*/
+    color: #1A191B;
+    transition: background-color 0.5s;
+}
+#topGnb #language,
+#topGnb #hamburger {
+    color: black;
+    cursor: pointer;
+}
+#topGnb ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0;
+}
+#topGnb ul li {
+    width: 15%;
+    float: left;
+    list-style: none;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+    left: -40px;
+}
+#topGnb ul li a::after {
+    content: "";
+    width: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    transition: width 0.5s;
+    margin: 0 auto;
+}
+#topGnb ul li:hover a::after {
+    width: 50%;
+    background-color: purple;
+}
+#topGnb ul li:hover a {
+    color: purple;
+    transition: color 0.5s;
+}
+#topGnb ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2em;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+#topGnb span {
+    color: white;
+    margin-top: 40px;
+}
+#topGnb img {
+    margin-top: 40px;
+    cursor: pointer;
+}
+/**********************상단 네비 서브메뉴**********************/
+#subMenu {
+    width: 100%;
+    height: 110px;
+    position: absolute;
+    /*margin-top: 100px;*/
+    z-index: 99999 !important;
+    /*background-color: white;*/
+    box-sizing: border-box;
+    transition: background-color 0.5s;
+    display: none;
+}
+#subMenu .subList {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /*background-color: white;*/
+    transition: background-color 0.5s;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid lightgrey;
+    position: relative;
+    z-index: 9;
+    box-sizing: border-box;
+}
+#subMenu .subList li {
+    width: 10%;
+    height: 100%;
+    float: left;
+    /*margin: 30px;*/
+    list-style: none;
+    font-weight: bolder;
+    position: relative;
+    text-align: center;
+    z-index: 99;
+}
+#subMenu .subList li a {
+    display: block;
+    position: relative;
+    font-size: 1em;
+    color: black;
+    margin-top: 40px;
+    text-decoration: none;
+    z-index: 999 !important;
+}
+#subMenu .subList li a:hover{
+    color: #60227E;
+    transition: color 0.5s;
+}
+/*#subMenu li a{
+     position: absolute;
+}*/
+#subMenu li:hover,
+#subMenu2 ul li a:hover{
+    color: #60227E;
+    transition: color 0.3s;
+}
+#subMenu2{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    /*background-color: white;*/
+    font-size: 0.9em;
+    border-top: 1px solid lightgrey;
+    box-sizing: border-box;
+}
+#subMenu2 #subMenu2_lastTxt{
+    margin-left: 10px;
+}
+#subMenu2 div{
+    width: 220px;
+    /*border: 1px solid blue;*/
+    /*border-top: 1px solid lightgrey;*/
+}
+#subMenu2 div ul{
+    width: 100%;
+    height: 100%;
+}
+#subMenu2 #subMenu2_firstBox{
+    width: 200px;
+}
+#subMenu2 #subMenu2_firstBox #subMenu2_textBox{
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+#subMenu2  div p{
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin: 10px 0 10px 0;
+}
+#subMenu2 #subMenu2_firstBox .subMenu2_menu{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+#subMenu2 ul li{
+    position: relative;
+    list-style:none;
+    float: left;
+    margin-bottom: 10px;
+}
+#subMenu2 ul li a{
+    text-decoration: none;
+    position: relative;
+    color: #5B6168;
+}
+#subMenu2 ul li a:nth-of-type(1){
+    margin-right: 10px;
+}
+/*********************************모바일 서브 메뉴*********************************/
+.mobileGnb{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.mobileMenu{
+    list-style: none;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-top: 1px solid lightgrey;
+}
+.mobileGnb #mobileTop{
+    /*z-index: 200;*/
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+}
+.mobileMenu li{
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: bolder;
+}
+.mobileMenu li a{
+    color: #60227E;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+.mobileMenu #subM1 li a{
+    color: black;
+}
+.mobileMenu #subM2 li a{
+    color: #5B6168;
+}
+.mobileMenu #subM1 li a:hover,
+.mobileMenu #subM2 li a:hover{
+    color: #60227E;
+    transition: color 0.5s;
+}
+.moreBtn1,
+.moreBtn2,
+.lessBtn1,
+.lessBtn2{
+    display: flex;
+    position: absolute;
+    left:80%;
+    cursor: pointer;
+    z-index: 9;
+}
+.mobileGnb .mobileMenu #subM1{
+    width: 100%;
+    height: 120px;
+    background-color: #F9FAFB;
+    display: flex;
+    align-items: center;
+}
+.mobileGnb .mobileMenu #subM1 li{
+    position: relative;
+    left: -20px;
+    list-style: none;
+    font-size: 0.8em;
+}
+.mobileGnb .mobileMenu #subM2{
+    width: 100%;
+    height: 175px;
+    background-color: #F9FAFB;
+    display: flex;
+    align-items: center;
+    /*border: 1px solid red;*/
+}
+.mobileGnb .mobileMenu #subM2 li{
+    position: relative;
+    left: -20px;
+    list-style: none;
+    font-size: 1.1em;
+    /*border: 1px solid black;*/
+    margin-top: 10px;
+}
+.mobileGnb .mobileMenu #subM2 li:nth-of-type(2),
+.mobileGnb .mobileMenu #subM2 li:nth-of-type(3),
+.mobileGnb .mobileMenu #subM2 li:nth-of-type(4){
+    font-size: 0.7em;
+}
+/*********************************carousel*********************************/
+#carousel1{
+    position: relative;
+    z-index: 1;
+}
+#carousel1 .carousel-inner .carousel-item img{
+    height: auto;
+    object-fit: cover;
+}
+.carousel-indicators{
+    cursor: pointer;
+}
+.carousel-inner .carousel-item{
+    width: 100%;
+    height: 100%;
+}
+.carousel-item .carousel1{
+    position: absolute;
+    width: 80%;
+    top: 30%;
+    left: 50%;
+    margin-left: -40%;
+    display: block;
+}
+.carousel-item .carousel1 a{
+    text-decoration: none;
+    color: white;
+}
+.carousel-item .carousel1 a .t1{
+    font-weight: bolder;
+    font-size: 2.3em;
+    color: lightgrey;
+    opacity: 0.5;
+}
+.carousel-item .carousel1 a .t2{
+    font-size: 3.8em;
+}
+.carousel-item .carousel1 a .t3{
+    font-size: 1.5em;
+}
+#language,#menu{
+    cursor: pointer;
+}
+/*********************************section1*********************************/
+#sec1{
+    width: 100%;
+}
+#sec1 .imgBox{
+    width: 73%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 130px auto 0;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+#sec1 .imgBox .mainBox{
+    width: 285px;
+    height: 325px;
+}
+#sec1 .imgBox img{
+    cursor: pointer;
+}
+#sec1 .imgBox .box{
+    position: absolute;
+    width: 285px;
+    height: 325px;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+#sec1 .imgBox .box p:nth-of-type(3){
+    position: relative;
+    left: 40px;
+}
+#sec1 .imgBox .box span{
+    position: relative;
+    left: 40px;
+    top: 50px;
+}
+#sec1 .imgBox .box .first{
+    font-weight: bolder;
+    font-size: 1.1em;
+    position: relative;
+    left: 40px;
+    top: 20px;
+}
+#sec1 .imgBox .box .second{
+    font-weight: bolder;
+    font-size: 1.8em;
+    position: relative;
+    left: 40px;
+    top: 20px;
+}
+#sec1 .imgBox .box .last{
+    font-size: 0.7em;
+    position: relative;
+    top: 70px;
+}
+#sec1 .imgBox div #plusBox img:nth-of-type(2){
+    /*display: none;*/
+}
+#sec1 #plusBox{
+    border: 1px solid black;
+    width: 285px;
+    height: 325px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #EFEFEF;
+}
+#sec1 .small{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: white;
+    position: relative;
+    left: -20px;
+    top: 210px;
+    z-index: 99;
+    cursor: pointer;
+    display: none;
+}
+#sec1 #smallcross{
+    width: 20px;
+    height: 20px;
+    z-index: 99;
+    position: absolute;
+    /*display: none;*/
+}
+#sec1 .imgBox div:hover .box,
+#sec1 .imgBox div:hover #plusBox{
+    display: block;
+    background-color: #60227E;
+    opacity: 0.9;
+    z-index: 9;
+}
+#sec1 .imgBox div:hover #plusBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+/*********************************section2*********************************/
+#sec2{
+    width: 100%;
+    height: 800px;
+    /*border: 3px solid greenyellow;*/
+    box-sizing: border-box;
+    margin-top: 130px;
+    overflow: hidden
+}
+#sec2 #project{
+    width: 100%;
+    height: 40%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background-color: #1A191B;
+    /*border: 5px solid red;*/
+}
+#sec2 #project p{
+    font-size: 1.6em;
+    position: relative;
+    margin-top: 8%;
+    left: 10%;
+}
+#sec2 #project #proBox{
+    text-align: center;
+    line-height: 60px;
+    width: 150px;
+    height: 60px;
+    border: 1px solid white;
+    position: relative;
+    top: 10%;
+    left: 10%;
+    font-size: 1.2em;
+}
+#sec2 #project #proBox a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 0.8em;
+    font-weight: bolder;
+}
+#sec2 #project h3{
+    position: relative;
+    font-weight: bolder;
+    left: 10%;
+    margin-top: 3%;
+    font-size: 2.7em;
+}
+#sec2 #project #txt{
+    width: 35px;
+    position: relative;
+    z-index: 1;
+}
+#sec2 #project #txt::before{
+    display: block;
+    content: '';
+    position: absolute;
+    top: 13px;
+    right: -12px;
+    z-index: -1;
+    width: 25px;
+    height: 25px;
+    background: #60227e;
+}
+#sec2 #Freenext{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: left;
+}
+#sec2 #Freenext .Fbox{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#sec2 #Freenext .Fbox .txt1{
+    position: absolute;
+    margin-top: -200px;
+    color: white;
+    font-size: 4.2em;
+    font-weight: bolder;
+}
+#sec2 #Freenext .Fbox .txtX{
+    position: absolute;
+    /*left: 37%;*/
+}
+#sec2 #Freenext .Fbox .txt2{
+    position: absolute;
+    /*left: 30%;*/
+    /*top: 50%;*/
+    color: white;
+    font-size: 1.2em;
+}
+#sec2 #Freenext .Fbox .txtX2{
+    position: absolute;
+    /*left: 31%;*/
+}
+#sec2 #Freenext .Fbox .arrow{
+    position: absolute;
+    left: 45%;
+    bottom: 15%;
+    color: #868586;
+    font-size: 5em;
+    cursor: pointer;
+}
+#sec2 #Freenext .Fbox .arrow:hover{
+    scale: 1.3;
+    transition: all 0.5s;
+    color: white;
+}
+#sec2 #Freenext img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}/*********************************section2 project2*********************************/
+#sec2 #project2{
+    width: 100%;
+    position: relative;
+    background-color: #1A191B;
+    color: white;
+}
+#sec2 #project2 img {
+    position: absolute;
+    right: 80px;
+    bottom: 100px;
+    width: 300px;
+    height: 240px;
+}
+#sec2 #project2 h3{
+    font-size: 2.5em;
+    position: relative;
+    /*left: 50px;*/
+    /*top: 50px;*/
+}
+#sec2 #project #txt2{
+    position: relative;
+    z-index: 1;
+}
+/*#sec2 #project2 #txt2::before{*/
+/*    display: block;*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 13px;*/
+/*    right: -12px;*/
+/*    z-index: -1;*/
+/*    width: 25px;*/
+/*    height: 25px;*/
+/*    background: #60227e;*/
+/*}*/
+#sec2 #project2 p{
+    font-size: 1.3em;
+    position: relative;
+    top: 80px;
+    left: 50px;
+}
+#sec2 #project2 #proBox2{
+    position: relative;
+    width: 170px;
+    height: 65px;
+    border: 1px solid white;
+    left: 50px;
+    top: 100px;
+}
+#sec2 #project2 #proBox2 a{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    line-height: 65px;
+    font-size: 1.3em;
+}
+/*********************************section2 carousel*********************************/
+#carousel2{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#carousel2 .carousel-inner{
+    width: 100%;
+    height: 100%;
+}
+#carousel2 .carousel-inner .carousel2txt{
+    position: absolute;
+    color: white;
+    cursor: pointer;
+}
+#carousel2 .carousel-inner .carousel2txt h3{
+    margin-top: 40px;
+    font-size: 2.2em;
+}
+#carousel2 .carousel-inner .sec2Carousel{
+    width: 100%;
+    height: 100%;
+}
+#carousel2 .carousel-inner .sec2Carousel img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*********************************footer*********************************/
+#footer{
+    width: 100%;
+    height: 230px;
+}
+#footer #footerBox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer #footerBox div{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+
+}
+#footer img{
+    position: absolute;
+    left: 50%;
+    margin-top: -100px;
+    width: 35px;
+    height: 32px;
+}
+#footer #footerBox div p{
+    position: relative;
+    font-size: 0.8em;
+    top: 10%;
+    margin: 0;
+    color: #B0B0B0;
+}
+/***************************************************************************/
+/*********************************미디어 쿼리*********************************/
+/***************************************************************************/
+
+/***************모니터 크기***************/
+@media screen and (min-width: 1200px){
+    #menu,
+    .close,
+    #sec2 #carousel2,
+    #sec2 #project2,
+    #top{
+        display: none;
+    }
+}
+/****************타블렛 사이즈****************/
+@media screen and (min-width: 841px) and (max-width: 1199px){
+    .close,
+    #topGnb ul,
+    #sec2 #carousel2,
+    #menu{
+        display: block;
+    }
+    #topGnb li,
+    #topGnb #language,
+    #sideBox,
+    #sideTxt{
+        display: none;
+    }
+    header{
+        height: 100px;
+    }
+    header:hover #menu{
+        margin-top: 60px;
+    }
+    #sec2 #Freenext{
+        height: 40%;
+    }
+    #sec2 #Freenext .Fbox{
+        display: none;
+        height: 30%;
+    }
+    #topGnb{
+        display: flex;
+        justify-content: space-between;
+    }
+    #menu{
+        scale: 1.5;
+        position: relative;
+        right: 30px;
+        top: 10px;
+    }
+    .close{
+        scale: 1.5;
+        position: relative;
+        right: 40px;
+        top: 10px;
+    }
+    #topGnb #noneHov{
+        position: relative;
+        left: 50px;
+    }
+    #topGnb #actHov{
+        display: none;
+        position: relative;
+        left: 50px;
+    }
+    #topGnb:hover #actHov{
+        display: block;
+    }
+    .carousel-item .carousel1 a .t1{
+        font-size: 1.5em;
+    }
+    .carousel-item .carousel1 a .t2{
+        font-size: 2.5em;
+    }
+    .carousel-item .carousel1 a .t3{
+        font-size: 1.5em;
+    }
+    #carouselExampleIndicators .carousel-inner .carousel-item img{
+        height: 500px;
+    }
+    #sec1 .imgBox{
+        width: 70%;
+    }
+    #sec1 .imgBox .mainBox,
+    #sec1 .imgBox .box,
+    #sec1 .imgBox #plusBox,
+    #sec1 .imgBox .mainBox .main
+    {
+        width: 255px;
+        height: 295px;
+        object-fit: cover;
+    }
+    #sec1 .imgBox .box .first{
+        top: 20px;
+    }
+    #sec1 .imgBox .box .second{
+        font-size: 1.6em;
+        top: 30px;
+    }
+    #sec2 #Freenext{
+        position: relative;
+        height: 45%;
+        width: 100%;
+    }
+    #carousel1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #carousel2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #carousel2 .arrow2{
+        margin-top: 25px;
+        color: #fff;
+        font-size: 2em;
+    }
+    #carousel2 .carousel-inner .carousel2txt{
+        font-size: 1.3em;
+        text-align: center;
+        width: 100%;
+        margin-top: 60px;
+    }
+    #carousel2 .carousel-inner .carousel2txt h3{
+        font-size: 2em;
+    }
+    #sec2 #project{
+        display: none;
+    }
+    #sec2 #project2{
+        display: block;
+        height: 55%;
+    }
+    #sec2 #project2 img {
+        width: 274px;
+        height: 218px;
+    }
+    #sec1 .imgBox{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /*#subMenu {*/
+    /*    z-index: 0;*/
+    /*}*/
+    #wrapper #top{
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        z-index: 999;
+    }
+}
+/**************모바일 사이즈***************/
+@media screen and (max-width: 840px){
+    #language,
+    #topGnb ul li,
+        /*.mobileGnb ul,*/
+    #sec1 #plusBox,
+    #sec1 .imgBox div:hover #plusBox,
+    #sec1 .imgBox .box .first,
+    #sec1 .imgBox .box .second,
+    #sec1 .imgBox .box .last,
+    #sec2 #Freenext .Fbox,
+    #sideBox,
+    #sideTxt{
+        display: none;
+    }
+    header{
+        height: 100px;
+    }
+    header:hover #menu{
+        margin-top: 60px;
+    }
+    #topGnb{
+        display: flex;
+        justify-content: space-between;
+    }
+    #menu{
+        scale: 1.5;
+        display: block;
+        position: relative;
+        right: 30px;
+        top: 10px;
+    }
+    .close{
+        scale: 1.5;
+        display: block;
+        position: relative;
+        right: 40px;
+        top: 10px;
+    }
+    #topGnb #noneHov{
+        position: relative;
+        left: 50px;
+    }
+    #topGnb #actHov{
+        display: none;
+        position: relative;
+        left: 50px;
+    }
+    #topGnb:hover #actHov{
+        display: block;
+    }
+    #sec1 .small{
+        display: block;
+        margin-top: -30px;
+    }
+    #sec1 .small #smallcross{
+        position: relative;
+        top: 8px;
+        left: 9px;
+    }
+    .carousel-item .carousel1 a .t1{
+        font-size: 1.2em;
+    }
+    .carousel-item .carousel1 a .t2{
+        font-size: 1.8em;
+    }
+    .carousel-item .carousel1 a .t3{
+        font-size: 0.8em;
+    }
+    #carouselExampleIndicators .carousel-inner .carousel-item img{
+        height: 400px;
+    }
+    #sec1 .imgBox .mainBox,
+    #sec1 .imgBox .box,
+    #sec1 .imgBox .mainBox .main
+    {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    #sec1 .imgBox{
+        width: 92%;
+        margin-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        /*border: 1px solid red;*/
+        /*justify-content: left;*/
+    }
+    #sec1 .imgBox .box span{
+        position: relative;
+        left: 50%;
+        margin-left: -18px;
+        top: 100px;
+    }
+    #sec2{
+        height:400px;
+    }
+    #sec2 #project{
+        display: none;
+    }
+    #sec2 #Freenext{
+        height: 45%;
+        width: 100%;
+    }
+    #sec2 #project2{
+        /*display: block;*/
+        height: 55%;
+        display: flex;
+    }
+    #sec2 #project2 img{
+        width: 200px;
+        height: 150px;
+        right: 0;
+        top: 40px;
+    }
+    #carousel1,
+    #carousel1 .carousel-inner,
+    #carousel1 .carousel-inner .carousel-item,
+    #carousel1 .carousel-inner .carousel-item img{
+        height: 400px;
+    }
+    #sec2 #carousel2{
+        display: block;
+    }
+    #sec2 #carousel2 .carousel-indicators{
+        position: absolute;
+        left: 0;
+    }
+    #carousel2 .carousel-inner .carousel2txt{
+        position: absolute;
+        color: white;
+        width: 100%;
+        text-align: center;
+    }
+    #carousel2 .carousel-inner .carousel2txt h3{
+        font-size: 1.3em;
+        margin-top: 30px;
+    }
+    #carousel2 .carousel-inner .carousel2txt p{
+        font-size: 0.9em;
+        position: relative;
+    }
+    #carousel2 .arrow2{
+        /*                margin-top: 50px;*/
+        color: #fff;
+        font-size: 2rem;
+
+    }
+    #sec2 #project2 p{
+        left: -110px;
+        top: 80px;
+        font-size: 0.9em;
+    }
+    #sec2 #project2 h3{
+        top: 30px;
+        left: 30px;
+        font-size: 1.2em;
+    }
+    #sec2 #project2 #proBox2{
+        top: 80px;
+        left: -110px;
+        width: 120px;
+        height: 40px;
+    }
+    #sec2 #project2 #proBox2 a{
+        font-size: 0.9em;
+        line-height: 40px;
+    }
+    /*#subMenu {*/
+    /*    z-index: 0;*/
+    /*}*/
+    #wrapper #top{
+        position: fixed;
+        right: 10px;
+        bottom: 50px;
+        z-index: 999;
+    }
+}

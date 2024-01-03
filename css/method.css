@@ -5,11 +5,6 @@
 }
 .material-symbols-outlined .arrow2 {
     color: white;
-    font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 24
 }
 .hidden {
     overflow: hidden;
@@ -18,6 +13,7 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing:-1.5px;
 }
 #wrapper {
     width: 100%;
@@ -35,9 +31,6 @@ header {
 }
 #subMenu2 {
     display: none;
-}
-.po{
-    cursor: pointer;
 }
 /**********************상단 네비**********************/
 #topGnb {
@@ -86,7 +79,7 @@ header {
     right: 0;
     bottom: 0;
     height: 3px;
-    transition: width 0.3s;
+    transition: width 0.5s;
     margin: 0 auto;
 }
 #topGnb ul li:hover a::after {
@@ -114,17 +107,6 @@ header {
     margin-top: 40px;
     cursor: pointer;
 }
-.gnbActive{
-    content: "";
-    width: 50%;
-    background-color: purple;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 3px;
-    margin: 0 auto;
-}
 /**********************상단 네비 서브메뉴**********************/
 #subMenu {
     width: 100%;
@@ -133,8 +115,6 @@ header {
     margin-top: 100px;
     z-index: 99999 !important;
     background-color: white;
-    border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
     box-sizing: border-box;
     transition: background-color 0.5s;
     display: none;
@@ -147,6 +127,7 @@ header {
     transition: background-color 0.5s;
     justify-content: center;
     align-items: center;
+    border-top: 1px solid lightgrey;
     position: relative;
     z-index: 9;
     box-sizing: border-box;
@@ -194,7 +175,6 @@ header {
     background-color: white;
     font-size: 0.9em;
     border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
     box-sizing: border-box;
 }
 #subMenu2 #subMenu2_lastTxt{
@@ -223,10 +203,9 @@ header {
     margin: 10px 0 10px 0;
 }
 #subMenu2 #subMenu2_firstBox .subMenu2_menu{
-    width: 48%;
-    height: 85px;
+    width: 50%;
+    height: 100%;
     float: left;
-    /*border: 1px solid black;*/
 }
 #subMenu2 ul li{
     position: relative;
@@ -267,20 +246,20 @@ header {
     cursor: pointer;
     scale: 1.3;
 }
-.mobileGnb .mobileMenu li{
+.mobileMenu li{
     margin: 20px 0 0 30px;
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: bolder;
 }
-.mobileGnb .mobileMenu li a{
-    color: black;
+.mobileMenu li a{
+    color: #60227E;
     text-decoration: none;
-    /*font-size: 1.3em;*/
+    font-size: 1.3em;
 }
-.mobileGnb .mobileMenu #subM1 li a{
+.mobileMenu #subM1 li a{
     color: black;
 }
-.mobileGnb .mobileMenu #subM2 li a{
+.mobileMenu #subM2 li a{
     color: #5B6168;
 }
 .mobileMenu #subM1 li a:hover,
@@ -294,7 +273,7 @@ header {
 .lessBtn2{
     display: flex;
     position: absolute;
-    left:92%;
+    left:80%;
     cursor: pointer;
     z-index: 9;
 }
@@ -311,7 +290,7 @@ header {
     position: relative;
     left: -20px;
     list-style: none;
-    font-size: 1em;
+    font-size: 0.8em;
 }
 .mobileGnb .mobileMenu #subM2{
     width: 100%;
@@ -331,7 +310,7 @@ header {
 .mobileGnb .mobileMenu #subM2 li:nth-of-type(2),
 .mobileGnb .mobileMenu #subM2 li:nth-of-type(3),
 .mobileGnb .mobileMenu #subM2 li:nth-of-type(4){
-    font-size: 1em;
+    font-size: 0.7em;
 }
 /**********************title**********************/
 #title {
@@ -344,192 +323,154 @@ header {
     margin:120px auto;
     /*display: none;*/
 }
-/**********************section1 네비**********************/
-#section1_nav{
-    width: 100%;
-    height: 100px;
-    /*border: 1px solid black;*/
-    margin: 50px auto 0 auto;
-    position: relative;
-}
-#section1_nav nav{
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-#section1_nav nav ul{
-    display: flex;
-    justify-content: center;
-}
-#section1_nav nav ul li{
-    margin: 10px;
-    font-size: 1em;
-    color: #AAAAAA;
-    font-weight: bolder;
-    list-style: none;
-    cursor: pointer;
-    letter-spacing:1px;
-}
-#section1_nav nav ul .section1_nav_img{
-    width: 35px;
-    height: 35px;
-    background-color: #E9E9E9;
-    border-radius: 50%;
-    text-align: center;
-}
-#section1_nav nav ul .section1_nav_img img{
-    margin-top: 10px;
-}
-.active{
-    color: black !important;
-    border-bottom: 2px solid black;
-}
 /**********************section1**********************/
 #section1{
-    height: auto;
-    width: 1141px;
-    /*border: 1px solid red;*/
-    margin: 0 auto;
-    /*position: absolute;*/
-}
-.bor{
-    border: 1px solid red;
-}
-.sec1-mb-90{
-    margin-bottom: 90px;
-}
-#section1 img{
-    /*object-fit: cover;*/
-}
-#section1 #section1_firstLine{
+    position: relative;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    height: 450px;
+    /*border: 1px solid red;*/
+    /*margin-top: 20px;*/
 }
-#section1 .section1_imgBox{
-    width: auto;
-    height: auto;
+#section1 #allContentBox{
+    position: relative;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /*margin: 50px;*/
+}
+#section1 #allContentBox .contentBox{
     position: relative;
     /*border: 1px solid black;*/
+    width: 430px;
+    height: 100%;
 }
-#section1 .Classification{
-    position: absolute;
-    font-weight: bolder;
+#section1 #allContentBox .contentBox .inside_ContentBox{
+    position: relative;
+    margin-top: 100px;
+}
+#section1 #allContentBox .contentBox .inside_ContentBox h3{
+    position: relative;
+    margin-top: 30px;
+    font-size: 1.5em;
+    letter-spacing:0;
+}
+#section1 #allContentBox .contentBox .inside_ContentBox p{
+    margin-top: 10px;
+    color: #5B6168;
+}
+/**********************section2**********************/
+#section2{
+    width: 100%;
+    height: 730px;
+    /*border: 1px solid red;*/
+/*    display: flex;
+    justify-content: center;*/
+}
+#section2 #section2_txtBox{
+    width: 100%;
+    height: 100px;
+    /*border: 1px solid blue;*/
+    text-align: center;
+    margin-top: 80px;
+}
+#section2 #section2_txtBox h1{
+    font-size: 2.2em;
+}
+#section2 #section2_txtBox p{
+    margin-top: 15px;
+    color: #5B6168;
+    font-size: 0.9em;
+}
+/**blueCircle**/
+#section2 #section2_blueCircleBox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    width: 600px;
+    height: 150px;
+    z-index: 1;
+    /*border: 1px solid black;*/
+}
+#section2 #section2_blueCircleBox .section2_blueCircle{
+    width: 120px;
+    height: 120px;
+    background-color: #53618C;
+    border-radius: 50%;
+    text-align: center;
+    opacity: 0.9;
+    margin: 28px;
+}
+#section2 #section2_blueCircleBox .section2_blueCircle p{
+    margin-top: 20px;
     color: white;
-    letter-spacing: 1px;
-    bottom: 10px;
-    left: 10px;
 }
-#section1 .section1_txtBox h3,
-#section1 .section1_txtBox p{
-    margin-left: 10px;
-}
-#section1 .section1_txtBox h3{
-    font-size: 18px;
-}
-#section1 .section1_txtBox p{
-    font-size: 13px;
-}
-#section1 #section1_secondLine{
+/**purpleCircle**/
+#section2 #section2_purpleCircleBox{
+    /*position: absolute;*/
     width: 100%;
     display: flex;
     justify-content: center;
+    /*border: 1px solid black;*/
+    margin: -100px auto;
+    /*text-align: center;*/
 }
-#section1 #section1_thirdLine{
-    width: 100%;
-    display: flex;
-    justify-content: left;
+#section2 #section2_purpleCircleBox .section2_allPurpleCircle{
+    /*border: 1px solid yellow;*/
+    width: 170px;
+    margin: 3px;
 }
-/**********************section1_imgHover**********************/
-.box{
-    width: 285px;
-    height: 325px;
+#section2 #section2_purpleCircleBox .section2_allPurpleCircle ul{
+    padding: 0 20px 0 40px;
+    letter-spacing:-1px;
+    text-align: center;
 }
-#section1 .box:hover .section1_txtBox{
-    display: none;
-    width: 100%;
-    height: 100%;
-}
-#section1 .section1_imgHoverBox{
-    position: absolute;
-    width: 245px;
-    height: 317px;
-    background-color: #60227E;
-    opacity: 0.9;
-    display: none;
-    margin-top: 60px;
-}
-#section1 .section1_imgHoverBox .section1_imgHoverTxt{
-    width: 200px;
-    height: 317px;
-    z-index: 5;
-}
-#section1 .section1_imgHoverBox h2,
-#section1 .section1_imgHoverBox span,
-#section1 .section1_imgHoverBox p{
-    position: absolute;
-    color: white;
-}
-#section1 .section1_imgHoverBox h2{
-    top: 50px;
-    left: 20px;
-}
-#section1 .section1_imgHoverBox span{
-    top: 200px;
-    left: 30px;
-}
-#section1 .section1_imgHoverBox p{
-    bottom: 30px;
-    left: 10px;
+#section2 #section2_purpleCircleBox .section2_allPurpleCircle ul li{
+    list-style: none;
     font-size: 13px;
+    position: relative;
+    text-align: left;
+    margin-top: 5px;
+    /*left: 0;*/
+    /*margin: 3px 30px;*/
 }
-#section1 .box:hover .section1_imgHoverBox{
-    display: block;
-    z-index: 2;
-}
-/*#section1 .box:hover .section1_imgHoverBox .section1_imgHoverTxt{*/
-/*    z-index: 3;*/
-/*}*/
-#section1 .box:hover .Classification{
-    top: 20px;
-    left: 20px;
-}
-.arrow{
-    color: #1A191B;
-}
-/**********************PlusBtn**********************/
-#PlusBtn_box{
-    width: 100%;
-    height: auto;
-    margin: 80px 0 80px 0;
-}
-#PlusBtn{
+#section2 #section2_purpleCircleBox .section2_allPurpleCircle .section2_purpleCircle{
+    width: 120px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 80px;
+    background-color: #70388B;
     border-radius: 50%;
-    background-color: #EFEFEF;
-    margin: 0 auto;
+    text-align: center;
+    /*opacity: 0.9;*/
+    margin: 30px auto;
+    /*border: 1px solid greenyellow;*/
+}
+#section2 #section2_purpleCircleBox .section2_allPurpleCircle .section2_purpleCircle p{
+    position: relative;
+    font-weight: bolder;
+    color: white;
 }
 /**********************footer**********************/
 #footer{
-    position: relative;
     width: 100%;
-    height: 180px;
-    background-color: black;
+    height: 200px;
+    background-color: #1A191B;
     color: #999999;
+}
+#footer #footerBox{
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-#footer div{
-    position: relative;
+#footer #footerBox div img{
+    margin-top: 50px;
 }
-#footer div img{
-    margin-bottom: 30px;
+#footer #footerBox p{
+    font-size: 14px;
+}
+#footer #footerBox p:nth-of-type(1){
+    margin-top: 25px;
 }
 /***************************************************************************/
 /*********************************미디어 쿼리*********************************/
@@ -538,7 +479,6 @@ header {
 @media screen and (min-width: 1200px){
     #menu,
     .close,
-    #section1_mobile,
     #hamburger{
         display: none;
     }
@@ -549,7 +489,7 @@ header {
 /**************타블렛 사이즈***************/
 @media screen and (min-width: 841px) and (max-width: 1199px){
     #topGnb ul li,
-    #title,
+    #section1_mobile,
     #language{
         display: none;
     }
@@ -560,24 +500,24 @@ header {
     }
     #topGnb img{
         margin-left: 30px;
+        width: 120px;
+        height: 20px;
     }
 }
 /**************모바일 사이즈***************/
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 840px){
     #topGnb ul li,
-    #title,
-    #language {
+    #language{
         display: none;
     }
-    #topGnb {
-        /*background-color: #1A191B;*/
-    }
-    #hamburger {
+    #hamburger{
         display: block;
         margin-right: 30px;
         scale: 1.3;
     }
-    #topGnb img {
+    #topGnb img{
         margin-left: 30px;
+        width: 120px;
+        height: 20px;
     }
 }
