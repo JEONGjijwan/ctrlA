@@ -5,6 +5,11 @@
 }
 .material-symbols-outlined .arrow2 {
     color: white;
+    font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
 }
 .hidden {
     overflow: hidden;
@@ -13,7 +18,6 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: 'Noto Sans KR', sans-serif;
-    letter-spacing:-1.5px;
 }
 #wrapper {
     width: 100%;
@@ -79,7 +83,7 @@ header {
     right: 0;
     bottom: 0;
     height: 3px;
-    transition: width 0.5s;
+    transition: width 0.3s;
     margin: 0 auto;
 }
 #topGnb ul li:hover a::after {
@@ -107,6 +111,17 @@ header {
     margin-top: 40px;
     cursor: pointer;
 }
+.gnbActive{
+    content: "";
+    width: 50%;
+    background-color: purple;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    margin: 0 auto;
+}
 /**********************상단 네비 서브메뉴**********************/
 #subMenu {
     width: 100%;
@@ -115,6 +130,8 @@ header {
     margin-top: 100px;
     z-index: 99999 !important;
     background-color: white;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
     box-sizing: border-box;
     transition: background-color 0.5s;
     display: none;
@@ -127,7 +144,6 @@ header {
     transition: background-color 0.5s;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid lightgrey;
     position: relative;
     z-index: 9;
     box-sizing: border-box;
@@ -175,6 +191,7 @@ header {
     background-color: white;
     font-size: 0.9em;
     border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
     box-sizing: border-box;
 }
 #subMenu2 #subMenu2_lastTxt{
@@ -203,9 +220,10 @@ header {
     margin: 10px 0 10px 0;
 }
 #subMenu2 #subMenu2_firstBox .subMenu2_menu{
-    width: 50%;
-    height: 100%;
+    width: 48%;
+    height: 85px;
     float: left;
+    /*border: 1px solid black;*/
 }
 #subMenu2 ul li{
     position: relative;
@@ -226,6 +244,7 @@ header {
     width: 100%;
     height: 100%;
     display: none;
+    position: relative;
 }
 .mobileMenu{
     list-style: none;
@@ -234,33 +253,32 @@ header {
     width: 100%;
     height: 100%;
     background-color: white;
-    z-index: 10;
+    z-index: 10!important;
 }
 .mobileGnb #mobileTop{
     /*z-index: 200;*/
     display: flex;
     justify-content: space-between;
     margin: 40px;
-    z-index: 99999!important;
 }
 .mobileGnb #mobileTop .close{
     cursor: pointer;
     scale: 1.3;
 }
-.mobileMenu li{
+.mobileGnb .mobileMenu li{
     margin: 20px 0 0 30px;
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: bolder;
 }
-.mobileMenu li a{
-    color: #60227E;
+.mobileGnb .mobileMenu li a{
+    color: black;
     text-decoration: none;
-    font-size: 1.3em;
+    /*font-size: 1.3em;*/
 }
-.mobileMenu #subM1 li a{
+.mobileGnb .mobileMenu #subM1 li a{
     color: black;
 }
-.mobileMenu #subM2 li a{
+.mobileGnb .mobileMenu #subM2 li a{
     color: #5B6168;
 }
 .mobileMenu #subM1 li a:hover,
@@ -274,7 +292,7 @@ header {
 .lessBtn2{
     display: flex;
     position: absolute;
-    left:80%;
+    left:92%;
     cursor: pointer;
     z-index: 9;
 }
@@ -291,7 +309,7 @@ header {
     position: relative;
     left: -20px;
     list-style: none;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 .mobileGnb .mobileMenu #subM2{
     width: 100%;
@@ -311,7 +329,7 @@ header {
 .mobileGnb .mobileMenu #subM2 li:nth-of-type(2),
 .mobileGnb .mobileMenu #subM2 li:nth-of-type(3),
 .mobileGnb .mobileMenu #subM2 li:nth-of-type(4){
-    font-size: 0.7em;
+    font-size: 1em;
 }
 /**********************title**********************/
 #title {
@@ -327,241 +345,113 @@ header {
 /**********************section1**********************/
 #section1{
     position: relative;
-    width: 100%;
-    height: 450px;
-}
-#section1 #allContentBox{
-    position: relative;
-    height: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    /*margin: 50px;*/
-}
-#section1 #allContentBox .contentBox{
-    position: relative;
+    width: 70%;
+    height: 200px;
+    margin: 20px auto;
     /*border: 1px solid black;*/
-    width: 430px;
-    height: 100%;
 }
-#section1 #allContentBox .contentBox .inside_ContentBox{
-    position: relative;
-    margin-top: 100px;
-}
-#section1 #allContentBox .contentBox .inside_ContentBox h3{
-    position: relative;
-    margin-top: 30px;
-    font-size: 1.5em;
-    letter-spacing:0;
-}
-#section1 #allContentBox .contentBox .inside_ContentBox p{
-    margin-top: 10px;
-    color: #5B6168;
-}
-/***display-ContentBox***/
-#section1 #d-ContentBox{
-    position: relative;
-    height: 550px;
-    margin-top: -120px;
-    display: none;
-}
-#section1 #d-ContentBox .contentBox{
+#section1 #section1_allTxtBox{
+    width: 100%;
+    height: 200px;
     display: flex;
-    margin: 30px 30px 30px 0;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    /*padding: 250px;*/
 }
-#section1 #d-ContentBox .contentBox .inside_txtBox p{
-    color: #5B6168;
-    /*font-size: 0.9em;*/
+#section1 #section1_allTxtBox span{
+    position: relative;
+    display: block;
+    width: 250px;
+    padding: 10px;
+    border-bottom: 2px solid black;
+    font-weight: bolder;
 }
-#section1 #d-ContentBox .contentBox .inside_ContentBox{
-    width: 200px;
-    text-align: center;
+#section1 #section1_allTxtBox p{
+    position: relative;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 15px;
 }
-#section1 #d-ContentBox .contentBox .inside_ContentBox img{
-    margin-top: 20px;
+#section1 #section1_allTxtBox #section1_lastTxtBox{
+    margin-top: 21px;
+}
+/**********************section1_mobile**********************/
+#section1 #section1_mobileBox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    float: left;
+    /*border: 3px solid green;*/
+    display: flex;
+}
+#section1 #section1_mobileBox #section1_mobileTitleBox{
+    position: relative;
+    /*border: 1px solid red;*/
+    height: 100%;
+    width: 100px;
+    padding: 20px;
+    margin-left: -50px;
+}
+#section1 #section1_mobileBox #section1_mobileTitleBox div{
+    width: 60px;
+    border-bottom: 2px solid black;
+    font-size: 15px;
+    font-weight: bolder;
+    margin: 20px 20px 20px 0;
+}
+#section1 #section1_mobileBox #section1_mobileTxtBox{
+    position: relative;
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 35px 30px 30px 0;
+    font-size: 15px;
+    /*margin-top: 20px;*/
+}
+#section1 #section1_mobileBox #section1_mobileTxtBox p:nth-of-type(2){
+    position: relative;
+    bottom: -5px;
+}
+#section1 #section1_mobileBox #section1_mobileTxtBox p:nth-of-type(3){
+    position: relative;
+    bottom: -10px;
 }
 /**********************section2**********************/
 #section2{
     width: 100%;
-    height: 730px;
+    height: 650px;
     position: relative;
-}
-#section2 #section2_txtBox{
-    width: 100%;
-    height: 100px;
-    /*border: 1px solid blue;*/
-    text-align: center;
-    margin-top: 80px;
-}
-#section2 #section2_txtBox h1{
-    font-size: 2.2em;
-}
-#section2 #section2_txtBox p{
-    margin-top: 15px;
-    color: #5B6168;
-    font-size: 0.9em;
-}
-/**blueCircle**/
-#section2 #section2_blueCircleBox{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin: 50px auto;
-    width: 600px;
-    height: 150px;
-    z-index: 1;
-    /*border: 1px solid black;*/
-}
-#section2 #section2_blueCircleBox .section2_blueCircle{
-    width: 120px;
-    height: 120px;
-    background-color: #53618C;
-    border-radius: 50%;
-    text-align: center;
-    opacity: 0.9;
-    margin: 28px;
-}
-#section2 #section2_blueCircleBox .section2_blueCircle p{
-    margin-top: 20px;
-    color: white;
-}
-/**purpleCircle**/
-#section2 #section2_purpleCircleBox{
-    /*position: absolute;*/
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    /*border: 1px solid black;*/
-    margin: -100px auto;
-    /*text-align: center;*/
-}
-#section2 #section2_purpleCircleBox .section2_allPurpleCircle{
-    /*border: 1px solid yellow;*/
-    width: 170px;
-    margin: 3px;
-}
-#section2 #section2_purpleCircleBox .section2_allPurpleCircle ul{
-    padding: 0 20px 0 40px;
-    letter-spacing:-1px;
-    text-align: center;
-}
-#section2 #section2_purpleCircleBox .section2_allPurpleCircle ul li{
-    list-style: none;
-    font-size: 13px;
-    position: relative;
-    text-align: left;
-    margin-top: 5px;
-    /*left: 0;*/
-    /*margin: 3px 30px;*/
-}
-#section2 #section2_purpleCircleBox .section2_allPurpleCircle .section2_purpleCircle{
-    width: 120px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #70388B;
-    border-radius: 50%;
-    text-align: center;
-    /*opacity: 0.9;*/
-    margin: 30px auto;
-    /*border: 1px solid greenyellow;*/
-}
-#section2 #section2_purpleCircleBox .section2_allPurpleCircle .section2_purpleCircle p{
-    position: relative;
-    font-weight: bolder;
-    color: white;
-}
-/**********************section2 display_box**********************/
-#section2 #display_CircleBox{
-    position: absolute;
-    width: 100%;
-    height: 1200px;
-    /*border: 5px solid green;*/
-    display: none;
-}
-#section2 #display_blueCircleBox{
-    position: absolute;
-    height: auto;
-    /*border: 1px solid red;*/
-    margin-top: 295px;
-}
-#section2 #display_blueCircleBox .display_blueCircle{
-    width: 120px;
-    height: 120px;
-    background-color: #53618C;
-    border-radius: 50%;
-    text-align: center;
-    opacity: 0.9;
-    margin: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#section2 #display_CircleBox #display_blueCircleBox .display_blueCircle p{
-    position: relative;
-    color: white;
     /*border: 1px solid red;*/
 }
-#section2 #display_purpleCircleBox{
-    position: absolute;
-    width: 300px;
-    /*border: 1px solid blue;*/
-    margin-left: 100px;
-}
-#section2 #display_purpleCircleBox .display_purpleCircle p{
+#section2 #section2_mapBox{
     position: relative;
-    /*top: 40px;*/
-    color: white;
-    font-weight: bolder;
-}
-#section2 #display_purpleCircleBox .display_allPurpleCircle{
-    position: relative;
-}
-#section2 #display_purpleCircleBox .display_allPurpleCircle .display_purpleCircle_txtBox{
-    float: left;
-    position: absolute;
-    /*border: 1px solid black;*/
-    margin-top: -130px;
-    margin-left: 160px;
-    display: flex;
-}
-#section2 #display_purpleCircleBox .display_allPurpleCircle .display_purpleCircle_txtBox ul li{
-    list-style: none;
-    font-size: 13px;
-    color: #5B6168;
-}
-#section2 #display_purpleCircleBox .display_allPurpleCircle .display_purpleCircle{
-    width: 120px;
-    height: 120px;
-    background-color: #70388B;
-    border-radius: 50%;
-    text-align: center;
-    opacity: 0.9;
-    margin: 28px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 50px;
+}
+#section2 #section2_mapBox #map{
+    width: 1200px;
+    height: 500px;
 }
 /**********************footer**********************/
 #footer{
     position: relative;
     width: 100%;
-    height: 200px;
-    background-color: #1A191B;
+    height: 180px;
+    background-color: black;
     color: #999999;
-}
-#footer #footerBox{
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#footer #footerBox div img{
-    margin-top: 50px;
+#footer div{
+    position: relative;
 }
-#footer #footerBox p{
-    font-size: 14px;
-}
-#footer #footerBox p:nth-of-type(1){
-    margin-top: 25px;
+#footer div img{
+    margin-bottom: 30px;
 }
 /***************************************************************************/
 /*********************************미디어 쿼리*********************************/
@@ -570,7 +460,8 @@ header {
 @media screen and (min-width: 1200px){
     #menu,
     .close,
-    #hamburger{
+    #hamburger,
+    #section1 #section1_mobileBox{
         display: none;
     }
     #language{
@@ -580,112 +471,68 @@ header {
 /**************타블렛 사이즈***************/
 @media screen and (min-width: 841px) and (max-width: 1199px){
     #topGnb ul li,
-    #section1_mobile,
-    #language,
     #title,
-    #section1 #allContentBox,
-    #section2 #section2_blueCircleBox,
-    #section2 #section2_purpleCircleBox{
+    #language,
+    #section1 #section1_mobileBox{
         display: none;
-    }
-    header{
-        width: 100%;
     }
     #hamburger{
         display: block;
         margin-right: 30px;
         scale: 1.3;
     }
+    header{
+        height: 100px;
+    }
     #topGnb img{
         margin-left: 30px;
-        width: 120px;
-        height: 20px;
     }
-    #section1 #d-ContentBox{
-        display: block;
+    #section1 #section1_allTxtBox span{
+        width: 180px;
     }
-    #section1 #d-ContentBox .contentBox .inside_txtBox h3{
-        margin-bottom: 5px;
+    #section1 #section1_allTxtBox p{
+        font-size: 14px;
+    }
+    #section1 #section1_allTxtBox #section1_lastTxtBox p{
+        margin-left: -10px;
+    }
+    #section1 #section1_allTxtBox #section1_lastTxtBox span{
+        margin-top: -1px;
     }
     #section2{
-        margin-top: 100px;
-        height: 1385px;
+        height: 500px;
     }
-    #display_CircleBox{
-        display: block;
-    }
-    #section2 #display_CircleBox{
-        display: block;
+    #section2 #section2_mapBox #map{
+        width: 80%;
+        height: 400px;
+        margin-top: 25px;
     }
 }
 /**************모바일 사이즈***************/
-@media screen and (max-width: 840px){
+@media screen and (max-width: 840px) {
     #topGnb ul li,
-    #section1_mobile,
-    #language,
     #title,
-    #section1 #allContentBox,
-    #section2 #section2_blueCircleBox,
-    #section2 #section2_purpleCircleBox{
+    #language,
+    #section1 #section1_allTxtBox{
         display: none;
     }
-    header{
-        width: 100%;
+    header {
+        height: 100px;
     }
-    #hamburger{
+    #hamburger {
         display: block;
         margin-right: 30px;
         scale: 1.3;
     }
-    #topGnb img{
-        margin-left: 30px;
-        width: 120px;
-        height: 20px;
-    }
-    #section1 #d-ContentBox{
-        display: block;
-    }
-    #section1 #d-ContentBox .contentBox .inside_ContentBox{
-        width: 130px;
-    }
-    #section1 #d-ContentBox .contentBox .inside_ContentBox img{
-        width: 50px;
-        height: 50px;
-        margin-top: 40px;
-    }
-    #section1 #d-ContentBox .contentBox .inside_txtBox h3{
-        font-size: 18px;
-        margin-bottom: 3px;
-    }
-    #section1 #d-ContentBox .contentBox .inside_txtBox p{
-        font-size: 14px;
-    }
     #section2{
-        margin-top: 100px;
-        height: 1100px;
+        height: 300px;
     }
-    #display_CircleBox{
-        display: block;
+    #section2 #section2_mapBox #map{
+        width: 90%;
+        height: 300px;
+        margin-top: -25px;
     }
-    #section2 #display_CircleBox{
-        display: block;
-    }
-    #section2 #display_blueCircleBox .display_blueCircle{
-        width: 90px;
-        height: 90px;
-        font-size: 13px;
-    }
-    #section2 #display_purpleCircleBox {
-        margin-top: 60px;
-        margin-left: 75px;
-    }
-    #section2 #display_purpleCircleBox .display_allPurpleCircle .display_purpleCircle_txtBox{
-        top: 140px;
-        left: -30px;
-    }
-    #section2 #display_purpleCircleBox .display_allPurpleCircle .display_purpleCircle{
-        width: 90px;
-        height: 90px;
-        font-size: 13px;
+    #footer div p{
+        font-size: 14px;
     }
 }
