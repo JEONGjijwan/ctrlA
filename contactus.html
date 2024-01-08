@@ -189,7 +189,7 @@
   <!--------------------------------section2-------------------------------------->
   <section id="section2">
     <div id="section2_mapBox">
-          <div id="map"></div>
+      <div id="map"></div>
     </div>
   </section>
   <!--------------------------------footer-------------------------------------->
@@ -251,12 +251,16 @@
     let mbMenu=$(".mobileGnb")
     let closeBtn=$(".close")
     let hamburgerBtn=$("#hamburger");
-
+    let sec1=$("#section1")
+    let sec2=$("#section2")
+    let foot=$("#footer")
     mbMenu.hide();
     closeBtn.hide();
-
     hamburgerBtn.click(function (){
       $("body").addClass("hidden");
+      sec1.hide()
+      sec2.hide();
+      foot.hide();
       topGnb.hide();
       mbMenu.show();
       hamburgerBtn.hide();
@@ -264,6 +268,9 @@
       header.hide();
     })
     closeBtn.click(function (){
+      sec1.show();
+      sec2.show();
+      foot.show();
       $("body").removeClass("hidden");
       mbMenu.hide();
       closeBtn.hide();

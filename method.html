@@ -468,6 +468,7 @@
         let subMenu=$("#subMenu");
         let subMenu2=$("#subMenu2");
         let navLi=$("#topGnb li a");
+        let sec1=$("#section1");
         /********************topGnb 활성화 및 비활성화********************/
 
         subMenu.hide();
@@ -506,6 +507,7 @@
         closeBtn.hide();
 
         hamburgerBtn.click(function (){
+            sec1.hide();
             $("body").addClass("hidden");
             topGnb.hide();
             mbMenu.show();
@@ -514,6 +516,7 @@
             header.hide();
         })
         closeBtn.click(function (){
+            sec1.show();
             topGnb.css("background-color","")
             $("body").removeClass("hidden");
             mbMenu.hide();

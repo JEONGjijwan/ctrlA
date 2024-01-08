@@ -278,7 +278,7 @@ header {
 .lessBtn2{
     display: flex;
     position: absolute;
-    left:80%;
+    left:88%;
     cursor: pointer;
     z-index: 9;
 }
