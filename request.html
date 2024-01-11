@@ -14,7 +14,7 @@
             crossorigin="anonymous">
     </script>
 </head>
-<body>
+<body style="overflow-x: hidden">
 <div class="wrapper">
     <!--------------------------------데스크탑네비-------------------------------------->
     <header>
@@ -124,7 +124,7 @@
             <div id="section1_txtBox">
                 <h4>
                     <b>컨트롤 에이</b>는 고객사와의 성공전략을 바탕으로</h4>
-                   <h4>업무의뢰 및 전략적 제휴에 관하여 항상 귀사의 제안을 기다리고 있습니다.
+                <h4>업무의뢰 및 전략적 제휴에 관하여 항상 귀사의 제안을 기다리고 있습니다.
                 </h4>
             </div><!--section1_txtBox-->
             <div id="section1_BtnBox">
@@ -174,16 +174,128 @@
                     <span id="realLastBox">시스템개선</span>
                 </div>
             </div><!--section2_greyBox-->
-        </div><!--section2_AllBox-->
-        <div id="section2_inputBox">
-            <div id="section2_inputBox_txt">
+            <!--------------------------------section2_hideBox-------------------------------------->
+            <div id="section2_hideGreyBox">
+                <div id="section2_hideTxtBox">
+                    <h1>01.상담구분</h1>
+                    <p>아래 상담을 희망하시는 분야를 클릭해서<br>선택해 주시기 바랍니다.</p>
+                </div>
+                <div id="section2_hidePillBox">
+                    <div class="box">
+                        <span>웹사이트</span>
+                        <span>모바일웹</span>
+                        <span>모바일앱</span>
+
+                        <span>컨설팅</span>
+                        <span>기업사이트</span>
+                        <span>서비스</span>
+
+                        <span>커머스</span>
+                        <span>브랜드</span>
+                        <span>CI/BI/패키지</span>
+
+                        <span>통합운영</span>
+                        <span>유지관리</span>
+                        <span>시스템개선</span>
+                    </div>
+                </div>
+            </div><!--section2_hideGreyBox-->
+            </div><!--section2_HideAllBox-->
+            <div id="section2_inputBox">
+                <div id="section2_inputBox_txt">
+                    <h1>02.정보입력</h1>
+                    <p>
+                        <span class="star">*</span>은 필수 입력항목입니다.
+                    </p>
+                </div><!--section2_inputBox_txt-->
+                <div id="section2_form">
+                    <div id="section2_form_txt">
+                        <div>
+                            <p>회사명
+                                <span class="star">*</span>
+                            </p>
+                            <label for="">
+                                <input type="text">
+                            </label>
+                        </div><!--회사명-->
+                        <div>
+                            <p>담당자
+                                <span class="star">*</span>
+                            </p>
+                            <label for="">
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div>
+                            <p>연락처
+                                <span class="star">*</span>
+                            </p>
+                            <label for="">
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div>
+                            <p>이메일
+                                <span class="star">*</span>
+                            </p>
+                            <label for="">
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div>
+                            <p>정부지원사업</p>
+                            <label for="">
+                                <input type="radio" class="radio">
+                                <span class="radio_txt">2019년 수출바우처 사업</span>
+                                <input type="radio" class="radio">
+                                <span class="radio_txt">선택안함</span>
+                            </label>
+                        </div>
+                        <div>
+                            <p>사업명
+                                <span class="star">*</span>
+                            </p>
+                            <label for="">
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div>
+                            <p>상담내용
+                                <span class="star">*</span>
+                            </p>
+                            <label for="">
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </label>
+                        </div>
+                        <div>
+                            <p>사업예산
+                                <span class="star">*</span>
+                            </p>
+                            <label for="">
+                                <input type="text" style="width: 250px">
+                                <span id="money">만원</span>
+                            </label>
+                        </div>
+                        <div id="Input_fileBox">
+                            <p>첨부파일</p>
+                            <label for="">
+                                <input type="file">
+                                <!--                            <label for="" id="fileInput">첨부파일</label>-->
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div><!--section2_inputBox-->
+        <!--------------------------------section3-------------------------------------->
+        <div id="section2_HideInputBox">
+            <div id="section2_HideInputBox_txt">
                 <h1>02.정보입력</h1>
                 <p>
                     <span class="star">*</span>은 필수 입력항목입니다.
                 </p>
             </div><!--section2_inputBox_txt-->
-            <div id="section2_form">
-                <div id="section2_form_txt">
+            <div id="section2_HideForm">
+                <div id="section2_HideForm_txt">
                     <div>
                         <p>회사명
                             <span class="star">*</span>
@@ -238,7 +350,7 @@
                             <span class="star">*</span>
                         </p>
                         <label for="">
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <textarea name=""  cols="30" rows="10"></textarea>
                         </label>
                     </div>
                     <div>
@@ -247,14 +359,14 @@
                         </p>
                         <label for="">
                             <input type="text" style="width: 250px">
-                            <span id="money">만원</span>
+                            <span id="HideMoney">만원</span>
                         </label>
                     </div>
-                    <div id="Input_fileBox">
+                    <div>
                         <p>첨부파일</p>
                         <label for="">
-                            <input type="file">
-<!--                            <label for="" id="fileInput">첨부파일</label>-->
+                            <input type="file" id="file">
+                            <!--<label for="" id="fileInput">첨부파일</label>-->
                         </label>
                     </div>
                 </div>
@@ -284,10 +396,12 @@
                 <span>개인정보 제공에 동의합니다.</span>
             </div>
         </div>
-        <div id="section3_submitBox">
-            <label for="">
-                <a href="">신청</a>
-            </label>
+        <div id="flex-box">
+            <div id="section3_submitBox">
+                <label for="">
+                    <a href="">신청</a>
+                </label>
+            </div>
         </div>
     </section>
     <!--------------------------------footer-------------------------------------->
@@ -350,12 +464,18 @@
         let mbMenu=$(".mobileGnb")
         let closeBtn=$(".close")
         let hamburgerBtn=$("#hamburger");
+        let sec1=$("#section1");
+        let sec2=$("#section2");
+        let sec3=$("#section3");
 
         mbMenu.hide();
         closeBtn.hide();
 
         hamburgerBtn.click(function (){
             $("body").addClass("hidden");
+            sec1.hide();
+            sec2.hide();
+            sec3.hide();
             topGnb.hide();
             mbMenu.show();
             hamburgerBtn.hide();
@@ -364,6 +484,9 @@
         })
         closeBtn.click(function (){
             $("body").removeClass("hidden");
+            sec1.show();
+            sec2.show();
+            sec3.show();
             mbMenu.hide();
             closeBtn.hide();
             hamburgerBtn.show();
@@ -409,6 +532,10 @@
         let activeClass=$("#section2_greyBox span");
 
         activeClass.on("click",function (){
+            $(this).toggleClass("active");
+        })
+        let hidePill=$("#section2_hidePillBox .box span")
+        hidePill.on("click",function (){
             $(this).toggleClass("active");
         })
     })

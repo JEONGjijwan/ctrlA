@@ -342,7 +342,7 @@ header {
 }
 /**********************section1**********************/
 #section1{
-    width: 100%;
+    width: 65%;
     height: 300px;
     position: relative;
     margin: 0 auto;
@@ -412,11 +412,13 @@ header {
 }
 /**********************section2**********************/
 #section2{
-    width: 1200px;
+    width: 90%;
     height: 750px;
     margin: 0 auto;
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 #section2 #section2_AllBox{
@@ -587,9 +589,136 @@ header {
     width: 100px;
     font-size: 16px;
 }
+/**********************section2_hide**********************/
+#section2 #section2_hideGreyBox{
+    width: 93%;
+    height: 250px;
+    margin: 50px auto;
+    position: relative;
+    background-color: #EFEDEF;
+}
+#section2 #section2_hideGreyBox #section2_hideTxtBox{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+#section2 #section2_hideGreyBox #section2_hideTxtBox h1{
+    position: relative;
+    top: 20px;
+    left: 30px;
+    font-size: 26px;
+}
+#section2 #section2_hideGreyBox #section2_hideTxtBox p{
+    margin: 25px 0 0 30px;
+    font-size: 14px;
+    color: #888888;
+}
+#section2 #section2_hideGreyBox #section2_hidePillBox{
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+#section2 #section2_hideGreyBox #section2_hidePillBox .box{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    margin-left: 20px;
+}
+#section2 #section2_hideGreyBox #section2_hidePillBox .box span{
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid black;
+    border-radius: 13px;
+    padding: 0 5px 5px 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+#section2 #section2_HideInputBox{
+    width: 90%;
+    height: 690px;
+    position: absolute;
+    top: 350px;
+}
+#section2 #section2_HideInputBox #section2_HideInputBox_txt{
+    position: relative;
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+#section2 #section2_HideInputBox #section2_HideInputBox_txt h1{
+    font-size: 26px;
+    margin-top: 5px;
+}
+#section2 #section2_HideInputBox #section2_HideInputBox_txt p{
+    font-size: 14px;
+    margin-top: 5px;
+}
+#section2 #section2_HideInputBox #section2_HideForm{
+    width: 93%;
+    height: 630px;
+    position: relative;
+    left: 30px;
+}
+#section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt p{
+    position: relative;
+    display: inline-block;
+}
+#section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt div{
+    width: 100%;
+    margin: 22px 0 0 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt textarea{
+    width: 200%;
+    height: 180px;
+    border: 1px solid lightgrey;
+    resize: none;
+    margin-left: 36px;
+}
+#section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt input{
+    width: 200%;
+    height: 30px;
+    border: 1px solid lightgrey;
+    margin-left: 50px;
+}
+#section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt #file{
+    width: 100%;
+}
+#section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt .radio{
+    width: 20px;
+    height: 20px;
+    color: black;
+    margin-left: 30px;
+}
+#section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt .radio_txt{
+    position: relative;
+    top: -5px;
+    font-size: 13px;
+}
+/*#section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt #fileInput{
+    position: absolute;
+    bottom: 5px;
+    float: right;
+}*/
+#section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt #HideMoney {
+    font-size: 14px;
+}
 /**********************section3**********************/
 #section3{
-    width: 1200px;
+    width: 100%;
     height: 400px;
     margin: 70px auto;
     position: relative;
@@ -602,7 +731,7 @@ header {
     margin-top: 20px;
 }
 #section3 #section3_allBox #section3_txtBox{
-    width: 65%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -631,17 +760,21 @@ header {
     position: relative;
     top: -4px;
 }
+#section3 #flex-box{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
 #section3 #section3_submitBox{
     width: 120px;
     height: 50px;
     position: relative;
     bottom: 0;
-    display: inline-block;
     text-align: center;
     line-height: 50px;
-    left: 50%;
-    margin-left: -100px;
-    top: 70px;
+    top: 50px;
     background: #60227e;
 }
 #section3 #section3_submitBox a{
@@ -682,7 +815,9 @@ header {
     #menu,
     .close,
     #section1_mobile,
-    #hamburger{
+    #hamburger,
+    #section2 #section2_HideInputBox,
+    #section2 #section2_hideGreyBox{
         display: none;
     }
     #language{
@@ -696,7 +831,11 @@ header {
 @media screen and (min-width: 841px) and (max-width: 1199px){
     #topGnb ul li,
     #title,
-    #language{
+    #language,
+    #section2_greyBox,
+    #section2_pillBox,
+    #section2_inputBox,
+    #section1 #section1_AllBox #section1_BtnBox{
         display: none;
     }
     #hamburger{
@@ -706,14 +845,12 @@ header {
     }
     #topGnb img{margin-left: 30px;}
     #section1{
+        width: 100%;
         margin: -150px 0 40px 0;
         display: flex;
     }
     #section1 #section1_AllBox{
         flex-direction: column;
-    }
-    #section1 #section1_AllBox #section1_BtnBox{
-        display: none
     }
     #section1 #section1_AllBox #section1_hide_BtnBox{
         display: block;
@@ -721,12 +858,20 @@ header {
     #section1 #section1_AllBox #section1_txtBox h4{
         display: inline-block;
     }
+    #section2{
+        width: 100%;
+        height: 1150px;
+    }
 }
 /**************모바일 사이즈***************/
 @media screen and (max-width: 840px) {
     #topGnb ul li,
     #title,
-    #language {
+    #language,
+    #section2 #section2_greyBox,
+    #section2 #section2_pillBox,
+    #section2 #section2_inputBox,
+    #section1 #section1_AllBox #section1_BtnBox{
         display: none;
     }
     #topGnb {
@@ -741,7 +886,8 @@ header {
         margin-left: 30px;
     }
     #section1{
-        margin: -250px 0 130px 0;
+        width: 100%;
+        margin: -200px 0 10px 0;
         display: flex;
     }
     #section1 #section1_AllBox{
@@ -752,5 +898,60 @@ header {
     }
     #section1 #section1_AllBox #section1_hide_BtnBox{
         height: 70px;
+    }
+    #section2{
+        width: 100%;
+        height: 1150px;
+    }
+    #section2 #section2_hideGreyBox{
+        margin-top: 100px;
+        height: 280px;
+    }
+    #section2 #section2_hideGreyBox #section2_hideTxtBox h1{
+        position: relative;
+        top: 20px;
+        left: 30px;
+        font-size: 20px;
+    }
+    #section2 #section2_hideGreyBox #section2_hideTxtBox p{
+        font-size: 14px;
+        color: #888888;
+    }
+    #section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt div{
+        margin: 20px auto;
+        position: relative;
+    }
+    #section2 #section2_HideInputBox #section2_HideForm{
+        left: 20px;
+    }
+    #section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt textarea,
+    #section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt input {
+        width: 120%;
+    }
+    #section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt input{
+        margin-left: 30px;
+    }
+    #section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt textarea{
+        margin-left: 15px;
+    }
+    #section2 #section2_HideInputBox #section2_HideForm #section2_HideForm_txt #file{
+        margin-left: 25px;
+    }
+    #section2 #section2_HideInputBox{
+        top: 430px;
+    }
+    #section3 #section3_allBox #section3_txtBox{
+        overflow: scroll;
+    }
+    #section3 h1{
+        margin-left: 20px;
+    }
+    #section3 #section3_allBox{
+        width: 95%;
+        margin: 0 auto;
+    }
+    #section3 #section3_allBox #section3_txtBox div{
+        width: 95%;
+        margin: 20px 0 0 20px;
     }
 }
