@@ -15,8 +15,6 @@
     overflow: hidden;
 }
 html, body {
-    width: 100%;
-    height: 100%;
     font-family: 'Noto Sans KR', sans-serif;
 }
 #wrapper {
@@ -24,8 +22,8 @@ html, body {
     height: 100%;
 }
 header {
-    width: 90%;
-    height: 250px;
+    width: 100%;
+    height: 100px;
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
@@ -39,38 +37,56 @@ header {
 .po{
     cursor: pointer;
 }
-.bo{
-    border-bottom: 1px solid black;
+/*********************************로그인*********************************/
+#loginFormBox{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+#loginFormBox #loginForm{
+    width: 100%;
+    height: 20px;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: right;
+    background-color: white;
+}
+#loginFormBox #loginForm span{
+    margin-right: 30px;
+    cursor: pointer;
+    font-size: 14px;
 }
 /**********************상단 네비**********************/
 #topGnb {
     width: 100%;
     height: 100px;
-    z-index: 9;
-    position: relative;
+    z-index: 999;
+    /*position: relative;*/
     display: flex;
     justify-content: space-around;
     box-sizing: border-box;
-    /*border: 1px solid red;*/
-}
-#topGnb:hover {
     background-color: white;
-    color: #1A191B;
-    transition: background-color 0.5s;
+    position: fixed;
+}
+#topGnb #nav_list{
+    width: 50%;
 }
 #topGnb #language,
 #topGnb #hamburger {
     color: black;
     cursor: pointer;
 }
-#topGnb ul {
-    width: 80%;
+#topGnb #topGnbMenu {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
     padding: 0;
 }
-#topGnb ul li {
+#topGnb #topGnbMenu li {
     width: 15%;
     float: left;
     list-style: none;
@@ -78,10 +94,8 @@ header {
     height: 100px;
     line-height: 100px;
     position: relative;
-    left: -40px;
-    /*margin-right: -30px;*/
 }
-#topGnb ul li a::after {
+#topGnb #topGnbMenu li a::after {
     content: "";
     width: 0;
     position: absolute;
@@ -89,18 +103,18 @@ header {
     right: 0;
     bottom: 0;
     height: 3px;
-    transition: width 0.3s;
+    transition: width 0.5s;
     margin: 0 auto;
 }
-#topGnb ul li:hover a::after {
-    width: 50%;
+#topGnb #topGnbMenu li:hover a::after {
+    width: 80%;
     background-color: purple;
 }
-#topGnb ul li:hover a {
+#topGnb #topGnbMenu li:hover a {
     color: purple;
     transition: color 0.5s;
 }
-#topGnb ul li a {
+#topGnb #topGnbMenu li a {
     text-decoration: none;
     color: black;
     font-weight: bolder;
@@ -116,9 +130,6 @@ header {
 #topGnb img {
     margin-top: 40px;
     cursor: pointer;
-}
-.gnbActive{
-    border-bottom: 3px solid purple;
 }
 /**********************상단 네비 서브메뉴**********************/
 #subMenu {
@@ -261,7 +272,6 @@ header {
 .mobileGnb #mobileTop .close{
     cursor: pointer;
     scale: 1.3;
-    margin-right: 50px;
 }
 .mobileGnb .mobileMenu li{
     margin: 20px 0 0 30px;
@@ -291,6 +301,7 @@ header {
     display: flex;
     position: absolute;
     left:88%;
+    margin-top: -30px;
     cursor: pointer;
     z-index: 9;
 }
@@ -329,16 +340,20 @@ header {
 .mobileGnb .mobileMenu #subM2 li:nth-of-type(4){
     font-size: 1em;
 }
-/**********************title**********************/
-#title {
+/**********************titleBox**********************/
+#title_box{
     width: 100%;
-    /*height: 50px;*/
+    height: auto;
+    overflow: hidden;
+}
+#title_box h1 span{
     position: absolute;
-    text-align: center;
-    font-size: 2.1em;
-    /*border: 1px solid red;*/
-    margin:120px auto;
-    /*display: none;*/
+    color: white;
+    left: 50%;
+    margin-left: -120px;
+    top: 230px;
+    font-size: 48px;
+    font-weight: bolder;
 }
 /**********************section1**********************/
 #section1{
@@ -422,7 +437,7 @@ header {
     flex-wrap: wrap;
 }
 #section2 #section2_AllBox{
-    width: 100%;
+    width: 95%;
     height: 100%;
     position: relative;
 }
@@ -441,6 +456,7 @@ header {
 #section2 #section2_greyBox #section2_txtBox h1{
     margin: 0 0 0 40px;
     font-size: 26px;
+    font-weight: bolder;
 }
 #section2 #section2_greyBox #section2_txtBox p{
     margin: 15px 0 0 40px;
@@ -509,11 +525,11 @@ header {
     width: 70%;
     height: 100%;
     position: absolute;
-    margin-left: 360px;
+    margin-left: 380px;
 }
 #section2 #section2_inputBox #section2_inputBox_txt{
     position: relative;
-    width: 90%;
+    width: 80%;
     height: 90px;
     margin: 0 auto;
     display: flex;
@@ -523,6 +539,7 @@ header {
 #section2 #section2_inputBox #section2_inputBox_txt h1{
     font-size: 26px;
     margin-top: 15px;
+    font-weight: bolder;
 }
 #section2 #section2_inputBox #section2_inputBox_txt p{
     font-size: 14px;
@@ -532,7 +549,7 @@ header {
     color: #E90A39;
 }
 #section2 #section2_inputBox #section2_form{
-    width: 90%;
+    width: 80%;
     height: 639px;
     margin: 0 auto;
     position: relative;
@@ -545,7 +562,7 @@ header {
     position: relative;
 }
 #section2 #section2_inputBox #section2_form #section2_form_txt div{
-    margin: 22px 0 0 30px;
+    margin: 12px 0 0 15px;
     display: flex;
     align-items: center;
     position: relative;
@@ -571,6 +588,10 @@ header {
     top: -5px;
     font-size: 13px;
 }
+#section2 #section2_inputBox #section2_form #section2_form_txt #Input_fileBox p{
+    position: relative;
+    top: 10px;
+}
 #section2 #section2_inputBox #section2_form #section2_form_txt #Input_fileBox input{
     position: absolute;
     bottom: 0;
@@ -585,8 +606,8 @@ header {
 }
 #section2 #section2_inputBox #section2_form #section2_form_txt p{
     display: inline-block;
-    margin-right: 70px;
-    width: 100px;
+    margin-right: 20px;
+    width: 90px;
     font-size: 16px;
 }
 /**********************section2_hide**********************/
@@ -736,6 +757,7 @@ header {
     display: flex;
     flex-direction: column;
     color: #888888;
+    overflow-y: scroll;
 }
 #section3 #section3_allBox #section3_txtBox p{
     font-size: 14px;
@@ -760,14 +782,14 @@ header {
     position: relative;
     top: -4px;
 }
-#section3 #flex-box{
+#section3 #flex-box1{
     width: 100%;
     height: 30%;
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
-#section3 #section3_submitBox{
+#section3 #flex-box1 #section3_submitBox{
     width: 120px;
     height: 50px;
     position: relative;
@@ -777,7 +799,12 @@ header {
     top: 50px;
     background: #60227e;
 }
-#section3 #section3_submitBox a{
+#section3 #flex-box1 #section3_submitBox label{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#section3 #flex-box1 #section3_submitBox label a{
     text-decoration: none;
     width: 100%;
     height: 100%;
@@ -846,7 +873,7 @@ header {
     #topGnb img{margin-left: 30px;}
     #section1{
         width: 100%;
-        margin: -150px 0 40px 0;
+        margin-bottom: 40px;
         display: flex;
     }
     #section1 #section1_AllBox{
@@ -887,7 +914,8 @@ header {
     }
     #section1{
         width: 100%;
-        margin: -200px 0 10px 0;
+        height: 400px;
+        margin-bottom: 10px;
         display: flex;
     }
     #section1 #section1_AllBox{
@@ -901,7 +929,7 @@ header {
     }
     #section2{
         width: 100%;
-        height: 1150px;
+        height: 1170px;
     }
     #section2 #section2_hideGreyBox{
         margin-top: 100px;
@@ -912,6 +940,7 @@ header {
         top: 20px;
         left: 30px;
         font-size: 20px;
+        font-weight: bolder;
     }
     #section2 #section2_hideGreyBox #section2_hideTxtBox p{
         font-size: 14px;
@@ -941,7 +970,7 @@ header {
         top: 430px;
     }
     #section3 #section3_allBox #section3_txtBox{
-        overflow: scroll;
+        overflow-y: scroll;
     }
     #section3 h1{
         margin-left: 20px;
@@ -952,6 +981,6 @@ header {
     }
     #section3 #section3_allBox #section3_txtBox div{
         width: 95%;
-        margin: 20px 0 0 20px;
+        margin: 10px 0 0 10px;
     }
 }

@@ -40,6 +40,28 @@ header {
 #subMenu2 {
     display: none;
 }
+/*********************************로그인*********************************/
+#loginFormBox{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+#loginFormBox #loginForm{
+    width: 100%;
+    height: 20px;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: right;
+    background-color: white;
+}
+#loginFormBox #loginForm span{
+    margin-right: 30px;
+    cursor: pointer;
+    font-size: 14px;
+}
 /*********************************side box*********************************/
 #sideBox{
     display: flex;
@@ -102,31 +124,30 @@ header {
 #topGnb {
     width: 100%;
     height: 100px;
-    z-index: 9;
-    position: relative;
+    z-index: 999;
+    /*position: relative;*/
     display: flex;
     justify-content: space-around;
     box-sizing: border-box;
-    /*border: 1px solid red;*/
-}
-#topGnb:hover {
     background-color: white;
-    color: #1A191B;
-    transition: background-color 0.5s;
+    position: fixed;
+}
+#topGnb #nav_list{
+    width: 50%;
 }
 #topGnb #language,
 #topGnb #hamburger {
     color: black;
     cursor: pointer;
 }
-#topGnb ul {
-    width: 80%;
+#topGnb #topGnbMenu {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
     padding: 0;
 }
-#topGnb ul li {
+#topGnb #topGnbMenu li {
     width: 15%;
     float: left;
     list-style: none;
@@ -134,11 +155,8 @@ header {
     height: 100px;
     line-height: 100px;
     position: relative;
-    left: -40px;
-    /*color: white;*/
-    /*margin-right: -30px;*/
 }
-#topGnb ul li a::after {
+#topGnb #topGnbMenu li a::after {
     content: "";
     width: 0;
     position: absolute;
@@ -149,20 +167,17 @@ header {
     transition: width 0.5s;
     margin: 0 auto;
 }
-header:hover #topGnb ul li a{
-    color: black;
-}
-#topGnb ul li:hover a::after {
-    width: 50%;
+#topGnb #topGnbMenu li:hover a::after {
+    width: 80%;
     background-color: purple;
 }
-#topGnb ul li:hover a {
+#topGnb #topGnbMenu li:hover a {
     color: purple;
     transition: color 0.5s;
 }
-#topGnb ul li a {
+#topGnb #topGnbMenu li a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bolder;
     font-size: 1.2em;
     width: 100%;
@@ -182,7 +197,7 @@ header:hover #topGnb ul li a{
     width: 100%;
     height: 110px;
     position: absolute;
-    /*margin-top: 100px;*/
+    margin-top: 100px;
     z-index: 99999 !important;
     background-color: white;
     box-sizing: border-box;
@@ -313,6 +328,11 @@ header:hover #topGnb ul li a{
     justify-content: space-between;
     margin: 40px;
 }
+.mobileGnb #mobileTop .close{
+    cursor: pointer;
+    scale: 1.3;
+    margin-right: 50px;
+}
 .mobileMenu li{
     margin-top: 20px;
     font-size: 1em;
@@ -384,7 +404,7 @@ header:hover #topGnb ul li a{
     z-index: 1;
 }
 #carousel1 .carousel-inner .carousel-item img{
-    height: auto;
+    height: 700px;
     object-fit: cover;
 }
 .carousel-indicators{
@@ -772,7 +792,7 @@ header:hover #topGnb ul li a{
 
 /***************모니터 크기***************/
 @media screen and (min-width: 1200px){
-    #menu,
+    #hamburger,
     .close,
     #sec2 #carousel2,
     #sec2 #project2,
@@ -785,7 +805,7 @@ header:hover #topGnb ul li a{
     .close,
     #topGnb ul,
     #sec2 #carousel2,
-    #menu{
+    #hamburger{
         display: block;
     }
     #topGnb li,
@@ -797,8 +817,11 @@ header:hover #topGnb ul li a{
     header{
         height: 100px;
     }
-    header:hover #menu{
-        margin-top: 60px;
+    #hamburger{
+        scale: 1.5;
+        position: relative;
+        right: 30px;
+        top: 10px;
     }
     #sec2 #Freenext{
         height: 40%;
@@ -810,12 +833,6 @@ header:hover #topGnb ul li a{
     #topGnb{
         display: flex;
         justify-content: space-between;
-    }
-    #menu{
-        scale: 1.5;
-        position: relative;
-        right: 30px;
-        top: 10px;
     }
     .close{
         scale: 1.5;
@@ -910,9 +927,6 @@ header:hover #topGnb ul li a{
         display: flex;
         flex-wrap: wrap;
     }
-    /*#subMenu {*/
-    /*    z-index: 0;*/
-    /*}*/
     #wrapper #top{
         position: fixed;
         right: 50px;
@@ -945,7 +959,7 @@ header:hover #topGnb ul li a{
         display: flex;
         justify-content: space-between;
     }
-    #menu{
+    #hamburger{
         scale: 1.5;
         display: block;
         position: relative;
@@ -958,18 +972,6 @@ header:hover #topGnb ul li a{
         position: relative;
         right: 40px;
         top: 10px;
-    }
-    #topGnb #noneHov{
-        position: relative;
-        left: 50px;
-    }
-    #topGnb #actHov{
-        display: none;
-        position: relative;
-        left: 50px;
-    }
-    #topGnb:hover #actHov{
-        display: block;
     }
     #sec1 .small{
         display: block;
@@ -1088,9 +1090,6 @@ header:hover #topGnb ul li a{
         font-size: 0.9em;
         line-height: 40px;
     }
-    /*#subMenu {*/
-    /*    z-index: 0;*/
-    /*}*/
     #wrapper #top{
         position: fixed;
         right: 10px;
