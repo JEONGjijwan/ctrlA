@@ -8,18 +8,18 @@
   "name":"김희애",
   "age":40,
   "personalColor":"brown",
-  "gobbies" : ["travel"]
+  "hobbies" : ["travel"]
   },
   {"id":3,
   "name":"한가인",
   "age":30,
   "personalColor":"pink",
-  "gobbies" : ["game","soccer"]
+  "hobbies" : ["game","soccer"]
   },
   {"id":4,
   "name":"송혜교",
   "age":35,
   "personalColor":"purple",
-  "gobbies" : ["watchingMovie","playingthePiano"]
+  "hobbies" : ["watchingMovie","playingthePiano"]
   }
 ]
