@@ -1,366 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>찾아오시는 길 > 컨트롤에이, CONTROLA : 프로젝트 수행경험</title>
-  <link rel="icon" href="x" type="image/x-icon">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/contactus.css">
-  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=xt7xi58pdw"></script>
+    <meta charset="UTF-8">
+    <title>찾아오시는 길 > 컨트롤에이, CONTROLA : 프로젝트 수행경험</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/contactus.css">
+    <script src="js/contactus.js"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=xt7xi58pdw"></script>
 </head>
 <body>
 <div class="wrapper">
-  <div id="loginFormBox">
-    <div id="loginForm">
-      <span data-toggle="modal" data-target="#login">로그인</span>
-      <span data-toggle="modal" data-target="#signUp">회원가입</span>
-    </div>
-  </div>
-  <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">로그인</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+    <!--------------------------------네비-------------------------------------->
+    <header>
+        <nav id="topGnb">
+            <a href="index.html">
+                <img src="img/logo_color.png" width="166px" height="28px" alt="">
+            </a>
+            <div id="nav_list">
+                <ul id="topGnbMenu">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">사업영역</a></li>
+                    <li><a href="method.html">특장점</a></li>
+                    <li><a href="work_list.html">포트폴리오</a></li>
+                    <li><a href="contactus.html">오시는 길</a></li>
+                    <li><a href="request.html">프로젝트 의뢰</a></li>
+                </ul>
+            </div>
+            <span class="material-symbols-outlined disabled" id="language">language</span>
+            <span class="material-symbols-outlined" id="hamburger">menu</span>
+            <!--------------------------------데스크탑서브메뉴-------------------------------------->
+            <nav id="subMenu">
+                <ul class="subList">
+                    <li><a href="company.html">회사소개</a></li>
+                    <li><a href="" class="disabled">주요 서비스</a></li>
+                </ul>
+            </nav>
+            <nav id="subMenu2">
+                <div id="subMenu2_firstBox">
+                    <div id="subMenu2_textBox">
+                        <p>시스템통합</p>
+                    </div>
+                    <div class="subMenu2_menu">
+                        <ul class="px-0">
+                            <li><a href="" class="disabled">-민간·서비스</a></li>
+                            <li><a href="" class="disabled">-공공</a></li>
+                            <li><a href="" class="disabled">-헬스케어</a></li>
+                        </ul>
+                    </div>
+                    <div class="subMenu2_menu">
+                        <ul>
+                            <li><a href="" class="disabled">-금융</a></li>
+                            <li><a href="" class="disabled">-커머스</a></li>
+                            <li><a href="" class="disabled">-국방</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <p>운영서비스</p>
+                </div>
+                <div>
+                    <p>플랫폼</p>
+                    <ul class="px-0">
+                        <li><a href="" class="disabled">-플러스넷</a></li>
+                        <li><a href="" id="subMenu2_lastTxt" class="disabled">-PG·VAN 서비스</a></li>
+                        <li><a href="" class="disabled">-창업서비스</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </nav>
+    </header>
+    <!--------------------------------모바일 메뉴-------------------------------------->
+    <nav class="mobileGnb">
+        <div id="mobileTop">
+            <a href="index.html">
+                <img src="img/logo_color.png" alt="">
+            </a>
+            <span class="material-symbols-outlined close">close</span>
         </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="id" class="col-form-label">아이디</label>
-              <input type="text" class="form-control" id="id">
-            </div>
-            <div class="form-group">
-              <label for="pw" class="col-form-label">비밀번호</label>
-              <input type="password" class="form-control" id="pw">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-info">로그인</button>
-          <button type="button" class="btn btn-warning" data-dismiss="modal">취소</button>
-        </div>
-      </div>
-    </div>
-  </div><!--로그인-->
-  <div class="modal fade" id="signUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel1">회원가입</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="s_name" class="col-form-label">이름</label>
-              <input type="text" class="form-control" id="s_name">
-            </div>
-            <div class="form-group">
-              <label for="s_id" class="col-form-label">아이디</label>
-              <input type="text" class="form-control" id="s_id">
-            </div>
-            <div class="form-group">
-              <label for="s_pw" class="col-form-label">비밀번호</label>
-              <input type="password" class="form-control" id="s_pw">
-            </div>
-            <div class="form-group">
-              <label for="s_checkPW" class="col-form-label">비밀번호 확인</label>
-              <input type="password" class="form-control" id="s_checkPW">
-            </div>
-            <div class="form-group">
-              <label for="s_email" class="col-form-label">이메일</label>
-              <input type="email" class="form-control" id="s_email">
-            </div>
-            <div class="form-group">
-              <label for="s_birth" class="col-form-label">생년월일</label>
-              <input type="password" class="form-control" id="s_birth">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-info">로그인</button>
-          <button type="button" class="btn btn-warning" data-dismiss="modal">취소</button>
-        </div>
-      </div>
-    </div>
-  </div><!--회원가입-->
-  <!--------------------------------데스크탑네비-------------------------------------->
-  <header>
-    <nav id="topGnb">
-      <a href="index.html">
-        <img src="img/logo_color.png" width="166px" height="28px" alt="">
-      </a>
-      <div id="nav_list">
-        <ul id="topGnbMenu">
-          <li><a href="#">회사소개</a></li>
-          <li><a href="#">사업영역</a></li>
-          <li><a href="method.html">특장점</a></li>
-          <li><a href="work_list.html">포트폴리오</a></li>
-          <li><a href="contactus.html">오시는 길</a></li>
-          <li><a href="request.html">프로젝트 의뢰</a></li>
+        <ul class="mobileMenu">
+            <li>
+                <a href="#">회사소개</a>
+                <span class="material-symbols-outlined moreBtn1">expand_more</span>
+                <span class="material-symbols-outlined lessBtn1">expand_less</span>
+            </li>
+            <li id="subM1">
+                <ul>
+                    <li><a href="company.html">회사소개</a></li>
+                    <li><a href="" class="disabled">주요 서비스</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="disabled">사업영역</a>
+                <span class="material-symbols-outlined moreBtn2">expand_more</span>
+                <span class="material-symbols-outlined lessBtn2">expand_less</span>
+            </li>
+            <li id="subM2">
+                <ul>
+                    <li>플랫폼</li>
+                    <li><a href="" class="disabled">- 플러스넷</a></li>
+                    <li><a href="" class="disabled">- 창업서비스</a></li>
+                    <li><a href="" class="disabled">- PGᆞVAN 서비스</a></li>
+                </ul>
+            </li>
+            <li><a href="method.html">특장점</a></li>
+            <li><a href="work_list.html">포트폴리오</a></li>
+            <li><a href="contactus.html">오시는 길</a></li>
+            <li><a href="request.html">프로젝트 의뢰</a></li>
         </ul>
-      </div>
-      <span class="material-symbols-outlined" id="language">language</span>
-      <span class="material-symbols-outlined" id="hamburger">menu</span>
-      <!--------------------------------데스크탑서브메뉴-------------------------------------->
-      <nav id="subMenu">
-        <ul class="subList">
-          <li><a href="company.html">회사소개</a></li>
-          <li><a href="">주요 서비스</a></li>
-        </ul>
-      </nav>
-      <nav id="subMenu2">
-        <div id="subMenu2_firstBox">
-          <div id="subMenu2_textBox">
-            <p>시스템통합</p>
-          </div>
-          <div class="subMenu2_menu">
-            <ul class="px-0">
-              <li><a href="">-민간·서비스</a></li>
-              <li><a href="">-공공</a></li>
-              <li><a href="">-헬스케어</a></li>
-            </ul>
-          </div>
-          <div class="subMenu2_menu">
-            <ul>
-              <li><a href="">-금융</a></li>
-              <li><a href="">-커머스</a></li>
-              <li><a href="">-국방</a></li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <p>운영서비스</p>
-        </div>
-        <div>
-          <p>플랫폼</p>
-          <ul class="px-0">
-            <li><a href="">-플러스넷</a></li>
-            <li><a href="" id="subMenu2_lastTxt">-PG·VAN 서비스</a></li>
-            <li><a href="">-창업서비스</a></li>
-          </ul>
-        </div>
-      </nav>
     </nav>
-  </header>
-  <!--------------------------------모바일 메뉴-------------------------------------->
-  <nav class="mobileGnb">
-    <div id="mobileTop">
-      <a href="index.html">
-        <img src="img/logo_color.png" alt="">
-      </a>
-      <span class="material-symbols-outlined close">close</span>
+    <!--------------------------------title-------------------------------------->
+    <div id="title_box">
+        <h1>
+            <span>오시는 길</span>
+        </h1>
+        <img src="title/bg_visual_contactus.jpg" alt="" class="">
     </div>
-    <ul class="mobileMenu">
-      <li>
-        <a href="#">회사소개</a>
-        <span class="material-symbols-outlined moreBtn1">expand_more</span>
-        <span class="material-symbols-outlined lessBtn1">expand_less</span>
-      </li>
-      <li id="subM1">
-        <ul>
-          <li><a href="company.html">회사소개</a></li>
-          <li><a href="">주요 서비스</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">사업영역</a>
-        <span class="material-symbols-outlined moreBtn2">expand_more</span>
-        <span class="material-symbols-outlined lessBtn2">expand_less</span>
-      </li>
-      <li id="subM2">
-        <ul>
-          <li>플랫폼</li>
-          <li><a href="">- 플러스넷</a></li>
-          <li><a href="">- 창업서비스</a></li>
-          <li><a href="">- PGᆞVAN 서비스</a></li>
-        </ul>
-      </li>
-      <li><a href="method.html">특장점</a></li>
-      <li><a href="work_list.html">포트폴리오</a></li>
-      <li><a href="contactus.html">오시는 길</a></li>
-      <li><a href="request.html">프로젝트 의뢰</a></li>
-    </ul>
-  </nav>
-  <!--------------------------------title-------------------------------------->
-  <div id="title_box">
-    <h1>
-      <span>오시는 길</span>
-    </h1>
-    <img src="title/bg_visual_contactus.jpg" alt="" class="">
-  </div>
-  <!--------------------------------section1-------------------------------------->
-  <section id="section1">
-    <div id="section1_allTxtBox">
-      <div class="section1_TxtBox">
-        <span>연락처</span>
-        <p>02.6082.8200</p>
-      </div>
-      <div class="section1_TxtBox">
-        <span>이메일</span>
-        <p>sales@ctrl-a.co.kr</p>
-      </div>
-      <div id="section1_lastTxtBox" class="section1_TxtBox">
-        <span>주소</span>
-        <p>서울 강남구 논현로 149길 12,3층<br>(논현동,에이치포)</p>
-      </div>
-    </div>
-    <!-------section1_mobileBox------->
-    <div id="section1_mobileBox">
-      <div id="section1_mobileTitleBox">
-        <div>연락처</div>
-        <div>이메일</div>
-        <div>주소</div>
-      </div>
-      <div id="section1_mobileTxtBox">
-        <p>02.6082.8200</p>
-        <p>sales@ctrl-a.co.kr</p>
-        <p>서울 강남구 논현로 149길 12,3층<br>(논현동,에이치포)</p>
-      </div>
-    </div>
-  </section>
-  <!--------------------------------section2-------------------------------------->
-  <section id="section2">
-    <div id="section2_mapBox">
-      <div id="map"></div>
-    </div>
-  </section>
-  <!--------------------------------footer-------------------------------------->
-  <footer id="footer">
-    <div>
-      <img src="img/footer_logo_on.png" alt="">
-      <p>주식회사 컨트롤에이 서울 강남구 논현로149길 12, 3층 (논현동, 에이치포)</p>
-      <p>Copyright &copy; 2019 CONTROLA CO., LTD. All Rights Reserved.</p>
-    </div>
-  </footer>
+    <!--------------------------------section1-------------------------------------->
+    <section id="section1">
+        <div id="section1_allTxtBox">
+            <div class="section1_TxtBox">
+                <span>연락처</span>
+                <p>02.6082.8200</p>
+            </div>
+            <div class="section1_TxtBox">
+                <span>이메일</span>
+                <p>sales@ctrl-a.co.kr</p>
+            </div>
+            <div id="section1_lastTxtBox" class="section1_TxtBox">
+                <span>주소</span>
+                <p>서울 강남구 논현로 149길 12,3층<br>(논현동,에이치포)</p>
+            </div>
+        </div>
+        <!-------section1_mobileBox------->
+        <div id="section1_mobileBox">
+            <div id="section1_mobileTitleBox">
+                <div>연락처</div>
+                <div>이메일</div>
+                <div>주소</div>
+            </div>
+            <div id="section1_mobileTxtBox">
+                <p>02.6082.8200</p>
+                <p>sales@ctrl-a.co.kr</p>
+                <p>서울 강남구 논현로 149길 12,3층<br>(논현동,에이치포)</p>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------section2-------------------------------------->
+    <section id="section2">
+        <div id="section2_mapBox">
+            <div id="map"></div>
+        </div>
+    </section>
+    <!--------------------------------footer-------------------------------------->
+    <footer id="footer">
+        <div id="footerBox">
+            <img src="img/footer_logo_on.png" alt="">
+            <div>
+                <p>주식회사 컨트롤에이 서울 강남구 논현로149길 12, 3층 (논현동, 에이치포)</p>
+                <p>
+                    Copyright &copy; 2019 CONTROLA CO., LTD. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
 </div>
 <script>
-  $(function (){
-    /********************topGnb 활성화 및 비활성화********************/
-    let header=$("header");
-    let navLi=$("#topGnb li a");
-    let subMenu=$("#subMenu");
-    let subMenu2=$("#subMenu2");
+    $(function (){
+        /********************지도 관련 제이쿼리********************/
+        var map = new naver.maps.Map('map', {
+            center: new naver.maps.LatLng(37.5185790, 127.0273334),
+            zoom: 15
+        });
 
-    subMenu.hide();
-    subMenu2.hide();
-
-    header.mouseleave(function (){
-      subMenu.hide();
-      subMenu2.hide();
+        var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(37.5185790, 127.0273334),
+            map: map
+        });
     })
-    navLi.eq(0).hover(function (){
-      // subList1.show();
-      subMenu.show();
-      subMenu2.hide();
-    });subMenu.mouseleave(function (){
-      subMenu.hide();
-    });
-    navLi.eq(1).hover(function (){
-      subMenu2.show();
-      subMenu.hide();
-    });subMenu2.mouseleave(function (){
-      subMenu2.hide();
-    });
-
-    navLi.eq(2).hover(function (){
-      subMenu2.hide();
-      subMenu.hide();
-    })
-    navLi.eq(3).hover(function (){
-      subMenu2.hide();
-      subMenu.hide();
-    })
-    navLi.eq(4).hover(function (){
-      subMenu2.hide();
-      subMenu.hide();
-    })
-    navLi.eq(5).hover(function (){
-      subMenu2.hide();
-      subMenu.hide();
-    })
-    /********************모바일 메뉴 활성화 및 비활성화********************/
-    /********************모바일 메뉴 활성화 및 비활성화********************/
-    let mbMenu=$(".mobileGnb")
-    let closeBtn=$(".close")
-    let hamburgerBtn=$("#hamburger");
-    let login=$("#loginFormBox");
-
-    mbMenu.hide();
-    closeBtn.hide();
-
-    hamburgerBtn.click(function (){
-      $("body").addClass("hidden");
-      login.hide();
-      hamburgerBtn.hide();
-      header.hide();
-      mbMenu.show();
-      closeBtn.show();
-    })
-    closeBtn.click(function (){
-      $("body").removeClass("hidden");
-      mbMenu.hide();
-      closeBtn.hide();
-      login.show();
-      hamburgerBtn.show();
-      header.show();
-    })
-    /********************모바일 서브 메뉴1********************/
-    let moreBtn1=$(".moreBtn1");
-    let lessBtn1=$(".lessBtn1");
-    let moreBtn2=$(".moreBtn2");
-    let lessBtn2=$(".lessBtn2");
-    let subM1=$("#subM1");
-    let subM2=$("#subM2");
-
-    lessBtn1.hide();
-    subM1.hide();
-    moreBtn1.on("click",function (){
-      subM1.show();
-      moreBtn1.hide();
-      lessBtn1.show();
-    })
-    lessBtn1.click(function (){
-      subM1.hide();
-      moreBtn1.show();
-      lessBtn1.hide();
-    })
-
-    /********************모바일 서브 메뉴2********************/
-    lessBtn2.hide();
-    subM2.hide();
-
-    moreBtn2.click(function (){
-      subM2.show()
-      moreBtn2.hide();
-      lessBtn2.show();
-    })
-    lessBtn2.click(function (){
-      subM2.hide();
-      moreBtn2.show();
-      lessBtn2.hide();
-    })
-    /********************지도 관련 제이쿼리********************/
-    var map = new naver.maps.Map('map', {
-      center: new naver.maps.LatLng(37.5185790, 127.0273334),
-      zoom: 15
-    });
-
-    var marker = new naver.maps.Marker({
-      position: new naver.maps.LatLng(37.5185790, 127.0273334),
-      map: map
-    });
-  })
 </script>
 </body>
 </html>

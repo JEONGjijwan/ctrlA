@@ -37,29 +37,11 @@ header {
 .po{
     cursor: pointer;
 }
-/*********************************Î°úÍ∑∏Ïù∏*********************************/
-#loginFormBox{
-    width: 100%;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
+.disabled{
+    pointer-events: none;
+    cursor: default;
 }
-#loginFormBox #loginForm{
-    width: 100%;
-    height: 20px;
-    position: fixed;
-    z-index: 9999;
-    display: flex;
-    justify-content: right;
-    background-color: white;
-}
-#loginFormBox #loginForm span{
-    margin-right: 30px;
-    cursor: pointer;
-    font-size: 14px;
-}
-/**********************ÏÉÅÎã® ÎÑ§ÎπÑ**********************/
+/**********************nav**********************/
 #topGnb {
     width: 100%;
     height: 100px;
@@ -72,7 +54,7 @@ header {
     position: fixed;
 }
 #topGnb #nav_list{
-    width: 50%;
+    width: 70%;
 }
 #topGnb #language,
 #topGnb #hamburger {
@@ -107,7 +89,7 @@ header {
     margin: 0 auto;
 }
 #topGnb #topGnbMenu li:hover a::after {
-    width: 80%;
+    width: 70%;
     background-color: purple;
 }
 #topGnb #topGnbMenu li:hover a {
@@ -131,7 +113,7 @@ header {
     margin-top: 40px;
     cursor: pointer;
 }
-/**********************ÏÉÅÎã® ÎÑ§ÎπÑ ÏÑúÎ∏åÎ©îÎâ¥**********************/
+/**********************ªÛ¥‹ ≥◊∫Ò º≠∫Í∏ﬁ¥∫**********************/
 #subMenu {
     width: 100%;
     height: 110px;
@@ -248,7 +230,7 @@ header {
 #subMenu2 ul li a:nth-of-type(1){
     margin-right: 10px;
 }
-/**********************Î™®Î∞îÏùº ÎÑ§ÎπÑ**********************/
+/**********************∏πŸ¿œ ≥◊∫Ò**********************/
 .mobileGnb{
     width: 100%;
     height: 100%;
@@ -303,6 +285,7 @@ header {
     left:88%;
     cursor: pointer;
     z-index: 9;
+    margin-top: -30px;
 }
 .mobileGnb .mobileMenu #subM1{
     width: 100%;
@@ -575,30 +558,30 @@ header {
     justify-content: center;
     align-items: center;
 }
-/**********************footer**********************/
 #footer{
     position: relative;
     width: 100%;
-    height: 200px;
-    background-color: #1A191B;
+    height: 180px;
+    background-color: black;
     color: #999999;
-}
-#footer #footerBox{
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#footer #footerBox div img{
-    margin-top: 50px;
+#footer div{
+    position: relative;
 }
-#footer #footerBox p{
-    font-size: 14px;
+#footer div img{
+    margin-bottom: 30px;
 }
-#footer #footerBox p:nth-of-type(1){
-    margin-top: 25px;
+#footer div p{
+    font-size: 0.8em;
 }
 /***************************************************************************/
-/*********************************ÎØ∏ÎîîÏñ¥ ÏøºÎ¶¨*********************************/
+/*********************************πÃµæÓ ƒı∏Æ*********************************/
 /***************************************************************************/
-/***************Î™®ÎãàÌÑ∞ ÌÅ¨Í∏∞***************/
+/***************∏¥œ≈Õ ≈©±‚***************/
 @media screen and (min-width: 1200px){
     #menu,
     .close,
@@ -609,7 +592,7 @@ header {
         display: block;
     }
 }
-/**************ÌÉÄÎ∏îÎ†õ ÏÇ¨Ïù¥Ï¶à***************/
+/**************≈∏∫Ì∑ø ªÁ¿Ã¡Ó***************/
 @media screen and (min-width: 841px) and (max-width: 1199px){
     #topGnb ul li,
     #section1_mobile,
@@ -651,7 +634,7 @@ header {
         display: block;
     }
 }
-/**************Î™®Î∞îÏùº ÏÇ¨Ïù¥Ï¶à***************/
+/**************∏πŸ¿œ ªÁ¿Ã¡Ó***************/
 @media screen and (max-width: 840px){
     #topGnb ul li,
     #section1_mobile,

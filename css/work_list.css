@@ -40,29 +40,11 @@ header {
 .cs-purple{
     color: #60227E;
 }
-/*********************************Î°úÍ∑∏Ïù∏*********************************/
-#loginFormBox{
-    width: 100%;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
+.disabled{
+    pointer-events: none;
+    cursor: default;
 }
-#loginFormBox #loginForm{
-    width: 100%;
-    height: 20px;
-    position: fixed;
-    z-index: 9999;
-    display: flex;
-    justify-content: right;
-    background-color: white;
-}
-#loginFormBox #loginForm span{
-    margin-right: 30px;
-    cursor: pointer;
-    font-size: 14px;
-}
-/**********************ÏÉÅÎã® ÎÑ§ÎπÑ**********************/
+/**********************nav**********************/
 #topGnb {
     width: 100%;
     height: 100px;
@@ -75,7 +57,7 @@ header {
     position: fixed;
 }
 #topGnb #nav_list{
-    width: 50%;
+    width: 70%;
 }
 #topGnb #language,
 #topGnb #hamburger {
@@ -110,7 +92,7 @@ header {
     margin: 0 auto;
 }
 #topGnb #topGnbMenu li:hover a::after {
-    width: 80%;
+    width: 70%;
     background-color: purple;
 }
 #topGnb #topGnbMenu li:hover a {
@@ -134,7 +116,7 @@ header {
     margin-top: 40px;
     cursor: pointer;
 }
-/**********************ÏÉÅÎã® ÎÑ§ÎπÑ ÏÑúÎ∏åÎ©îÎâ¥**********************/
+/**********************ªÛ¥‹ ≥◊∫Ò º≠∫Í∏ﬁ¥∫**********************/
 #subMenu {
     width: 100%;
     height: 110px;
@@ -251,7 +233,7 @@ header {
 #subMenu2 ul li a:nth-of-type(1){
     margin-right: 10px;
 }
-/**********************Î™®Î∞îÏùº ÎÑ§ÎπÑ**********************/
+/**********************∏πŸ¿œ ≥◊∫Ò**********************/
 .mobileGnb{
     width: 100%;
     height: 100%;
@@ -306,6 +288,7 @@ header {
     left:88%;
     cursor: pointer;
     z-index: 9;
+    margin-top: -30px;
 }
 .mobileGnb .mobileMenu #subM1{
     width: 100%;
@@ -357,7 +340,7 @@ header {
     font-size: 48px;
     font-weight: bolder;
 }
-/**********************section1 ÎÑ§ÎπÑ**********************/
+/**********************section1 ≥◊∫Ò**********************/
 #section1_nav{
     width: 100%;
     height: 100px;
@@ -388,6 +371,7 @@ header {
     background-color: #E9E9E9;
     border-radius: 50%;
     text-align: center;
+    cursor: default;
 }
 #section1_nav nav ul .section1_nav_img img{
     margin-top: 10px;
@@ -477,13 +461,14 @@ header {
 #section1 .section1_imgHoverBox h2{
     top: 50px;
     left: 20px;
+    font-size: 24px;
 }
 #section1 .section1_imgHoverBox span{
     top: 200px;
     left: 30px;
 }
 #section1 .section1_imgHoverBox p{
-    bottom: 30px;
+    bottom: 10px;
     left: 10px;
     font-size: 13px;
 }
@@ -551,9 +536,9 @@ header {
     margin-bottom: 30px;
 }
 /***************************************************************************/
-/*********************************ÎØ∏ÎîîÏñ¥ ÏøºÎ¶¨*********************************/
+/*********************************πÃµæÓ ƒı∏Æ*********************************/
 /***************************************************************************/
-/***************Î™®ÎãàÌÑ∞ ÌÅ¨Í∏∞***************/
+/***************∏¥œ≈Õ ≈©±‚***************/
 @media screen and (min-width: 1200px){
     #menu,
     .close,
@@ -565,7 +550,7 @@ header {
         display: block;
     }
 }
-/**************ÌÉÄÎ∏îÎ†õ ÏÇ¨Ïù¥Ï¶à***************/
+/**************≈∏∫Ì∑ø ªÁ¿Ã¡Ó***************/
 @media screen and (min-width: 841px) and (max-width: 1199px){
     #topGnb ul li,
     #title,
@@ -581,7 +566,7 @@ header {
         margin-left: 30px;
     }
 }
-/**************Î™®Î∞îÏùº ÏÇ¨Ïù¥Ï¶à***************/
+/**************∏πŸ¿œ ªÁ¿Ã¡Ó***************/
 @media screen and (max-width: 840px) {
     #topGnb ul li,
     #title,

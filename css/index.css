@@ -1,3 +1,4 @@
+@charset "EUC-KR";
 *{
     margin: 0;
     padding: 0;
@@ -40,87 +41,11 @@ header {
 #subMenu2 {
     display: none;
 }
-/*********************************Î°úÍ∑∏Ïù∏*********************************/
-#loginFormBox{
-    width: 100%;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
+.disabled{
+    pointer-events: none;
+    cursor: default;
 }
-#loginFormBox #loginForm{
-    width: 100%;
-    height: 20px;
-    position: fixed;
-    z-index: 9999;
-    display: flex;
-    justify-content: right;
-    background-color: white;
-}
-#loginFormBox #loginForm span{
-    margin-right: 30px;
-    cursor: pointer;
-    font-size: 14px;
-}
-/*********************************side box*********************************/
-#sideBox{
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    justify-content: center;
-    width: 50px;
-    height: 500px;
-    box-sizing: border-box;
-    text-align: center;
-    right: 0;
-    margin-right: 30px;
-    top: 30%;
-    z-index: 99999;
-}
-#sideBox #yellow{
-    position: relative;
-    width: 30px;
-    height: 30px;
-    right: -10px;
-    top: 38px;
-    /*margin-right: 20px;*/
-    background-color: #fae100;
-    border-radius: 50%;
-    /*border: 1px solid blue;*/
-    z-index: -1;
-}
-#sideBox .side{
-    width: 20px;
-    height: 20px;
-    margin: 14px auto;
-    cursor: pointer;
-}
-#sideTxt{
-    width: 120px;
-    height: 600px;
-    position: fixed;
-    top: 27%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    right: 80px;
-}
-#sideTxt ul li{
-    /*display: none;*/
-    list-style: none;
-    height: 18px;
-    margin: 20px 0 30px 0;
-    font-weight: bolder;
-    z-index: 99999;
-}
-#sideTxt ul li a{
-    color: black;
-    text-decoration: none;
-    font-size: 0.7em;
-    margin-left: 30px;
-    z-index: 900;
-}
-/**********************ÏÉÅÎã® ÎÑ§ÎπÑ**********************/
+/******************************************************************/
 #topGnb {
     width: 100%;
     height: 100px;
@@ -133,7 +58,7 @@ header {
     position: fixed;
 }
 #topGnb #nav_list{
-    width: 50%;
+    width: 70%;
 }
 #topGnb #language,
 #topGnb #hamburger {
@@ -168,7 +93,7 @@ header {
     margin: 0 auto;
 }
 #topGnb #topGnbMenu li:hover a::after {
-    width: 80%;
+    width: 70%;
     background-color: purple;
 }
 #topGnb #topGnbMenu li:hover a {
@@ -192,7 +117,7 @@ header {
     margin-top: 40px;
     cursor: pointer;
 }
-/**********************ÏÉÅÎã® ÎÑ§ÎπÑ ÏÑúÎ∏åÎ©îÎâ¥**********************/
+/**********************ªÛ¥‹ ≥◊∫Ò º≠∫Í∏ﬁ¥∫**********************/
 #subMenu {
     width: 100%;
     height: 110px;
@@ -200,6 +125,8 @@ header {
     margin-top: 100px;
     z-index: 99999 !important;
     background-color: white;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
     box-sizing: border-box;
     transition: background-color 0.5s;
     display: none;
@@ -208,11 +135,10 @@ header {
     width: 100%;
     height: 100%;
     display: flex;
-    /*background-color: white;*/
+    background-color: white;
     transition: background-color 0.5s;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid lightgrey;
     position: relative;
     z-index: 9;
     box-sizing: border-box;
@@ -258,9 +184,9 @@ header {
     display: flex;
     justify-content: center;
     background-color: white;
-    transition: background-color 0.5s;
     font-size: 0.9em;
     border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
     box-sizing: border-box;
 }
 #subMenu2 #subMenu2_lastTxt{
@@ -289,9 +215,10 @@ header {
     margin: 10px 0 10px 0;
 }
 #subMenu2 #subMenu2_firstBox .subMenu2_menu{
-    width: 50%;
-    height: 100%;
+    width: 48%;
+    height: 85px;
     float: left;
+    /*border: 1px solid black;*/
 }
 #subMenu2 ul li{
     position: relative;
@@ -307,7 +234,7 @@ header {
 #subMenu2 ul li a:nth-of-type(1){
     margin-right: 10px;
 }
-/*********************************Î™®Î∞îÏùº ÏÑúÎ∏å Î©îÎâ¥*********************************/
+/**********************∏πŸ¿œ ≥◊∫Ò**********************/
 .mobileGnb{
     width: 100%;
     height: 100%;
@@ -320,7 +247,7 @@ header {
     width: 100%;
     height: 100%;
     background-color: white;
-    border-top: 1px solid lightgrey;
+    z-index: 10;
 }
 .mobileGnb #mobileTop{
     /*z-index: 200;*/
@@ -331,22 +258,21 @@ header {
 .mobileGnb #mobileTop .close{
     cursor: pointer;
     scale: 1.3;
-    margin-right: 50px;
 }
-.mobileMenu li{
-    margin-top: 20px;
-    font-size: 1em;
+.mobileGnb .mobileMenu li{
+    margin: 20px 0 0 30px;
+    font-size: 1.3em;
     font-weight: bolder;
 }
-.mobileMenu li a{
-    color: #60227E;
+.mobileGnb .mobileMenu li a{
+    color: black;
     text-decoration: none;
-    font-size: 1.3em;
+    /*font-size: 1.3em;*/
 }
-.mobileMenu #subM1 li a{
+.mobileGnb .mobileMenu #subM1 li a{
     color: black;
 }
-.mobileMenu #subM2 li a{
+.mobileGnb .mobileMenu #subM2 li a{
     color: #5B6168;
 }
 .mobileMenu #subM1 li a:hover,
@@ -360,9 +286,10 @@ header {
 .lessBtn2{
     display: flex;
     position: absolute;
-    left:80%;
+    left:88%;
     cursor: pointer;
     z-index: 9;
+    margin-top: -30px;
 }
 .mobileGnb .mobileMenu #subM1{
     width: 100%;
@@ -370,12 +297,14 @@ header {
     background-color: #F9FAFB;
     display: flex;
     align-items: center;
+    margin-left: 30px;
+    /*display: none;*/
 }
 .mobileGnb .mobileMenu #subM1 li{
     position: relative;
     left: -20px;
     list-style: none;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 .mobileGnb .mobileMenu #subM2{
     width: 100%;
@@ -383,20 +312,53 @@ header {
     background-color: #F9FAFB;
     display: flex;
     align-items: center;
-    /*border: 1px solid red;*/
+    margin-left: 30px;
 }
 .mobileGnb .mobileMenu #subM2 li{
     position: relative;
     left: -20px;
     list-style: none;
     font-size: 1.1em;
-    /*border: 1px solid black;*/
     margin-top: 10px;
 }
 .mobileGnb .mobileMenu #subM2 li:nth-of-type(2),
 .mobileGnb .mobileMenu #subM2 li:nth-of-type(3),
 .mobileGnb .mobileMenu #subM2 li:nth-of-type(4){
-    font-size: 0.7em;
+    font-size: 1em;
+}
+
+/*********************************side box*********************************/
+#sideBox{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+    height: 500px;
+    box-sizing: border-box;
+    text-align: center;
+    right: 0;
+    margin-right: 30px;
+    top: 30%;
+    z-index: 99999;
+}
+#sideBox #yellow{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    right: -10px;
+    top: 38px;
+    /*margin-right: 20px;*/
+    background-color: #fae100;
+    border-radius: 50%;
+    /*border: 1px solid blue;*/
+    z-index: -1;
+}
+#sideBox .side{
+    width: 20px;
+    height: 20px;
+    margin: 14px auto;
+    cursor: pointer;
 }
 /*********************************carousel*********************************/
 #carousel1{
@@ -461,13 +423,12 @@ header {
     height: 325px;
 }
 #sec1 .imgBox img{
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 #sec1 .imgBox .box{
     position: absolute;
     width: 285px;
     height: 325px;
-    cursor: pointer;
     color: white;
     display: none;
 }
@@ -537,6 +498,15 @@ header {
     background-color: #60227E;
     opacity: 0.9;
     z-index: 9;
+}
+#sec1 .mainBox #plusBox #actcross{
+    display: none;
+}
+#sec1 .mainBox #plusBox:hover #nonecross{
+    display: none;
+}
+#sec1 .mainBox #plusBox:hover #actcross{
+    display: block;
 }
 #sec1 .imgBox div:hover #plusBox{
     display: flex;
@@ -691,17 +661,6 @@ header {
     position: relative;
     z-index: 1;
 }
-/*#sec2 #project2 #txt2::before{*/
-/*    display: block;*/
-/*    content: '';*/
-/*    position: absolute;*/
-/*    top: 13px;*/
-/*    right: -12px;*/
-/*    z-index: -1;*/
-/*    width: 25px;*/
-/*    height: 25px;*/
-/*    background: #60227e;*/
-/*}*/
 #sec2 #project2 p{
     font-size: 1.3em;
     position: relative;
@@ -754,43 +713,32 @@ header {
     height: 100%;
     object-fit: cover;
 }
-/*********************************footer*********************************/
+/******************footer*****************/
 #footer{
+    position: relative;
     width: 100%;
-    height: 230px;
-}
-#footer #footerBox{
-    width: 100%;
-    height: 100%;
+    height: 180px;
+    background-color: black;
+    color: #999999;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#footer #footerBox div{
-    width: 100%;
-    position: absolute;
-    text-align: center;
-
-}
-#footer img{
-    position: absolute;
-    left: 50%;
-    margin-top: -100px;
-    width: 35px;
-    height: 32px;
-}
-#footer #footerBox div p{
+#footer div{
     position: relative;
+}
+#footer div img{
+    margin-bottom: 30px;
+}
+#footer div p{
     font-size: 0.8em;
-    top: 10%;
-    margin: 0;
-    color: #B0B0B0;
 }
 /***************************************************************************/
-/*********************************ÎØ∏ÎîîÏñ¥ ÏøºÎ¶¨*********************************/
+/*********************************πÃµæÓ ƒı∏Æ*********************************/
 /***************************************************************************/
 
-/***************Î™®ÎãàÌÑ∞ ÌÅ¨Í∏∞***************/
+/***************∏¥œ≈Õ ≈©±‚***************/
 @media screen and (min-width: 1200px){
     #hamburger,
     .close,
@@ -800,7 +748,7 @@ header {
         display: none;
     }
 }
-/****************ÌÉÄÎ∏îÎ†õ ÏÇ¨Ïù¥Ï¶à****************/
+/****************≈∏∫Ì∑ø ªÁ¿Ã¡Ó****************/
 @media screen and (min-width: 841px) and (max-width: 1199px){
     .close,
     #topGnb ul,
@@ -934,7 +882,7 @@ header {
         z-index: 999;
     }
 }
-/**************Î™®Î∞îÏùº ÏÇ¨Ïù¥Ï¶à***************/
+/**************∏πŸ¿œ ªÁ¿Ã¡Ó***************/
 @media screen and (max-width: 840px){
     #language,
     #topGnb ul li,

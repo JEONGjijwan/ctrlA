@@ -1,1243 +1,955 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>포트폴리오 > 컨트롤에이, CONTROLA : 프로젝트 수행경험</title>
-    <link rel="icon" href="x" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="css/work_list.css">
+  <meta charset="UTF-8">
+  <title>포트폴리오 > 컨트롤에이, CONTROLA : 프로젝트 수행경험</title>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/work_list.css">
+  <script src="js/work_list.js"></script>
 </head>
 <body>
-<div id="wrapper">
-    <div id="loginFormBox">
-        <div id="loginForm">
-            <span data-toggle="modal" data-target="#login">로그인</span>
-            <span data-toggle="modal" data-target="#signUp">회원가입</span>
-        </div>
-    </div>
-    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">로그인</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="id" class="col-form-label">아이디</label>
-                            <input type="text" class="form-control" id="id">
-                        </div>
-                        <div class="form-group">
-                            <label for="pw" class="col-form-label">비밀번호</label>
-                            <input type="password" class="form-control" id="pw">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-info">로그인</button>
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">취소</button>
-                </div>
-            </div>
-        </div>
-    </div><!--로그인-->
-    <div class="modal fade" id="signUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel1">회원가입</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="s_name" class="col-form-label">이름</label>
-                            <input type="text" class="form-control" id="s_name">
-                        </div>
-                        <div class="form-group">
-                            <label for="s_id" class="col-form-label">아이디</label>
-                            <input type="text" class="form-control" id="s_id">
-                        </div>
-                        <div class="form-group">
-                            <label for="s_pw" class="col-form-label">비밀번호</label>
-                            <input type="password" class="form-control" id="s_pw">
-                        </div>
-                        <div class="form-group">
-                            <label for="s_checkPW" class="col-form-label">비밀번호 확인</label>
-                            <input type="password" class="form-control" id="s_checkPW">
-                        </div>
-                        <div class="form-group">
-                            <label for="s_email" class="col-form-label">이메일</label>
-                            <input type="email" class="form-control" id="s_email">
-                        </div>
-                        <div class="form-group">
-                            <label for="s_birth" class="col-form-label">생년월일</label>
-                            <input type="password" class="form-control" id="s_birth">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-info">로그인</button>
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">취소</button>
-                </div>
-            </div>
-        </div>
-    </div><!--회원가입-->
-    <!--------------------------------데스크탑네비-------------------------------------->
-    <header>
-        <nav id="topGnb">
-            <a href="index.html">
-                <img src="img/logo_color.png" width="166px" height="28px" alt="">
-            </a>
-            <div id="nav_list">
-                <ul id="topGnbMenu">
-                    <li><a href="#">회사소개</a></li>
-                    <li><a href="#">사업영역</a></li>
-                    <li><a href="method.html">특장점</a></li>
-                    <li><a href="work_list.html" class="cs-purple">포트폴리오</a></li>
-                    <li><a href="contactus.html">오시는 길</a></li>
-                    <li><a href="request.html">프로젝트 의뢰</a></li>
-                </ul>
-            </div>
-            <span class="material-symbols-outlined" id="language">language</span>
-            <span class="material-symbols-outlined" id="hamburger">menu</span>
-            <!--------------------------------데스크탑서브메뉴-------------------------------------->
-            <nav id="subMenu">
-                <ul class="subList">
-                    <li><a href="company.html">회사소개</a></li>
-                    <li><a href="">주요 서비스</a></li>
-                </ul>
-            </nav>
-            <nav id="subMenu2">
-                <div id="subMenu2_firstBox">
-                    <div id="subMenu2_textBox">
-                        <p>시스템통합</p>
-                    </div>
-                    <div class="subMenu2_menu">
-                        <ul class="px-0">
-                            <li><a href="">-민간·서비스</a></li>
-                            <li><a href="">-공공</a></li>
-                            <li><a href="">-헬스케어</a></li>
-                        </ul>
-                    </div>
-                    <div class="subMenu2_menu">
-                        <ul>
-                            <li><a href="">-금융</a></li>
-                            <li><a href="">-커머스</a></li>
-                            <li><a href="">-국방</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <p>운영서비스</p>
-                </div>
-                <div>
-                    <p>플랫폼</p>
-                    <ul class="px-0">
-                        <li><a href="">-플러스넷</a></li>
-                        <li><a href="" id="subMenu2_lastTxt">-PG·VAN 서비스</a></li>
-                        <li><a href="">-창업서비스</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </nav>
-    </header>
-    <!--------------------------------모바일 메뉴-------------------------------------->
-    <nav class="mobileGnb">
-        <div id="mobileTop">
-            <a href="index.html">
-                <img src="img/logo_color.png" alt="">
-            </a>
-            <span class="material-symbols-outlined close">close</span>
-        </div>
-        <ul class="mobileMenu">
-            <li>
-                <a href="#">회사소개</a>
-                <span class="material-symbols-outlined moreBtn1">expand_more</span>
-                <span class="material-symbols-outlined lessBtn1">expand_less</span>
-            </li>
-            <li id="subM1">
-                <ul>
-                    <li><a href="company.html">회사소개</a></li>
-                    <li><a href="">주요 서비스</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">사업영역</a>
-                <span class="material-symbols-outlined moreBtn2">expand_more</span>
-                <span class="material-symbols-outlined lessBtn2">expand_less</span>
-            </li>
-            <li id="subM2">
-                <ul>
-                    <li>플랫폼</li>
-                    <li><a href="">- 플러스넷</a></li>
-                    <li><a href="">- 창업서비스</a></li>
-                    <li><a href="">- PGᆞVAN 서비스</a></li>
-                </ul>
-            </li>
-            <li><a href="method.html">특장점</a></li>
-            <li><a href="work_list.html">포트폴리오</a></li>
-            <li><a href="contactus.html">오시는 길</a></li>
-            <li><a href="request.html">프로젝트 의뢰</a></li>
+<div id="wrapper"><!--------------------------------네비-------------------------------------->
+  <header>
+    <nav id="topGnb">
+      <a href="index.html">
+        <img src="img/logo_color.png" width="166px" height="28px" alt="">
+      </a>
+      <div id="nav_list">
+        <ul id="topGnbMenu">
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">사업영역</a></li>
+          <li><a href="method.html">특장점</a></li>
+          <li><a href="work_list.html">포트폴리오</a></li>
+          <li><a href="contactus.html">오시는 길</a></li>
+          <li><a href="request.html">프로젝트 의뢰</a></li>
         </ul>
-    </nav>
-    <!--------------------------------title-------------------------------------->
-    <div id="title_box">
-        <h1>
-            <span>포트폴리오</span>
-        </h1>
-        <img src="title/bg_visual_work.jpg" alt="" class="">
-    </div>
-    <!--------------------------------section1 네비-------------------------------------->
-    <div id="section1_nav">
-        <nav>
-            <ul>
-                <li id="all" class="active">ALL</li>
-                <li id="Consulting">Consulting</li>
-                <li id="Corporation">Corporation</li>
-                <li id="eCommerce">e-Commerce</li>
-                <li id="eBusiness">eBusiness</li>
-                <li id="Maintenance">Maintenance</li>
-                <li id="Package">Package</li>
-                <li class="section1_nav_img">
-                    <img src="work_/device_pc.png" alt="">
-                </li>
-                <li class="section1_nav_img">
-                    <img src="work_/device_mobile.png" alt="">
-                </li>
+      </div>
+      <span class="material-symbols-outlined disabled" id="language">language</span>
+      <span class="material-symbols-outlined" id="hamburger">menu</span>
+      <!--------------------------------데스크탑서브메뉴-------------------------------------->
+      <nav id="subMenu">
+        <ul class="subList">
+          <li><a href="company.html">회사소개</a></li>
+          <li><a href="" class="disabled">주요 서비스</a></li>
+        </ul>
+      </nav>
+      <nav id="subMenu2">
+        <div id="subMenu2_firstBox">
+          <div id="subMenu2_textBox">
+            <p>시스템통합</p>
+          </div>
+          <div class="subMenu2_menu">
+            <ul class="px-0">
+              <li><a href="" class="disabled">-민간·서비스</a></li>
+              <li><a href="" class="disabled">-공공</a></li>
+              <li><a href="" class="disabled">-헬스케어</a></li>
             </ul>
-        </nav>
-    </div>
-    <!--------------------------------section1-------------------------------------->
-    <section id="section1">
-        <div class="po box sec1-mb-90 Corporation">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>LG에너지솔루션<br>ESS<br>WECARE 캠페인<br>개발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>LG에너지솔루션 ESS WECARE 캠페인개발</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Corporation</span>
-                <img src="work_/file_1652876889_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>LG에너지솔루션 ESS WECARE 캠페인개발</h3>
-                <p>LG에너지솔루션 2022.04.15</p>
-            </div>
+          </div>
+          <div class="subMenu2_menu">
+            <ul>
+              <li><a href="" class="disabled">-금융</a></li>
+              <li><a href="" class="disabled">-커머스</a></li>
+              <li><a href="" class="disabled">-국방</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="po box sec1-mb-90 eBusiness">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>밥# 전기차 플랫폼<br>어플리케이션 개<br>발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>밥# 전기차 플랫폼 어플리케이션 개발</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">eBusiness</span>
-                <img src="work_/file_1651841183_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>밥# 전기차 플랫폼 어플리케이션 개발</h3>
-                <p>(주)피엠그로우 2021.11.03</p>
-            </div>
-        </div>
-        <div class="po box sec1-mb-90 eBusiness">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>잇다이아<br>게임중개플랫폼<br>유지보수</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>잇다이아 게임중개플랫폼 PC/모바일 통합 유지보수</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">eBusiness</span>
-                <img src="work_/file_1652875264_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>잇다이아 게임중개플랫폼 유지보수</h3>
-                <p>주식회사 리을 2021.10.01</p>
-            </div>
-        </div>
-        <div class="po box sec1-mb-90 Corporation">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>커스텀아츠 기업<br>사이트<br>반응형웹 개발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>반응형웹 개발</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Corporation</span>
-                <img src="work_/file_1651840540_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>커스텀아츠 기업 사이트 반응형웹 개발</h3>
-                <p>커스텀아츠 주식회사 2021.09.10</p>
-            </div>
-        </div>
-        <!-------line 2------->
-        <div class="po box sec1-mb-90 eBusiness">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>팀하트흉부외과의<br>원<br>홍보 및 예약시스<br>템 개발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>팀하트흉부외과의원 홍보 및 예약시스템 개발</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">eBusiness</span>
-                <img src="work_/file_1652876850_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>팀하트흉부외과의원 홍보 및 예약시스템 개발</h3>
-                <p>팀하트흉부외과의원 2021.07.20</p>
-            </div>
-        </div>
-        <div class="po box sec1-mb-90 eBusiness">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>케어런츠 서비스<br>플랫폼 개발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>케어런츠 서비스 플랫폼 개발</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">eBusiness</span>
-                <img src="work_/file_1652876813_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>케어런츠 서비스 플랫폼 개발</h3>
-                <p>케어런츠 주식회사 2021.05.27</p>
-            </div>
-        </div>
-        <div class="po box sec1-mb-90 Corporation">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>캐치아이 기업사<br>이트<br>반응형 개발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>캐치아이 기업사이트 반응형 개발</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Corporation</span>
-                <img src="work_/file_1651838704_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>캐치아이 기업사이트 반응형 개발</h3>
-                <p>캐치아이 주식회사 2021.05.25</p>
-            </div>
-        </div>
-        <div class="po box sec1-mb-90 eBusiness">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>잇다이아<br>게임중개플랫폼<br>PC 웹 개발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>게임중개플랫폼 PC 웹 개발 및 PC/모바일 최적화</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">eBusiness</span>
-                <img src="work_/file_1652874929_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>게임중개플랫폼 PC 웹 개발 및 PC/모바일 최적화</h3>
-                <p>주식회사 리을 2021.05.10</p>
-            </div>
-        </div>
-        <!-------line 3------->
-        <div class="po box sec1-mb-90 Corporation">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>캐치아이 CI 및<br>패키지 개발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>캐치아이 CI(로고) 및 패키지 개발</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Corporation</span>
-                <img src="work_/file_1651836834_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>캐치아이 CI 및 패키지 개발</h3>
-                <p>캐치아이 주식회사 2021.03.10</p>
-            </div>
-        </div>
-        <div class="po box sec1-mb-90 Corporation">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>넛츠크루 기업 및<br>다국어 서비스 제<br>작</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>넛츠크루 기업 및 다국어 서비스 제작</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Corporation</span>
-                <img src="work_/file_1615725085_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>넛츠크루 기업 및 다국어 서비스 제작</h3>
-                <p>넛츠크루 주식회사 2021.03</p>
-            </div>
-        </div>
-        <!-------------------------------->
-        <div class="po box Consulting sec1-mb-90 all">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>공감랩 AVM 서비스 UI UX 컨설팅</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>자동 부동산 시세조회 및 임대차,부동산금융서비스</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Consulting</span>
-                <img src="work_/file_1601290756_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>공감랩 AVM 서비스 UI UX 컨설팅</h3>
-                <p>공감랩 2016.10</p>
-            </div>
-        </div>
-        <div class="po box Consulting sec1-mb-90 all">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>증권 퍼티컬서비스 UI/UX컨설팅</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>증권 퍼티컬서비스 UI/UX컨설팅</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Consulting</span>
-                <img src="work_/file_1601290638_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>증권 버티컬서비스 UI/UX컨설팅</h3>
-                <p>2016.06</p>
-            </div>
-        </div>
-        <div class="po box Consulting sec1-mb-90 all">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>셀핑 서비스 개발 UI/UX 기획업무</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>셀핑 서비스 개발-UI/UX 기획업무</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Consulting</span>
-                <img src="work_/file_1597191590_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>셀핑 서비스 개발-UI/UX 기획업무</h3>
-                <p>셀핑 2016.06</p>
-            </div>
-        </div>
-        <!----------------e-Commerce---------------->
-        <div class="po box eCommerce sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>지니스토어(진에<br>어)홈쇼핑 쇼핑몰 개<br>발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>지니스토어(진에어) 홈쇼핑 쇼핑몰 개발</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">e-Commerce</span>
-                <img src="work_/file_1652876780_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>지니스토어(진에어) 홈쇼핑 쇼핑몰 개발</h3>
-                <p>진에어 2020.12.17</p>
-            </div>
-        </div>
-        <div class="po box eCommerce sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>식스뷰리팁스<br>온라인 마케팅 대<br>행</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>식스뷰리팁스 및 맘스뷰티팁스 IMC 및 커머스 운영대행</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">e-Commerce</span>
-                <img src="work_/file_1597191013_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>식스뷰리팁스 온라인 마케팅 대행</h3>
-                <p>식스뷰리팁스 2017.06</p>
-            </div>
-        </div>
-        <div class="po box eCommerce sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>제주항공 리플레<br>시포인트<br>서비스디자인 제<br>작</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>제주항공 리플레시포인트 서비스디자인 제작</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">e-Commerce</span>
-                <img src="work_/file_1597191151_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>제주항공 리플레시포인트 서비스디자인 제작</h3>
-                <p>제주항공 2017.05</p>
-            </div>
-        </div>
-        <div class="po box eCommerce sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>더홈 1차 자사몰<br>개발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>이탈리아 가구전문 브랜드 더홈 쇼핑몰 개발</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">e-Commerce</span>
-                <img src="work_/file_1597190994_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>더홈 1차 자사몰 개발</h3>
-                <p>더홈 2017.03</p>
-            </div>
-        </div>
-        <div class="po box eCommerce sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>제주항공 통합라<br>운지<br>개발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>제주항공 여행상품 마켓플레이스 서비스</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">e-Commerce</span>
-                <img src="work_/file_1597190945_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>제주항공 통합라운지 개발</h3>
-                <p>제주항공 2016.11</p>
-            </div>
-        </div>
-        <div class="po box eCommerce sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>MBABY 모바일<br>쇼핑몰<br>개발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>MBABY 모바일 쇼핑몰 개발</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">e-Commerce</span>
-                <img src="work_/file_1597191206_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>MBABY 모바일 쇼핑몰 개발</h3>
-                <p>엠베이비 2016.02</p>
-            </div>
-        </div>
-        <div class="po box eCommerce sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>뷰티 어플리케이<br>션<br>프로젝트관리 및<br>UI/UX 기획</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>뷰티 어플리케이션 프로젝트관리 및 UI/UX 기획업무</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">e-Commerce</span>
-                <img src="work_/file_1597191187_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>뷰티 어플리케이션 프로젝트관리 및 UI/UX 기획</h3>
-                <p>주식회사 라이클 2016.01</p>
-            </div>
-        </div>
-        <div class="po box eCommerce sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>다날쏘시오 커머<br>스서비스<br>디자인 제작</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>다날쏘시오 커머스 PC,모바일 서비스 디자인 제작</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">e-Commerce</span>
-                <img src="work_/file_1597191131_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>다날쏘시오 커머스 디자인 제작</h3>
-                <p>다날쏘시오 2015.10</p>
-            </div>
-        </div>
-        <!----------------eBusiness---------------->
-        <div class="po box eBusiness sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>M STREET<br>기업사이트 제작</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>M STREET 기업정보 및 서비스/제휴문의 기능</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">eBusiness</span>
-                <img src="work_/file_1615724526_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>M STREET 기업사이트 제작</h3>
-                <p>M Street 2020.12</p>
-            </div>
-        </div>
-        <div class="po box eBusiness sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>MID(딜리버리 서<br>비스)<br>기업사이트 제작</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>MidEast 기업정보 및 서비스/제휴문의 기능</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">eBusiness</span>
-                <img src="work_/file_1615724766_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>MID(딜리버리 서비스) 기업사이트 제작</h3>
-                <p>M Street 2020.12</p>
-            </div>
-        </div>
-        <div class="po box eBusiness sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>서울시 어린이병<br>원<br>자원봉사 및 예약<br>개발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>자원봉사 및 건강검진,발달치료,치과 예약기능 개발</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">eBusiness</span>
-                <img src="work_/file_1615252024_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>서울시 어린이병원 자원봉사 및 예약 개발</h3>
-                <p>서울시 어린이병원 2020.11</p>
-            </div>
-        </div>
-        <div class="po box Corporation sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>유진자산운용 웹<br>사이트<br>유지보수</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>유진자산운용 웹사이트 유지보수</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">eBusiness</span>
-                <img src="work_/file_1601422211_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>유진자산운용 웹사이트 유지보수</h3>
-                <p>유진자산운용 2020.04</p>
-            </div>
-        </div>
-        <div class="po box eBusiness sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>KTB자산운용 메<br>인 비주얼 및<br>탭클래스 화면적<br>용</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>KTB자산운용-메인 비주얼 및 탭클래스 화면적용</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">eBusiness</span>
-                <img src="work_/file_1597191670_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>KTB자산운용-메인 비주얼 및 탭클래스 화면적용</h3>
-                <p>KTB 자산운용 2019.10</p>
-            </div>
-        </div>
-        <div class="po box eBusiness sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>KB자산운용<br>홈페이지 유지보<br>수</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>KB자산운용(KB자산운용,ETF,영문사이트)유지보수</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">eBusiness</span>
-                <img src="work_/file_1597190595_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>KB자산운용 홈페이지 유지보수</h3>
-                <p>KB 자산운용 2018.11</p>
-            </div>
-        </div>
-        <div class="po box eBusiness sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>삼성꿈장학재단<br>정보망 운영 및 유<br>지보수</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>삼성꿈장학재단 정보망 운영 및 유지보수</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">eBusiness</span>
-                <img src="work_/file_1597190577_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>삼성꿈장학재단 정보망 운영 및 유지보수</h3>
-                <p>삼성꿈장학재단 2018.05</p>
-            </div>
-        </div>
-        <div class="po box Maintenance sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>서울시 나눔카<br>통합사이트 리뉴<br>얼</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>서울시 나눔카 통합사이트 리뉴얼</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Maintenance</span>
-                <img src="work_/file_1597190459_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>서울시 나눔카 통합사이트 리뉴얼</h3>
-                <p>서울시 2018.05</p>
-            </div>
-        </div>
-        <div class="po box eBusiness sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>베타딘 통합사이<br>트<br>운영</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>베타딘 통합사이트 외 6개 브랜드사이트 통합운영</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">eBusiness</span>
-                <img src="work_/file_1597190780_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>베타딘 통합사이트 운영</h3>
-                <p>한국먼디파마 2017.11.15</p>
-            </div>
-        </div>
-        <!---------------------------------------------->
-        <div class="po box Corporation sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>M STREET<br>기업사이트 제작</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>M STREET 기업정보 및 서비스/제휴문의 기능</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Corporation</span>
-                <img src="work_/file_1615724526_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>M STREET 기업사이트 제작</h3>
-                <p>M Street 2020.12</p>
-            </div>
-        </div>
-        <div class="po box Corporation sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>MID(딜리버리 서<br>비스)<br> 기업사이트 제작</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>MidEast 기업정보 및 서비스/제휴문의 기능</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Corporation</span>
-                <img src="work_/file_1615724766_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>MID(딜리버리 서비스) 기업사이트 제작</h3>
-                <p>M Street 2020.12</p>
-            </div>
-        </div>
-        <div class="po box Corporation sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>엑스큐어<br>웹사이트 개편</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>엑스큐어 웹사이트 개편</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Corporation</span>
-                <img src="work_/file_1601419538_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>엑스큐어 웹사이트 개편</h3>
-                <p>엑스큐어 2020.06</p>
-            </div>
-        </div>
-        <div class="po box Corporation sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>디에스지엔터프라<br>이즈<br>반응형 웹사이트<br>리뉴얼</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>디에스지엔터프라이즈 반응형 웹사이트 리뉴얼</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Corporation</span>
-                <img src="work_/file_1601422696_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>디에스지엔터프라이즈 반응형 웹사이트 리뉴얼</h3>
-                <p>디에스지엔터프라이즈 2020.06</p>
-            </div>
-        </div>
-        <div class="po box Corporation sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>올댓휴먼 반응형<br>웹사이트 리뉴얼</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>올댓휴먼 반응형 웹사이트 리뉴얼</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Corporation</span>
-                <img src="work_/file_1601422345_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>올댓휴먼 반응형 웹사이트 리뉴얼</h3>
-                <p>올댓휴먼 2020.05</p>
-            </div>
-        </div>
-        <!--------------------Package---------------------->
-        <div class="po box Package sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>제이에이인베스트<br>먼트<br>CI/명함제작</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>제이에이인베스트먼트 CI/명함제작</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Package</span>
-                <img src="work_/file_1597190496_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>제이에이인베스트먼트 CI/명함제작</h3>
-                <p>제이에이자산운용 2018.11</p>
-            </div>
-        </div>
-        <div class="po box Package sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>코어글로벌<br>CI 및 패키지 개발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>코어글로벌 CI 및 패키지(로고,명함,대봉투)개발</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Package</span>
-                <img src="work_/file_1597190478_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>코어글로벌 CI 및 패키지 개발</h3>
-                <p>코어 글로벌 2018.05</p>
-            </div>
-        </div>
-        <div class="po box Package sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>JIMOCO BI 패키<br>지 개발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>JICOMO BI 패키지 개발</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Package</span>
-                <img src="work_/file_1597191101_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>JICOMO BI 패키지 개발</h3>
-                <p>JICOMO 2017.08</p>
-            </div>
-        </div>
-        <div class="po box Package sec1-mb-90">
-            <!--hover-->
-            <div class="section1_imgHoverBox">
-                <div class="section1_imgHoverTxt">
-                    <h2>대중소기업구매<br>상담회 BI 패키지<br>디자인 개발</h2>
-                    <span class="arrow">
-                            <img src="img/ico_link.png" alt="">
-                        </span>
-                    <p>대중소기업구매 상담회 BI 패키지 디자인 개발</p>
-                </div>
-            </div>
-            <div class="section1_imgBox">
-                <span class="Classification">Package</span>
-                <img src="work_/file_1597191169_.png" alt="">
-            </div>
-            <div class="section1_txtBox">
-                <h3>대중소기업구매 상담회 BI 패키지 디자인 개발</h3>
-                <p>대중소기업협력재단 2015.10</p>
-            </div>
-        </div>
-    </section>
-    <!--------------------------------PlusBtn-------------------------------------->
-    <div id="PlusBtn_box">
-        <div id="PlusBtn" class="po">
-            <img src="work_/ico_more.png" width="40" height="40" alt="">
-        </div>
-    </div>
-    <div id="PlusBtn_box2">
-        <div id="PlusBtn2" class="po">
-            <img src="work_/ico_more.png" width="40" height="40" alt="">
-        </div>
-    </div>
-    <!--------------------------------footer-------------------------------------->
-    <footer id="footer">
         <div>
-            <img src="img/footer_logo_on.png" alt="">
-            <p>주식회사 컨트롤에이 서울 강남구 논현로149길 12, 3층 (논현동, 에이치포)</p>
-            <p>Copyright &copy; 2019 CONTROLA CO., LTD. All Rights Reserved.</p>
+          <p>운영서비스</p>
         </div>
-    </footer>
+        <div>
+          <p>플랫폼</p>
+          <ul class="px-0">
+            <li><a href="" class="disabled">-플러스넷</a></li>
+            <li><a href="" id="subMenu2_lastTxt" class="disabled">-PG·VAN 서비스</a></li>
+            <li><a href="" class="disabled">-창업서비스</a></li>
+          </ul>
+        </div>
+      </nav>
+    </nav>
+  </header>
+  <!--------------------------------모바일 메뉴-------------------------------------->
+  <nav class="mobileGnb">
+    <div id="mobileTop">
+      <a href="index.html">
+        <img src="img/logo_color.png" alt="">
+      </a>
+      <span class="material-symbols-outlined close">close</span>
+    </div>
+    <ul class="mobileMenu">
+      <li>
+        <a href="#">회사소개</a>
+        <span class="material-symbols-outlined moreBtn1">expand_more</span>
+        <span class="material-symbols-outlined lessBtn1">expand_less</span>
+      </li>
+      <li id="subM1">
+        <ul>
+          <li><a href="company.html">회사소개</a></li>
+          <li><a href="" class="disabled">주요 서비스</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="disabled">사업영역</a>
+        <span class="material-symbols-outlined moreBtn2">expand_more</span>
+        <span class="material-symbols-outlined lessBtn2">expand_less</span>
+      </li>
+      <li id="subM2">
+        <ul>
+          <li>플랫폼</li>
+          <li><a href="" class="disabled">- 플러스넷</a></li>
+          <li><a href="" class="disabled">- 창업서비스</a></li>
+          <li><a href="" class="disabled">- PGᆞVAN 서비스</a></li>
+        </ul>
+      </li>
+      <li><a href="method.html">특장점</a></li>
+      <li><a href="work_list.html">포트폴리오</a></li>
+      <li><a href="contactus.html">오시는 길</a></li>
+      <li><a href="request.html">프로젝트 의뢰</a></li>
+    </ul>
+  </nav>
+  <!--------------------------------title-------------------------------------->
+  <div id="title_box">
+    <h1>
+      <span>포트폴리오</span>
+    </h1>
+    <img src="title/bg_visual_work.jpg" alt="" class="">
+  </div>
+  <!--------------------------------section1 네비-------------------------------------->
+  <div id="section1_nav">
+    <nav>
+      <ul>
+        <li id="all" class="active">ALL</li>
+        <li id="Consulting">Consulting</li>
+        <li id="Corporation">Corporation</li>
+        <li id="eCommerce">e-Commerce</li>
+        <li id="eBusiness">eBusiness</li>
+        <li id="Maintenance">Maintenance</li>
+        <li id="Package">Package</li>
+        <li class="section1_nav_img">
+          <img src="work_/device_pc.png" alt="">
+        </li>
+        <li class="section1_nav_img">
+          <img src="work_/device_mobile.png" alt="">
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!--------------------------------section1-------------------------------------->
+  <section id="section1">
+    <div class="po box sec1-mb-90 Corporation">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>LG에너지솔루션<br>ESS<br>WECARE 캠페인<br>개발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>LG에너지솔루션 ESS WECARE 캠페인개발</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Corporation</span>
+        <img src="work_/file_1652876889_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>LG에너지솔루션 ESS WECARE 캠페인개발</h3>
+        <p>LG에너지솔루션 2022.04.15</p>
+      </div>
+    </div>
+    <div class="po box sec1-mb-90 eBusiness">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>밥# 전기차 플랫폼<br>어플리케이션 개<br>발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>밥# 전기차 플랫폼 어플리케이션 개발</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">eBusiness</span>
+        <img src="work_/file_1651841183_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>밥# 전기차 플랫폼 어플리케이션 개발</h3>
+        <p>(주)피엠그로우 2021.11.03</p>
+      </div>
+    </div>
+    <div class="po box sec1-mb-90 eBusiness">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>잇다이아<br>게임중개플랫폼<br>유지보수</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>잇다이아 게임중개플랫폼 PC/모바일 통합 유지보수</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">eBusiness</span>
+        <img src="work_/file_1652875264_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>잇다이아 게임중개플랫폼 유지보수</h3>
+        <p>주식회사 리을 2021.10.01</p>
+      </div>
+    </div>
+    <div class="po box sec1-mb-90 Corporation">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>커스텀아츠 기업<br>사이트<br>반응형웹 개발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>반응형웹 개발</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Corporation</span>
+        <img src="work_/file_1651840540_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>커스텀아츠 기업 사이트 반응형웹 개발</h3>
+        <p>커스텀아츠 주식회사 2021.09.10</p>
+      </div>
+    </div>
+    <!-------line 2------->
+    <div class="po box sec1-mb-90 eBusiness">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>팀하트흉부외과의<br>원<br>홍보 및 예약시스<br>템 개발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>팀하트흉부외과의원 홍보 및 예약시스템 개발</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">eBusiness</span>
+        <img src="work_/file_1652876850_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>팀하트흉부외과의원 홍보 및 예약시스템 개발</h3>
+        <p>팀하트흉부외과의원 2021.07.20</p>
+      </div>
+    </div>
+    <div class="po box sec1-mb-90 eBusiness">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>케어런츠 서비스<br>플랫폼 개발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>케어런츠 서비스 플랫폼 개발</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">eBusiness</span>
+        <img src="work_/file_1652876813_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>케어런츠 서비스 플랫폼 개발</h3>
+        <p>케어런츠 주식회사 2021.05.27</p>
+      </div>
+    </div>
+    <div class="po box sec1-mb-90 Corporation">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>캐치아이 기업사<br>이트<br>반응형 개발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>캐치아이 기업사이트 반응형 개발</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Corporation</span>
+        <img src="work_/file_1651838704_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>캐치아이 기업사이트 반응형 개발</h3>
+        <p>캐치아이 주식회사 2021.05.25</p>
+      </div>
+    </div>
+    <div class="po box sec1-mb-90 eBusiness">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>잇다이아<br>게임중개플랫폼<br>PC 웹 개발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>게임중개플랫폼 PC 웹 개발 및 PC/모바일 최적화</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">eBusiness</span>
+        <img src="work_/file_1652874929_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>게임중개플랫폼 PC 웹 개발 및 PC/모바일 최적화</h3>
+        <p>주식회사 리을 2021.05.10</p>
+      </div>
+    </div>
+    <!-------line 3------->
+    <div class="po box sec1-mb-90 Corporation">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>캐치아이 CI 및<br>패키지 개발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>캐치아이 CI(로고) 및 패키지 개발</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Corporation</span>
+        <img src="work_/file_1651836834_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>캐치아이 CI 및 패키지 개발</h3>
+        <p>캐치아이 주식회사 2021.03.10</p>
+      </div>
+    </div>
+    <div class="po box sec1-mb-90 Corporation">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>넛츠크루 기업 및<br>다국어 서비스 제<br>작</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>넛츠크루 기업 및 다국어 서비스 제작</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Corporation</span>
+        <img src="work_/file_1615725085_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>넛츠크루 기업 및 다국어 서비스 제작</h3>
+        <p>넛츠크루 주식회사 2021.03</p>
+      </div>
+    </div>
+    <!-------------------------------->
+    <div class="po box Consulting sec1-mb-90 all">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>공감랩 AVM 서비스 UI UX 컨설팅</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>자동 부동산 시세조회 및 임대차,부동산금융서비스</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Consulting</span>
+        <img src="work_/file_1601290756_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>공감랩 AVM 서비스 UI UX 컨설팅</h3>
+        <p>공감랩 2016.10</p>
+      </div>
+    </div>
+    <div class="po box Consulting sec1-mb-90 all">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>증권 퍼티컬서비스 UI/UX컨설팅</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>증권 퍼티컬서비스 UI/UX컨설팅</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Consulting</span>
+        <img src="work_/file_1601290638_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>증권 버티컬서비스 UI/UX컨설팅</h3>
+        <p>2016.06</p>
+      </div>
+    </div>
+    <div class="po box Consulting sec1-mb-90 all">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>셀핑 서비스 개발 UI/UX 기획업무</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>셀핑 서비스 개발-UI/UX 기획업무</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Consulting</span>
+        <img src="work_/file_1597191590_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>셀핑 서비스 개발-UI/UX 기획업무</h3>
+        <p>셀핑 2016.06</p>
+      </div>
+    </div>
+    <!----------------e-Commerce---------------->
+    <div class="po box eCommerce sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>지니스토어(진에<br>어)홈쇼핑 쇼핑몰 개<br>발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>지니스토어(진에어) 홈쇼핑 쇼핑몰 개발</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">e-Commerce</span>
+        <img src="work_/file_1652876780_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>지니스토어(진에어) 홈쇼핑 쇼핑몰 개발</h3>
+        <p>진에어 2020.12.17</p>
+      </div>
+    </div>
+    <div class="po box eCommerce sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>식스뷰리팁스<br>온라인 마케팅 대<br>행</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>식스뷰리팁스 및 맘스뷰티팁스 IMC 및 커머스 운영대행</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">e-Commerce</span>
+        <img src="work_/file_1597191013_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>식스뷰리팁스 온라인 마케팅 대행</h3>
+        <p>식스뷰리팁스 2017.06</p>
+      </div>
+    </div>
+    <div class="po box eCommerce sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>제주항공 리플레<br>시포인트<br>서비스디자인 제<br>작</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>제주항공 리플레시포인트 서비스디자인 제작</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">e-Commerce</span>
+        <img src="work_/file_1597191151_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>제주항공 리플레시포인트 서비스디자인 제작</h3>
+        <p>제주항공 2017.05</p>
+      </div>
+    </div>
+    <div class="po box eCommerce sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>더홈 1차 자사몰<br>개발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>이탈리아 가구전문 브랜드 더홈 쇼핑몰 개발</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">e-Commerce</span>
+        <img src="work_/file_1597190994_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>더홈 1차 자사몰 개발</h3>
+        <p>더홈 2017.03</p>
+      </div>
+    </div>
+    <div class="po box eCommerce sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>제주항공 통합라<br>운지<br>개발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>제주항공 여행상품 마켓플레이스 서비스</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">e-Commerce</span>
+        <img src="work_/file_1597190945_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>제주항공 통합라운지 개발</h3>
+        <p>제주항공 2016.11</p>
+      </div>
+    </div>
+    <div class="po box eCommerce sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>MBABY 모바일<br>쇼핑몰<br>개발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>MBABY 모바일 쇼핑몰 개발</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">e-Commerce</span>
+        <img src="work_/file_1597191206_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>MBABY 모바일 쇼핑몰 개발</h3>
+        <p>엠베이비 2016.02</p>
+      </div>
+    </div>
+    <div class="po box eCommerce sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>뷰티 어플리케이<br>션<br>프로젝트관리 및<br>UI/UX 기획</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>뷰티 어플리케이션 프로젝트관리 및 UI/UX 기획업무</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">e-Commerce</span>
+        <img src="work_/file_1597191187_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>뷰티 어플리케이션 프로젝트관리 및 UI/UX 기획</h3>
+        <p>주식회사 라이클 2016.01</p>
+      </div>
+    </div>
+    <div class="po box eCommerce sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>다날쏘시오 커머<br>스서비스<br>디자인 제작</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>다날쏘시오 커머스 PC,모바일 서비스 디자인 제작</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">e-Commerce</span>
+        <img src="work_/file_1597191131_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>다날쏘시오 커머스 디자인 제작</h3>
+        <p>다날쏘시오 2015.10</p>
+      </div>
+    </div>
+    <!----------------eBusiness---------------->
+    <div class="po box eBusiness sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>M STREET<br>기업사이트 제작</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>M STREET 기업정보 및 서비스/제휴문의 기능</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">eBusiness</span>
+        <img src="work_/file_1615724526_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>M STREET 기업사이트 제작</h3>
+        <p>M Street 2020.12</p>
+      </div>
+    </div>
+    <div class="po box eBusiness sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>MID(딜리버리 서<br>비스)<br>기업사이트 제작</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>MidEast 기업정보 및 서비스/제휴문의 기능</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">eBusiness</span>
+        <img src="work_/file_1615724766_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>MID(딜리버리 서비스) 기업사이트 제작</h3>
+        <p>M Street 2020.12</p>
+      </div>
+    </div>
+    <div class="po box eBusiness sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>서울시 어린이병<br>원<br>자원봉사 및 예약<br>개발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>자원봉사 및 건강검진,발달치료,치과 예약기능 개발</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">eBusiness</span>
+        <img src="work_/file_1615252024_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>서울시 어린이병원 자원봉사 및 예약 개발</h3>
+        <p>서울시 어린이병원 2020.11</p>
+      </div>
+    </div>
+    <div class="po box Corporation sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>유진자산운용 웹<br>사이트<br>유지보수</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>유진자산운용 웹사이트 유지보수</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">eBusiness</span>
+        <img src="work_/file_1601422211_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>유진자산운용 웹사이트 유지보수</h3>
+        <p>유진자산운용 2020.04</p>
+      </div>
+    </div>
+    <div class="po box eBusiness sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>KTB자산운용 메<br>인 비주얼 및<br>탭클래스 화면적<br>용</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>KTB자산운용-메인 비주얼 및 탭클래스 화면적용</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">eBusiness</span>
+        <img src="work_/file_1597191670_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>KTB자산운용-메인 비주얼 및 탭클래스 화면적용</h3>
+        <p>KTB 자산운용 2019.10</p>
+      </div>
+    </div>
+    <div class="po box eBusiness sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>KB자산운용<br>홈페이지 유지보<br>수</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>KB자산운용(KB자산운용,ETF,영문사이트)유지보수</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">eBusiness</span>
+        <img src="work_/file_1597190595_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>KB자산운용 홈페이지 유지보수</h3>
+        <p>KB 자산운용 2018.11</p>
+      </div>
+    </div>
+    <div class="po box eBusiness sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>삼성꿈장학재단<br>정보망 운영 및 유<br>지보수</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>삼성꿈장학재단 정보망 운영 및 유지보수</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">eBusiness</span>
+        <img src="work_/file_1597190577_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>삼성꿈장학재단 정보망 운영 및 유지보수</h3>
+        <p>삼성꿈장학재단 2018.05</p>
+      </div>
+    </div>
+    <div class="po box Maintenance sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>서울시 나눔카<br>통합사이트 리뉴<br>얼</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>서울시 나눔카 통합사이트 리뉴얼</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Maintenance</span>
+        <img src="work_/file_1597190459_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>서울시 나눔카 통합사이트 리뉴얼</h3>
+        <p>서울시 2018.05</p>
+      </div>
+    </div>
+    <div class="po box eBusiness sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>베타딘 통합사이<br>트<br>운영</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>베타딘 통합사이트 외 6개 브랜드사이트 통합운영</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">eBusiness</span>
+        <img src="work_/file_1597190780_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>베타딘 통합사이트 운영</h3>
+        <p>한국먼디파마 2017.11.15</p>
+      </div>
+    </div>
+    <!---------------------------------------------->
+    <div class="po box Corporation sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>M STREET<br>기업사이트 제작</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>M STREET 기업정보 및 서비스/제휴문의 기능</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Corporation</span>
+        <img src="work_/file_1615724526_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>M STREET 기업사이트 제작</h3>
+        <p>M Street 2020.12</p>
+      </div>
+    </div>
+    <div class="po box Corporation sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>MID(딜리버리 서<br>비스)<br> 기업사이트 제작</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>MidEast 기업정보 및 서비스/제휴문의 기능</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Corporation</span>
+        <img src="work_/file_1615724766_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>MID(딜리버리 서비스) 기업사이트 제작</h3>
+        <p>M Street 2020.12</p>
+      </div>
+    </div>
+    <div class="po box Corporation sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>엑스큐어<br>웹사이트 개편</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>엑스큐어 웹사이트 개편</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Corporation</span>
+        <img src="work_/file_1601419538_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>엑스큐어 웹사이트 개편</h3>
+        <p>엑스큐어 2020.06</p>
+      </div>
+    </div>
+    <div class="po box Corporation sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>디에스지엔터프라<br>이즈<br>반응형 웹사이트<br>리뉴얼</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>디에스지엔터프라이즈 반응형 웹사이트 리뉴얼</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Corporation</span>
+        <img src="work_/file_1601422696_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>디에스지엔터프라이즈 반응형 웹사이트 리뉴얼</h3>
+        <p>디에스지엔터프라이즈 2020.06</p>
+      </div>
+    </div>
+    <div class="po box Corporation sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>올댓휴먼 반응형<br>웹사이트 리뉴얼</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>올댓휴먼 반응형 웹사이트 리뉴얼</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Corporation</span>
+        <img src="work_/file_1601422345_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>올댓휴먼 반응형 웹사이트 리뉴얼</h3>
+        <p>올댓휴먼 2020.05</p>
+      </div>
+    </div>
+    <!--------------------Package---------------------->
+    <div class="po box Package sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>제이에이인베스트<br>먼트<br>CI/명함제작</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>제이에이인베스트먼트 CI/명함제작</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Package</span>
+        <img src="work_/file_1597190496_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>제이에이인베스트먼트 CI/명함제작</h3>
+        <p>제이에이자산운용 2018.11</p>
+      </div>
+    </div>
+    <div class="po box Package sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>코어글로벌<br>CI 및 패키지 개발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>코어글로벌 CI 및 패키지(로고,명함,대봉투)개발</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Package</span>
+        <img src="work_/file_1597190478_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>코어글로벌 CI 및 패키지 개발</h3>
+        <p>코어 글로벌 2018.05</p>
+      </div>
+    </div>
+    <div class="po box Package sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>JIMOCO BI 패키<br>지 개발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>JICOMO BI 패키지 개발</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Package</span>
+        <img src="work_/file_1597191101_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>JICOMO BI 패키지 개발</h3>
+        <p>JICOMO 2017.08</p>
+      </div>
+    </div>
+    <div class="po box Package sec1-mb-90">
+      <!--hover-->
+      <div class="section1_imgHoverBox">
+        <div class="section1_imgHoverTxt">
+          <h2>대중소기업구매<br>상담회 BI 패키지<br>디자인 개발</h2>
+          <span class="arrow">
+                            <img src="img/ico_link.png" alt="">
+                        </span>
+          <p>대중소기업구매 상담회 BI 패키지 디자인 개발</p>
+        </div>
+      </div>
+      <div class="section1_imgBox">
+        <span class="Classification">Package</span>
+        <img src="work_/file_1597191169_.png" alt="">
+      </div>
+      <div class="section1_txtBox">
+        <h3>대중소기업구매 상담회 BI 패키지 디자인 개발</h3>
+        <p>대중소기업협력재단 2015.10</p>
+      </div>
+    </div>
+  </section>
+  <!--------------------------------PlusBtn-------------------------------------->
+  <div id="PlusBtn_box">
+    <div id="PlusBtn" class="po">
+      <img src="work_/ico_more.png" width="40" height="40" alt="">
+    </div>
+  </div>
+  <div id="PlusBtn_box2">
+    <div id="PlusBtn2" class="po">
+      <img src="work_/ico_more.png" width="40" height="40" alt="">
+    </div>
+  </div>
+  <!--------------------------------footer-------------------------------------->
+  <footer id="footer">
+    <div id="footerBox">
+      <img src="img/footer_logo_on.png" alt="">
+      <div>
+        <p>주식회사 컨트롤에이 서울 강남구 논현로149길 12, 3층 (논현동, 에이치포)</p>
+        <p>
+          Copyright &copy; 2019 CONTROLA CO., LTD. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
 </div>
-<script>
-    $(function (){
-        /********************topGnb 활성화 및 비활성화********************/
-        let header=$("header");
-        let navLi=$("#topGnb li a");
-        let subMenu=$("#subMenu");
-        let subMenu2=$("#subMenu2");
-
-        subMenu.hide();
-        subMenu2.hide();
-
-        header.mouseleave(function (){
-            subMenu.hide();
-            subMenu2.hide();
-        })
-        navLi.eq(0).hover(function (){
-            // subList1.show();
-            subMenu.show();
-            subMenu2.hide();
-        });subMenu.mouseleave(function (){
-            subMenu.hide();
-        });
-        navLi.eq(1).hover(function (){
-            subMenu2.show();
-            subMenu.hide();
-        });subMenu2.mouseleave(function (){
-            subMenu2.hide();
-        });
-
-        navLi.eq(2).hover(function (){
-            subMenu2.hide();
-            subMenu.hide();
-        })
-        navLi.eq(3).hover(function (){
-            subMenu2.hide();
-            subMenu.hide();
-        })
-        navLi.eq(4).hover(function (){
-            subMenu2.hide();
-            subMenu.hide();
-        })
-        navLi.eq(5).hover(function (){
-            subMenu2.hide();
-            subMenu.hide();
-        })
-        /********************모바일 메뉴 활성화 및 비활성화********************/
-        let topGnb=$("#topGnb");
-        let mbMenu=$(".mobileGnb")
-        let closeBtn=$(".close")
-        let hamburgerBtn=$("#hamburger");
-        let login=$("#loginFormBox");
-
-        mbMenu.hide();
-        closeBtn.hide();
-
-        hamburgerBtn.click(function (){
-            $("body").addClass("hidden");
-            login.hide();
-            hamburgerBtn.hide();
-            header.hide();
-            mbMenu.show();
-            closeBtn.show();
-        })
-        closeBtn.click(function (){
-            $("body").removeClass("hidden");
-            mbMenu.hide();
-            closeBtn.hide();
-            login.show();
-            hamburgerBtn.show();
-            header.show();
-        })
-        /********************모바일 서브 메뉴1********************/
-        let moreBtn1=$(".moreBtn1");
-        let lessBtn1=$(".lessBtn1");
-        let moreBtn2=$(".moreBtn2");
-        let lessBtn2=$(".lessBtn2");
-        let subM1=$("#subM1");
-        let subM2=$("#subM2");
-
-        lessBtn1.hide();
-        subM1.hide();
-        moreBtn1.on("click",function (){
-            subM1.show();
-            moreBtn1.hide();
-            lessBtn1.show();
-        })
-        lessBtn1.click(function (){
-            subM1.hide();
-            moreBtn1.show();
-            lessBtn1.hide();
-        })
-
-        /********************모바일 서브 메뉴2********************/
-        lessBtn2.hide();
-        subM2.hide();
-
-        moreBtn2.click(function (){
-            subM2.show()
-            moreBtn2.hide();
-            lessBtn2.show();
-        })
-        lessBtn2.click(function (){
-            subM2.hide();
-            moreBtn2.show();
-            lessBtn2.hide();
-        })
-        /********************active 활성화 및 비활성화********************/
-        let activeClass=$("#section1_nav nav ul li");
-
-        activeClass.click(function (){
-            activeClass.removeClass("active");
-            $(this).addClass("active");
-        })
-        /********************list 별 상자 구분********************/
-        let box=$("#section1 .box")
-        let allBtn=$("#all")
-        let plusBtn=$("#PlusBtn");
-        let plusBtn2=$("#PlusBtn2");
-        let consulting=$(".Consulting")
-        let eCommerce=$(".eCommerce")
-        let corporation=$(".Corporation")
-        let package=$(".Package")
-
-        consulting.hide();
-        eCommerce.hide();
-        corporation.hide();
-        package.hide();
-        plusBtn2.hide()
-        allBtn.click(function (){/* All */
-            box.show();
-            box.parent().addClass("sec1-mb-90");
-            consulting.hide();
-            eCommerce.hide();
-            corporation.hide();
-            package.hide();
-            plusBtn.show();
-            plusBtn2.hide();
-        })
-        plusBtn.click(function (){
-            consulting.show();
-            eCommerce.show();
-            corporation.show();
-            package.show();
-            plusBtn.hide();
-            plusBtn2.hide();
-        })
-        let consultingBtn=$("#Consulting")
-        consultingBtn.click(function (){ /* consulting */
-            box.hide();
-            box.parent().removeClass("sec1-mb-90");
-            consulting.parent().addClass("sec1-mb-90");
-            consulting.show();
-            plusBtn.hide()
-            plusBtn2.hide();
-        })
-        let corporationBtn=$("#Corporation")
-        corporationBtn.click(function (){ /* consulting */
-            box.hide();
-            box.parent().removeClass("sec1-mb-90");
-            corporation.parent().addClass("sec1-mb-90");
-            corporation.show();
-            plusBtn.hide()
-            plusBtn2.hide();
-        })
-        let ecommerceBtn=$("#eCommerce")
-        ecommerceBtn.click(function (){
-            box.hide();
-            box.parent().removeClass("sec1-mb-90");
-            eCommerce.parent().addClass("sec1-mb-90");
-            eCommerce.show();
-            plusBtn.hide()
-            plusBtn2.hide();
-        })
-        let eBusiness=$(".eBusiness")
-        let eBusinessBtn=$("#eBusiness")
-        eBusinessBtn.click(function (){
-            box.hide();
-            box.parent().removeClass("sec1-mb-90");
-            eBusiness.parent().addClass("sec1-mb-90");
-            eBusiness.show();
-            plusBtn.hide()
-            plusBtn2.hide();
-        })
-        let maintenanceBtn=$("#Maintenance")
-        let maintenance=$(".Maintenance")
-        maintenanceBtn.click(function (){
-            box.hide();
-            box.parent().removeClass("sec1-mb-90");
-            eBusiness.parent().addClass("sec1-mb-90");
-            eBusiness.show()
-            maintenance.parent().addClass("sec1-mb-90");
-            maintenance.show();
-            plusBtn.hide()
-            plusBtn2.show()
-        })
-        plusBtn2.click(function (){
-            corporation.parent().addClass("sec1-mb-90");
-            corporation.show();
-            plusBtn2.hide();
-        })
-        let packageBtn=$("#Package")
-        packageBtn.click(function (){
-            box.hide();
-            box.parent().removeClass("sec1-mb-90");
-            package.parent().addClass("sec1-mb-90");
-            package.show();
-            plusBtn.hide()
-            plusBtn2.hide();
-        })
-    })
-</script>
 </body>
 </html>
